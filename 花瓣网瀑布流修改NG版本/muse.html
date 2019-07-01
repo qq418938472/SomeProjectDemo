@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>花瓣美思</title>
+	<script type="text/javascript" src="./js/jquery-3.1.0.min.js"></script>
+	<script type="text/javascript" src="./js/angular.min.js"></script>
+	<script type="text/javascript" src="./js/angular-animate.min.js"></script>
+	<link rel="stylesheet" href="./css/muse.css" type="text/css">
+</head>
+<body ng-app="myapp">
+	<!--头部-->
+	<div class="header">
+		<div class="header_content">
+			<div class="header_content_left" >
+				<a href="index.html"><img class="header_logo" src="./images/muse/header_logo.png" alt=""></a>
+				<a class="header_content_minA" href="#">首页</a>
+				<a class="header_content_min" href="#">设计服务</a>
+				<a class="header_content_min" href="#">设计师</a>
+				<a class="header_content_min" href="#">工作台</a>
+				<input type="text" value="搜索设计服务">
+				<a href="#"><img class="search" src="./images/muse/header_input_search.png" alt=""></a>
+			</div>
+			<button class="header_content_rightD">注册</button>
+			<button class="header_content_rightU">登录</button>
+		</div>
+	</div>
+	<!--内容-->
+	<div class="content">
+		<!--轮播图-->
+		<div class="content_Af" id="container" ng-controller="myCtrl">
+			<div class="pre" id="pre" ng-click="pre()" ng-mouseover="over()" ng-mouseleave="leave()"><img src="./images/muse/pre.png" alt=""></div>
+			<div class="next" id="next" ng-click="next()" ng-mouseover="over()" ng-mouseleave="leave()"><img src="./images/muse/next.png" alt=""></div>
+			<div id="list" style="left:{{left}}px; transition: {{time}}s" class="content_Af_frame" ng-mouseover="over()" ng-mouseleave="leave()">
+				<a href="#"><img src="./images/muse/content_Af_img4.jpg" ></a>
+				<a href="#"><img src="./images/muse/content_Af_img1.png" ></a>
+				<a href="#"><img src="./images/muse/content_Af_img2.jpg" ></a>
+				<a href="#"><img src="./images/muse/content_Af_img3.jpg" ></a>
+				<a href="#"><img src="./images/muse/content_Af_img4.jpg" ></a>
+				<a href="#"><img src="./images/muse/content_Af_img1.png" ></a>
+			</div>
+			<div id="dot" ng-mouseover="over()" ng-mouseleave="leave()">
+                <span class="{{dot[0]}}" ng-click="selectdot(1)"></span>
+                <span class="{{dot[1]}}" ng-click="selectdot(2)"></span>
+                <span class="{{dot[2]}}" ng-click="selectdot(3)"></span>
+                <span class="{{dot[3]}}" ng-click="selectdot(4)"></span>
+                
+        	</div>
+		</div>
+		<script type="text/javascript">
+			var app = angular.module("myapp",[]);
+			app.controller("myCtrl",function($scope,$interval,$timeout){
+				$scope.time = 1;
+				$scope.left = -1200;
+				$scope.index = 0;
+				$scope.dot = ['','','','']
+				var move = true;
+				$scope.next = function(){
+					if (move) {
+						$scope.left -= 1200;
+						$scope.time = 1;
+						$scope.index = (++$scope.index)>3?0:$scope.index;
+						if ($scope.left == -6000) {
+							move = false;
+							$timeout(function(){
+								$scope.time = 0;
+								$scope.left = -1200;
+								move = true;
+							},1000)
+						}
+						$scope.showDot();
+					}
+				}
+				$scope.pre= function(){
+					if (move) {
+						$scope.left += 1200;
+						$scope.time = 1;
+						$scope.index = (--$scope.index)<0?3:$scope.index;
+						if ($scope.left == 0) {
+							move = false;
+							$timeout(function(){
+								$scope.time = 0;
+								$scope.left = -4800;
+								move = true;
+							},1000)
+						}
+						$scope.showDot();
+					}
+				}
+				$scope.showDot = function(){
+					$scope.time = 1;
+					for (var i = 0; i < $scope.dot.length; i++) {
+						$scope.dot[i] = "";
+					}
+					$scope.dot[$scope.index] = "on"	
+				}
+				$scope.showDot();
+				$scope.selectdot = function(newleft){
+					$scope.left = newleft*-1200;
+					$scope.index = newleft-1;
+					$scope.showDot();
+				}
+				var interval_start;
+				$scope.start = function(){
+					interval_start = $interval(function(){
+					    $scope.next();
+					},2000)
+				}
+				$scope.start();
+				$scope.over = function(){
+					$interval.cancel(interval_start);
+				}
+				$scope.leave = function(){
+					$scope.start();
+				}
+			})
+		</script>
+		<!--轮播图-->
+		<div class="content_Bf">
+			<img src="./images/muse/content_Bf_img.png" alt="">
+		</div>
+		<div class="content_bottom">
+			<div class="content_Cf">
+				<div class="button_frame">
+					<button>联系设计经纪人</button>
+				</div>
+			</div>
+			<div class="content_Df">
+				<p class="title_left">推荐设计师</p>
+				<a class="title_right" href="#">所有设计师》</a>
+				<div class="main">
+					<div class="main_left">
+						<div class="main_top">
+							<p class="left_Af">The_Three_DesignS</p>
+							<img class="right" src="./images/muse/content_Df_left.jpg" alt="">
+							<img  class="left_Bf" 	 src="./images/muse/content_Df_hr.png" alt="">
+							<p class="left_Cf">6个设计服务</p>
+							<a class="left_Df" href="#">平面设计师</a>
+						</div>
+						<div class="main_bottom">
+							<a href="#"><p>毕业于福州大学厦门工艺美术学院，自幼学习绘画，从事品牌识别设计与传播工作三年，在lofter、微博、微信拥有15万粉丝，微信公众号the3d...</p></a>
+						</div>
+						
+					</div>
+					<div class="main_right">
+						<div class="main_top">
+							<p class="left_Af">雪熙SULIY</p>
+							<img class="right" src="./images/muse/content_Df_right.png" alt="">
+							<img  class="left_Bf" 	 src="./images/muse/content_Df_hr.png" alt="">
+							<p class="left_Cf">10个设计服务</p>
+							<a class="left_Df" href="#">平面设计师</a>
+							<a class="left_Df_2" href="#">UI设计师</a>
+						</div>
+						<div class="main_bottom">
+							<a href="#"><p>插画师，设计师。小清新插画。客户有HTC网易印象派，imu幻想神州，及韩国，意大利，新西兰，澳大利亚等各地及国家内多名知名出版社。</p></a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="content_Ef">
+				<p class="title_left">设计服务</p>
+				<a class="title_right" href="#">所有服务》</a>
+				<ul class="content_Ef_list">
+					<li>
+						<a href="#">
+							<div class="list_content">
+								<img src="./images/muse/content_Ef_img1.gif">
+								<p class="list_content_Bf">静态和动态的表情包设计 GIF</p>
+								<hr class="list_content_hr" />
+								<p class="list_content_Cf">￥2500/个</p>
+								<p class="list_content_Df">提供加急服务，提供可选拓展</p>
+								<div class="star"><a href="#"><img class="star_img" src="./images/muse/content_Ef_star.png" alt=""></a></div>
+							</div>
+						</a>
+						
+					</li>
+					<li>
+						<a href="#">
+							<div class="list_content">
+								<img src="./images/muse/content_Ef_img2.gif">
+								<p class="list_content_Bf">各类型商业广告、social海报设计</p>
+								<hr class="list_content_hr" />
+								<p class="list_content_Cf">￥3000/副</p>
+								<p class="list_content_Df">提供加急服务，提供可选拓展</p>
+								<div class="star"><a href="#"><img class="star_img" src="./images/muse/content_Ef_star.png" alt=""></a></div>
+							</div>
+						</a>	
+					</li>
+					<li>
+						<a href="#">
+							<div class="list_content">
+								<img src="./images/muse/content_Ef_img3.gif">
+								<p class="list_content_Bf">插画/二维码设计</p>
+								<hr class="list_content_hr" />
+								<p class="list_content_Cf">￥5000/个</p>
+								<p class="list_content_Df">提供加急服务，提供可选拓展</p>
+								<div class="star"><a href="#"><img class="star_img" src="./images/muse/content_Ef_star.png" alt=""></a></div>
+							</div>
+						</a>
+						
+					</li>
+					<li>
+						<a href="#">
+							<div class="list_content">
+								<img src="./images/muse/content_Ef_img8.jpg">
+								<p class="list_content_Bf">花瓣.爱绘STUDIO:水彩培训综合班</p>
+								<hr class="list_content_hr" />
+								<p class="list_content_Cf">￥3200/每位学员</p>
+								<p class="list_content_Df">提供加急服务，提供可选拓展</p>
+								<div class="star"><a href="#"><img class="star_img" src="./images/muse/content_Ef_star.png" alt=""></a></div>
+							</div>
+						</a>
+						
+					</li>
+					<li>
+						<a href="#">
+							<div class="list_content">
+								<img src="./images/muse/content_Ef_img5.gif">
+								<p class="list_content_Bf">H5动态插画设计 游戏动画 人物gif插画</p>
+								<hr class="list_content_hr" />
+								<p class="list_content_Cf">￥4500/幅</p>
+								<p class="list_content_Df">提供加急服务，提供可选拓展</p>
+								<div class="star"><a href="#"><img class="star_img" src="./images/muse/content_Ef_star.png" alt=""></a></div>
+							</div>
+						</a>
+						
+					</li>
+					<li>
+						<a href="#">
+							<div class="list_content">
+								<img src="./images/muse/content_Ef_img6.gif">
+								<p class="list_content_Bf">静态和动态的表情包设计 GIF</p>
+								<hr class="list_content_hr" />
+								<p class="list_content_Cf">￥2500/组</p>
+								<p class="list_content_Df">提供加急服务，提供可选拓展</p>
+								<div class="star"><a href="#"><img class="star_img" src="./images/muse/content_Ef_star.png" alt=""></a></div>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<div class="list_content">
+								<img src="./images/muse/content_Ef_img7.jpg">
+								<p class="list_content_Bf">饱满性商业广告画面</p>
+								<hr class="list_content_hr" />
+								<p class="list_content_Cf">￥3000/页</p>
+								<p class="list_content_Df">提供加急服务，提供可选拓展</p>
+								<div class="star"><a href="#"><img class="star_img" src="./images/muse/content_Ef_star.png" alt=""></a></div>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<div class="list_content">
+								<img src="./images/muse/content_Ef_img4.jpg">
+								<p class="list_content_Bf">婚照漫画</p>
+								<hr class="list_content_hr" />
+								<p class="list_content_Cf">￥1000/张</p>
+								<p class="list_content_Df">提供加急服务，提供可选拓展</p>
+								<div class="star"><a href="#"><img class="star_img" src="./images/muse/content_Ef_star.png" alt=""></a></div>
+							</div>
+						</a>
+					</li>
+
+				</ul>
+			</div>
+		</div>
+		
+	</div>
+	<!--底部-->
+	<div class="footer_Af">
+		<hr class="footer_Af_left" />
+		<a href="#"><span class="footer_Af_titleA">浏览所有设计业务</span></a>
+		<hr class="footer_Af_right" />
+		<p class="footer_Af_bottomT">以分类浏览花瓣<a href="#">所有采集》</a></p>
+		<hr class="footer_Af_bottomM" />
+		<ul class="footer_Af_bottomD">
+			<li class="ul_list">
+				<ul class="">
+					<li><a href="#">UI/UX</a></li>
+					<li><a href="#">平面</a></li>
+					<li><a href="#">插画/漫画</a></li>
+					<li><a href="#">家居/家装</a></li>
+					<li><a href="#">女装/搭配</a></li>
+					<li><a href="#">男士/风尚</a></li>
+					<li><a href="#">婚礼</a></li>
+
+				</ul>
+				<ul class="">
+					<li><a href="#">工业设计</a></li>
+					<li><a href="#">摄影</a></li>
+					<li><a href="#">造型/美女</a></li>
+					<li><a href="#">美食</a></li>
+					<li><a href="#">旅行</a></li>
+					<li><a href="#">手工/布艺</a></li>
+					<li><a href="#">健身/舞蹈</a></li>
+				</ul>
+				<ul class="">
+					<li><a href="#">儿童</a></li>
+					<li><a href="#">宠物</a></li>
+					<li><a href="#">美图</a></li>
+					<li><a href="#">明星</a></li>
+					<li><a href="#">美女</a></li>
+					<li><a href="#">礼物</a></li>
+					<li><a href="#">极客</a></li>
+				</ul>
+				<ul class="">
+					<li><a href="#">动漫</a></li>
+					<li><a href="#">建筑设计</a></li>
+					<li><a href="#">人文艺术</a></li>
+					<li><a href="#">数据图</a></li>
+					<li><a href="#">游戏</a></li>
+					<li><a href="#">汽车/摩托</a></li>
+					<li><a href="#">电影/图书</a></li>
+				</ul>
+				<ul class="">
+					<li><a href="#">生活百科</a></li>
+					<li><a href="#">教育</a></li>
+					<li><a href="#">运动</a></li>
+					<li><a href="#">搞笑</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<div class="footer_Bf">
+		<div class="footer_Bf_topL" >
+			<ul class="bottom_list">
+				<li>
+					<dl>
+						<dt><a href="#">花瓣首页</a></dt>
+						<dd><a href="#">花瓣采集工具</a></dd>
+						<dd><a href="#">花瓣官方博客</a></dd>
+					</dl>
+					<dl>
+						<dt>联系与合作</dt>
+						<dd><a href="#">联系我们</a></dd>
+						<dd><a href="#">用户反馈</a></dd>
+						<dd><a href="#">花瓣LOGO标志文档</a></dd>
+					</dl>
+					<dl>
+						<dt>移动客户端</dt>
+						<dd><a href="#">花瓣iPhone版</a></dd>
+						<dd><a href="#">花瓣Android版</a></dd>
+						<dd><a href="#">花瓣HD</a></dd>
+					</dl>
+				</li>
+			</ul>
+		</div>
+		<div class="footer_Bf_topR" >
+			<p class="title">关注我们</p>
+			<p><a href="#">新浪微博: @花瓣网</a></p>
+			<p>官方QQ: 188126952</p>
+			<p>官方微信: <img src="./images/footer_Bf_topR.png" alt=""><img class="code" src="./images/footer_Bf_topRimg.png" alt=""></p>
+		</div>
+		<div class="clear"></div>
+		<div class="footer_Bf_bottom">
+			<p>
+				© Huaban 杭州纬聚网络有限公司   |   <a href="#">浙公网安备 33010602001878号</a>
+			</p>
+		</div>
+
+	</div>
+</body>
+</html>

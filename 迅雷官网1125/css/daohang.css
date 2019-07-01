@@ -1,0 +1,169 @@
+/*导航条*/
+.header_top_father{
+	background: rgba(0, 0, 0, 0) url("../images/vip_index/bg_hd.png") repeat scroll 0 0;
+	width: 100%;
+	height: 70px;
+	opacity: 0.8;
+	min-width: 1200px;
+	position:fixed;
+	top: 0;
+	z-index: 110;
+	/*overflow: hidden;*/
+}
+.header_top_mian{
+	width: 1200px;
+	margin: 0 auto;
+	height: 70px;
+	position: relative;
+    z-index: 110;
+
+}
+.logo {   
+    margin: 15px 35px 0 0;
+    width: auto;
+    height: auto;
+    float: left;
+}
+.header_top_mian .logo a{
+	background-image: url("../images/vip_index/logo_hd_hv.png");
+	display: block;
+	width: 102px;
+	height: 40px;
+	position: relative;
+	line-height: 1111;
+    overflow: hidden;
+}
+.header_top_father .header_navin {
+    font-size: 14px;
+    padding: 16px 0 0;
+    float: right;
+}
+.header_top_father .header_navin li {
+    display: inline;
+    float: left;
+    margin-right: 30px;
+    position: relative;
+}
+.menu .mid_link {
+    border-radius: 0;
+    color: #fff;
+    padding-bottom: 17px;
+    transition: all 0.3s ease 0s;
+}
+.mid_link {
+    display: inline-block;
+    height: 37px;
+    line-height: 37px;
+    position: relative;
+    text-align: center;
+}
+.mid_link:hover{
+	color: #aaa;
+}
+.vip-usertop {
+    float: right;
+    font-size: 14px;
+    margin-left: -100px;
+    min-width: auto;
+    position: relative;
+    top: 0;
+}
+.vip-usertop .unlogin {
+    display: block;
+    margin: 16px 69px 0 0;
+}
+.vip-usertop .linkmag {
+    color: #fff;
+    display: block;
+    height: 39px;
+    line-height: 39px;
+    transition: all 0.3s ease 0s;
+}
+.unlogin .userimg {
+    background: rgba(0, 0, 0, 0) url("../images/vip_index/bg_base_spr24.png") no-repeat scroll -100px 0;
+    border: 2px solid #fff;
+    border-radius: 100%;
+    display: inline-block;
+    height: 35px;
+    margin-right: 10px;
+    vertical-align: middle;
+    width: 35px;
+}
+.vip-usertop .btn_wp {
+    background: rgba(0, 0, 0, 0) url("../images/vip_index/bg_base_spr24.png") no-repeat scroll 0 -100px;
+    height: 53px;
+    padding: 0 0 0 20px;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: 70px;
+    width: 243px;
+    transition: all 0.2s ease 0s;
+}
+.vip-usertop .t_nav_links {
+	background: #ffc52a none repeat scroll 0 0;
+    border-radius: 18px;
+    height: 36px;
+    line-height: 36px;
+    min-width: 85px;
+    padding: 0 20px;
+    transition: all 0.2s ease 0s;
+    color: #975500;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    display: inline-block;
+    position: relative;
+}
+.vip-usertop a:hover{
+	color: #aaa;
+}
+.vip-usertop span:hover{
+	background: rgba(0, 0, 0, 0) url("../images/vip_index/bg_base_spr24.png") no-repeat scroll -250px 0;
+}
+/*end*/
+/*二维码*/
+.p_getbom {
+    bottom: 0;
+    position: fixed;
+    right: 0;
+    width: 65px;
+    z-index: 11;
+}
+
+.p_getbom .goerwei {
+    background: rgba(0, 0, 0, 0) url("../images/vip_index/bg_basespr.png") no-repeat scroll -138px -65px;
+    display: block;
+    height: 65px;
+    margin-bottom: 3px;
+    overflow: hidden;
+    text-indent: -999em;
+    z-index: 100;
+}
+.p_getbom .gobacktop {
+    background: rgba(0, 0, 0, 0) url("../images/vip_index/bg_basespr.png") no-repeat scroll 0 -65px;
+    display: block;
+    height: 65px;
+    overflow: hidden;
+    text-indent: -999em;
+    z-index: 100;
+}
+.p_getbom .p_showma {
+    background: #fff none repeat scroll 0 0;
+    bottom: -6px;
+    box-shadow: 0 1px 4px rgba(12, 4, 7, 0.2);
+    padding: 8px 8px 7px;
+    position: absolute;
+    right: 65px;
+    text-align: center;
+    width: 120px;
+    margin: 0 -120px -120px 0;
+    opacity: 0;
+    transition: all 0.5s ease 0s;
+}
+.p_getbom .p_showma::after{
+    clear: both;
+    content: " ";
+    display: block;
+    height: 0;
+}

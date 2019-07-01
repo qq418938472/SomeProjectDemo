@@ -1,0 +1,574 @@
+
+
+.themebg_wp {
+    background: rgba(0, 0, 0, 0) url("../images/vip_index/bg.jpg") no-repeat scroll center bottom;
+    height: 960px;
+    min-width: 1200px;
+    position: absolute;
+    width: 100%;
+    z-index: 0;
+}
+.header_top {
+    position: relative;
+    z-index: 101;
+    margin-bottom: 40px;
+}
+
+.header_content{
+	margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    width: 1200px;
+}
+.carousel {
+    height: 540px;
+    position: relative;
+}
+.carousel li {
+    display: block;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+.carousel .img_wp {
+    display: block;
+    height: 100%;
+    margin: 0 auto;
+    width: 100%;
+}
+.img_wp img {
+    display: block;
+    width: 100%;
+}
+.carousel .pic_guide {
+    bottom: 5.56%;
+    font-size: 0;
+    left: 0;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    z-index: 10;
+}
+.pic_guide .dot::after {
+    background: #000 none repeat scroll 0 0;
+    bottom: 0;
+    content: "";
+    height: 2px;
+    left: 5px;
+    opacity: 0.4;
+    position: absolute;
+    transition: all 0.3s ease 0s;
+    width: 89%;
+}
+.pic_guide .dot {
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 13px;
+    height: 36px;
+    line-height: 36px;
+    position: relative;
+    transition: all 0.3s ease 0s;
+    vertical-align: middle;
+    width: 94px;
+}
+.pic_guide .dot.on, .pic_guide .dot:hover{
+    background: rgba(255, 255, 255, 0.2) none repeat scroll 0 0;
+}
+.pic_guide .dot.on::after, .pic_guide .dot:hover::after {
+    background-color: #fff;
+    left: 0;
+    opacity: 0.9;
+    width: 100%;
+ }
+
+.carousel .btn_arrow_wp a {
+   
+    height: 64px;
+    line-height: 64;
+    margin-top: 3px;
+    overflow: hidden;
+    position: absolute;
+    top: 50%;
+    width: 33px;
+    z-index: 2;
+}
+.carousel a.prev {
+	 background: rgba(0, 0, 0, 0) url("../images/vip_index/index_spr24.png") no-repeat scroll 0 0;
+    left: -114px;
+}
+.carousel a.next {
+	 background: rgba(0, 0, 0, 0) url("../images/vip_index/index_spr24.png") no-repeat scroll -150px 0;
+    right: -114px;
+}
+
+
+.mission_tabs li{
+	background: #ff464e none repeat scroll 0 0;
+    float: left;
+    height: 100px;
+    position: relative;
+    transition: all 0.3s ease 0s;
+    width: 20%;
+}
+.ico_lottery,.ico_signin,.ico_stamp,.ico_shop,.ico_crown{
+    background: rgba(0, 0, 0, 0) url("../img-y16/index/icons_normal.png") no-repeat scroll 0 0;
+    height: 80px;
+    left: 20px;
+    position: absolute;
+    top: 10px;
+    width: 80px;
+}
+.mission_tabs .ico_lottery{
+	background: rgba(0, 0, 0, 0) url("../images/vip_index/icons_normal.png") no-repeat scroll -100px 0px;
+}
+.mission_tabs .ico_signin{
+	background: rgba(0, 0, 0, 0) url("../images/vip_index/icons_normal.png") no-repeat scroll 0px 0px;
+}
+.mission_tabs .ico_stamp{
+	background: rgba(0, 0, 0, 0) url("../images/vip_index/icons_normal.png") no-repeat scroll -200px 0px;
+}
+.mission_tabs .ico_shop{
+	background: rgba(0, 0, 0, 0) url("../images/vip_index/icons_normal.png") no-repeat scroll -400px 0px;
+}
+.mission_tabs .ico_crown{
+	background: rgba(0, 0, 0, 0) url("../images/vip_index/icons_normal.png") no-repeat scroll -500px 0px;
+}
+.mission_tabs .item.on{
+	background: #fff;
+}
+
+.mission_tabs .item.on .tit {
+    color: #e41e27;
+}
+
+.mission_tabs li:hover{
+	background: #ff636a;
+}
+.mission_tabs .item.on .ico_lottery, .mission_tabs .item:hover .ico_lottery {
+    background-position: -100px -100px;
+}
+.mission_tabs .item.on .ico_signin, .mission_tabs .item:hover .ico_signin {
+    background-position: 0 -100px;
+}
+.mission_tabs .item.on .ico_stamp, .mission_tabs .item:hover .ico_stamp {
+    background-position: -200px -100px;
+}
+.mission_tabs .item.on .ico_shop, .mission_tabs .item:hover .ico_shop {
+    background-position: -400px -100px;
+}
+.mission_tabs .item.on .ico_crown, .mission_tabs .item:hover .ico_crown {
+    background-position: -500px -100px;
+}
+
+.mission_tabs .Ico {
+    display: block;
+    padding: 22px 0 0 110px;
+}
+.mission_tabs .tit {
+    color: #fff;
+    display: block;
+    font-size: 20px;
+}
+.mission_tabs .txt {
+    color: #ffbabd;
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+
+.mission_cont {
+    background: #fff none repeat scroll 0 0;
+    width: 100%;
+    height: 290px;
+    overflow: hidden;
+    position: relative;
+}
+.mission_area {
+    height: 100%;
+    position: relative;
+}
+.mission_wp {
+    line-height: 1.5;
+}
+.cashback_left::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 10.91%;
+    margin-left: -21.55%;
+    width: 43.1%;
+    height: 5%;
+    background: #d39f00;
+    border-radius: 6px;
+}
+.cashback_left {
+    float: left;
+    position: relative;
+    z-index: 2;
+    margin: 3.5% 2.92% 0 2.5%;
+    padding-top: 2.92%;
+    width: 19.33%;
+    height: 185px;
+    background: #fff5d6;
+    border-radius: 8px;
+}
+.cashback_left .coin {
+    background: rgba(0, 0, 0, 0) url("../images/vip_index/index_spr24.png") repeat scroll 0 -150px;
+    color: #a68400;
+    font: bold 24px/80px arial;
+    height: 80px;
+    left: 76px;
+    position: absolute;
+    text-align: center;
+    top: -9.4%;
+    width: 80px;
+    z-index: 1;
+}
+.cashback_left .cont {
+    position: relative;
+    z-index: 1;
+    padding-top: 8.62%;
+    background: #fff5d6;
+    text-align: center;
+}
+.cashback_left .money i {
+    font: 24px/1.5 arial;
+}
+.cashback_left .txt {
+    font-size: 12px;
+}
+.cashback_left .login{
+	color:red;
+}
+
+.cashback_left .money {
+    color: #e41e27;
+    font-weight: bold;
+    margin-left: 5px;
+}
+.cashback_left .btn_wp {
+    margin-top: 9.91%;
+}
+#get-cash-btn {
+    display: inline-block;
+    height: 41px;
+    line-height: 41px;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 21px;
+    background: #e41e27;
+    transition: background .2s;
+    text-align: center;
+    min-width: 103px;
+    padding: 0 20px;
+}
+
+.cashback_right {
+    float: left;
+    margin-top: 3.5%;
+    overflow: hidden;
+    width: 74.25%;
+}
+.cashback_right .func {
+    border: 1px solid #f3f3f3;
+    border-radius: 4px;
+    float: left;
+    height: 218px;
+    margin-right: 2.39%;
+    position: relative;
+    width: 30.64%;
+}
+.func .cont {
+    padding: 14.29% 0 0 7.33%;
+    position: relative;
+    z-index: 1;
+}
+.func .tit {
+    font-size: 24px;
+    margin-bottom: 5px;
+    height: auto;
+}
+.func .txt {
+    color: #8b8b8b;
+    width: 7.5em;
+}
+.func .link_go {
+    bottom: 0;
+    font-size: 18px;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+}
+.func .link_go span {
+    bottom: 24.31%;
+    font-size: 18px;
+    left: 7.33%;
+    position: absolute;
+    color: red;
+}
+.func::before {
+    background: rgba(0, 0, 0, 0) url("../images/vip_index/spr24_cashback.png") no-repeat scroll 0 0;
+    content: "";
+    height: 134px;
+    left: 45.42%;
+    position: absolute;
+    top: 17.89%;
+    transition: all 0.3s ease 0s;
+    width: 134px;
+}
+.func:nth-child(2)::before{
+	 background-position: -150px 0px;
+}
+.func:nth-child(3)::before{
+	 background-position: -300px 0px;
+}
+.mission_signin {
+    position: relative;
+    
+}
+.mission_signin .signin {
+    position: absolute;
+    left: 3.125%;
+    top: 11.03%;
+    width: 16.83%;
+    height: 79.31%;
+    background: #fff5d6;
+    border-radius: 6px;
+    text-align: center;
+}
+.signin .slogan {
+    margin-bottom: 7.43%;
+    height: 24.35%;
+    line-height: 4.4;
+    background: #fe8e0b;
+    border-radius: 6px 6px 0 0;
+    color: #fff;
+    font-size: 16px;
+}
+.signin .date_wp {
+    margin-bottom: 7.92%;
+}
+.mission_area {
+    height: 100%;
+    position: relative;
+}
+.awards_wp {
+    position: relative;
+    height: 100%;
+}
+.mission_exchange .awards_list, .mission_ticket .awards_list {
+    padding-top: 25px;
+}
+.awards_list .item {
+    width: 20%;
+    text-align: center;
+    float: left;
+    position: relative;
+}
+.awards_list .img_wp {
+    display: block;
+    margin: 0 auto 12px;
+    width: 170px;
+    height: 145px;
+    overflow: hidden;
+}
+.img_wp img {
+    width: 100%;
+    transition: 1s
+
+}
+.item .img_wp img:hover{
+    transform:scale(1.05,1.05);
+}
+.awards_list .item {
+    text-align: center;
+}
+.awards_list .item {
+    text-align: center;
+}
+.awards_list .tit_small {
+    font-size: 12px;
+}
+.c_gray {
+    color: #8b8b8b;
+}
+a.get-fuli {
+    display: inline-block;
+    width: 120px;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+    color: #dc0000;
+    border: 1px solid #e41e27;
+    border-radius: 17px;
+    transition: 0.2s;
+}
+a.get-fuli:hover{
+    background: red;
+    color: #fff;
+}
+.cont p{
+    height: auto;
+}
+.mission_area {
+    height: 100%;
+    position: relative;
+}
+.active_wp {
+    padding-top: 50px;
+}
+.active {
+    float: left;
+    position: relative;
+    margin-left: 2.5%;
+    width: 30%;
+    height: 190px;
+    background: #fff5d6;
+    border-radius: 5px;
+}
+.active .img_active {
+    position: absolute;
+    left: 10px;
+    bottom: 0;
+    width: 50%;
+}
+.active .img_active img {
+    display: block;
+    width: 100%;
+}
+.active .cont {
+    margin: 12.78% 0 0 58.33%;
+}
+.active .cont .tit {
+    margin-bottom: 2px;
+    width: 96%;
+    font-size: 16px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.active .cont .txt {
+    width: 96%;
+    font-size: 12px;
+    color: #8b8b8b;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+a.btn_trans {
+    display: inline-block;
+    width: 120px;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+    color: #dc0000;
+    border: 1px solid #e41e27;
+    border-radius: 17px;
+    transition: .2s;
+}
+.active .btn_trans {
+    margin-top: 17%;
+    width: 98px;
+}
+
+
+
+
+
+/*======================================================================================================*/
+
+.scnitem_1, .scnitem_3 {
+    text-align: right;
+}
+.scnitem {
+    height: 990px;
+    margin: 0 auto;
+    position: relative;
+    min-width: 1200px;
+    overflow: hidden;
+}
+
+.scnitem .img_scn {
+    left: 50%;
+    margin-left: -960px;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    max-width: 1920px;
+    min-width: 1200px;
+}
+
+.cont_scn {
+    font-size: 16px;
+    position: absolute;
+    top: 25.25%;
+    width: 100%;
+}
+.cont_scn .tex_hide {
+    background: rgba(0, 0, 0, 0) url("../images/vip_index/tex_spr.png") no-repeat scroll 0 0;
+    display: inline-block;
+    overflow: hidden;
+}
+.scnitem_1 .cont_scn, .scnitem_3 .cont_scn {
+    right: 6%;
+}
+.scnitem_2 .cont_scn{
+	left: 6%;
+}
+
+.scnitem_1 .tex_hide {
+    height: 200px;
+    width: 400px;
+}
+
+.cont_scn .btnwp {
+    padding-top: 20px;
+}
+
+.cont_scn .btn_trans {
+    border-radius: 26px;
+    font-size: 18px;
+    height: 50px;
+    line-height: 50px;
+    width: 170px;
+}
+a.btn_trans {
+    border: 1px solid #e41e27;
+    border-radius: 17px;
+    color: #dc0000;
+    display: inline-block;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+    transition: all 0.2s ease 0s;
+    width: 120px;
+}
+a.btn_trans:hover{
+	background: red;
+	color: #fff;
+}
+
+.scnitem_2 .tex_hide {
+    background-position: 0 -300px;
+    height: 200px;
+    width: 350px;
+}
+
+.cont_scn .btnwp {
+    padding-top: 20px;
+}
+
+.scnitem_3 .tex_hide {
+    background-position: 0 -600px;
+    height: 130px;
+    width: 450px;
+}
+
+

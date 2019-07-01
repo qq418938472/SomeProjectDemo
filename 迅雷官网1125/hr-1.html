@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>欢迎</title>
+		<link rel="stylesheet" type="text/css" href="css/hr-1-style.css" />
+		<script src="js/hr-3/angular.min.js"></script>
+		
+<script>
+var app = angular.module("myApp", []);
+app.controller("myCtrlone", function($scope) {
+    $scope.records1 = [
+    { 
+    	'name':"刘智聪",
+    	'job':"首席工程师",
+    	'p1':"Bolt界面引擎发明人",
+    	'p2':"2010年荣获迅雷网络首席工程师荣誉称号",
+    	'p3':'人物贡献',
+	 'txta':["2007年加入迅雷，Bolt界面引擎发明人，迅雷客户端架构师。目前迅雷所有Windows客户端产品都基于Bolt界面引擎开发，业界有超过100家公司使用该引擎开发自己的产品。刘智聪参与制订了迅雷大量的技术规范，是互联网下载、图像处理等多个领域的产品和技术专家。现致力于研究如何降低互联网应用的整体开发门槛，并让互联网更有效率。"],
+    },]
+    $scope.records2 = [
+    { 
+    	'name':"敬宓",
+    	'job':"首席工程师",
+    	'p1':"D C D N重要奠基人",
+    	'p2':"2010年荣获迅雷网络首席工程师荣誉称号",
+    	'p3':'人物贡献',
+	 'txta':["2013年加入迅雷，DCDN重要奠基人。他从零组建团队，根据大规模分布式理念改进 P2P 技术架构，运用数据分析与挖掘技术，结合学术产业界发展方向打造出众筹云计算的革命性产品——DCDN，实现了迅雷多年来的技术愿望。DCDN的横空出世不仅为公司带来了非常重要的技术动力和商业前景，也为社会贡献了不可估量的市场价值。"],
+    },]
+});
+
+</script>
+	</head>
+
+	<body ng-app="myApp">
+		<div class="wrap css3" id="wrap">
+			<!--页面内容 -->
+			<div class="wrapper">
+				<!--头部导航一层 -->
+				<div class="header">
+					<div class="head">
+						<div class="logo_box">
+							<h1 class="hide_txt"><a href="index.html" title="迅雷网络">迅雷网络<img src="img/hr-1/w_logo.png" alt="迅雷网络"></a></h1></div>
+						<div class="links_box">
+							<a  href="####" class="btn_join">加入我们</a>
+							<a  href="javascript:void(0);" class="btn_sound" id="btn_sound"></a>
+							<div class="nav_box">
+								<ul class="nav_list" id="nav_list">
+									<li>
+										<a href="hr-1.html">欢迎</a>
+									</li>
+									<li>
+										<!--<a href="hr-1.html">欢迎</a>-->
+									</li>
+									<li>
+										<a href="hr-2.html">校园招聘</a>
+									</li>
+									<li>
+										<a href="hr-3.html">校园大使</a>
+									</li>
+									<li>
+										<a href="hr-4.html">关于迅雷</a>
+									</li>
+								</ul>
+								<span class="ic_line" id="h_line" style="display: none; width: 32px; left: 18px;"></span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--头部内容二层 -->
+				<div class="top_sec show" id="top_sec" style="height: 700px;">
+					<span class="rpt_bg png"></span>
+					<div class="content">
+						<div class="title_box">
+							<span class="ic_light"></span>
+							<span class="ic_bird"></span>
+							<canvas width="1525" height="805" id="canvas" style="left: -565.5px;"></canvas>
+							<h2 class="hide_txt">遇见迅雷</h2>
+							<span class="txt_en1 png"></span>
+							<span class="txt_en2 png"></span>
+						</div>
+						<div class="key_box status_4" id="key_box">
+							<a href="javascript:;" class="key_1">
+								<span class="ic_key png">
+              <i class="ic_1"></i><i class="ic_2"></i><i class="ic_3"></i>
+            </span>
+								<span class="txt_key">正直</span>
+							</a>
+							<a href="javascript:;" class="key_2">
+								<span class="ic_key png">
+              <i class="ic_1"></i><i class="ic_2"></i><i class="ic_3"></i>
+            </span>
+								<span class="txt_key">开放</span>
+							</a>
+							<a href="javascript:;" class="key_3">
+								<span class="ic_key png">
+              <i class="ic_1"></i><i class="ic_2"></i><i class="ic_3"></i>
+            </span>
+								<span class="txt_key">创新</span>
+							</a>
+							<a href="javascript:;" class="key_4 hover">
+								<span class="ic_key png">
+              <i class="ic_1"></i><i class="ic_2"></i><i class="ic_3"></i>
+            </span>
+								<span class="txt_key">担当</span>
+							</a>
+							<a href="javascript:;" class="key_5">
+								<span class="ic_key png">
+              <i class="ic_1"></i><i class="ic_2"></i><i class="ic_3"></i>
+            </span>
+								<span class="txt_key">共赢</span>
+							</a>
+							<span class="line_1"></span>
+							<span class="line_2"></span>
+							<span class="line_3"></span>
+							<span class="line_4"></span>
+						</div>
+						<div class="xiu_box">
+							<span class="ic_1 png"></span>
+							<span class="ic_2 png"></span>
+							<span class="ic_3 png">嗅探<br>职位</span>
+						</div>
+						<div class="job_box">
+							<div class="search_box">
+								<input class="JSsearch" placeholder="请输入岗位" type="text">
+								<i class="JSplaceholder" style="display:none;position:absolute;top:4px;font-size:14px;left:6px;color:#fff;">请输入岗位</i>
+								<a href="####" class="btn_search hide_txt png" title="搜索">搜索</a>
+							</div>
+							<div class="classify_box" id="classify_box">
+								<div class="job_feed job_js job_4">
+									<p class="job_tt">
+										<a href="####"><i class="ic_rd png"></i><i class="ic_job png"></i>技术族</a>
+									</p>
+									<div class="sub_box">
+										<ul class="sub_list">
+											<li>
+												<a href="####">开发类</a>
+											</li>
+											<li>
+												<a href="####">测试类</a>
+											</li>
+											<li>
+												<a href="####">设计类</a>
+											</li>
+											<li>
+												<a href="####">运维类</a>
+											</li>
+										</ul>
+										<span class="sub_bg"><span class="ic_arr"><i></i></span></span>
+									</div>
+								</div>
+								<div class="job_feed job_cp job_2">
+									<p class="job_tt">
+										<a href="####"><i class="ic_rd png"></i><i class="ic_job png"></i>产品族</a>
+									</p>
+									<div class="sub_box">
+										<ul class="sub_list">
+											<li>
+												<a href="####">运营类</a>
+											</li>
+											<li>
+												<a href="####">产品类</a>
+											</li>
+										</ul>
+										<span class="sub_bg"><span class="ic_arr"><i></i></span></span>
+									</div>
+								</div>
+								<div class="job_feed job_yx job_3">
+									<p class="job_tt">
+										<a href="####"><i class="ic_rd png"></i><i class="ic_job png"></i>营销族</a>
+									</p>
+									<div class="sub_box">
+										<ul class="sub_list">
+											<li>
+												<a href="####">销售类</a>
+											</li>
+											<li>
+												<a href="####">市场类</a>
+											</li>
+											<li>
+												<a href="####">商务类</a>
+											</li>
+										</ul>
+										<span class="sub_bg"><span class="ic_arr"><i></i></span></span>
+									</div>
+								</div>
+								<div class="job_feed job_zy job_4">
+									<p class="job_tt">
+										<a href="####"><i class="ic_rd png"></i><i class="ic_job png"></i>专业族</a>
+									</p>
+									<div class="sub_box">
+										<ul class="sub_list">
+											<li>
+												<a href="####">人力资源类</a>
+											</li>
+											<li>
+												<a href="####">行政类</a>
+											</li>
+											<li>
+												<a href="####">其他类</a>
+											</li>
+											<li>
+												<a href="####">投资类</a>
+											</li>
+										</ul>
+										<span class="sub_bg"><span class="ic_arr"><i></i></span></span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<a href="javascript:;" class="page_down" title="往下" id="page_down"></a>
+					</div>
+				</div>
+				<!--中间主体内容 -->
+				<div class="main_sec" ng-controller="myCtrlone">
+					<div class="content">
+						<div class="brief_wp">
+							<div class="brief_cont JSoneImgCon">
+								<ul style="left: -995.012px;">
+									<li style="left:0">
+										<p class="brief_tt"><span class="txt_tt"><i class="ic_brief png"></i>技术创新</span></p>
+										<p class="txt_brief">迅雷率先并创新地实现了P2SP技术，建立了超过60亿条的全球最大的进制文件索引库，并吸引了超过3亿的互联网用户使用我们的产品</p>
+									</li>
+									<li style="left:1000px;">
+										<p class="brief_tt"><span class="txt_tt"><i class="ic_brief png"></i>数据导向</span></p>
+										<p class="txt_brief">应对“海量”和“实时”，从无限可能的维度组合里找到有效的数据，并理解产品的商业模式和用户的行为模式</p>
+									</li>
+									<li style="left:2000px;">
+										<p class="brief_tt"><span class="txt_tt"><i class="ic_brief png"></i>平等沟通</span></p>
+										<p class="txt_brief">what you think is what you talk，直截了当地表达是最有效的沟通，无论是你对于事物对错的看法，还是具体的实施建议</p>
+									</li>
+									<li style="left:3000px;">
+										<p class="brief_tt"><span class="txt_tt"><i class="ic_brief png"></i>自我管理</span></p>
+										<p class="txt_brief">简单做人，积极做事</p>
+									</li>
+								</ul>
+							</div>
+							<div class="btns_box JSoneIndexCon">
+								<a href="javascript:;" class="png"></a>
+								<a href="javascript:;" class="png cur"></a>
+								<a href="javascript:;" class="png"></a>
+								<a href="javascript:;" class="png"></a>
+							</div>
+							<a href="javascript:;" class="btn_prev JSonePre"></a>
+							<a href="javascript:;" class="btn_next JSoneNext"></a>
+						</div>
+						<div class="introduce_wp" ng-repeat="x in records1">
+							<div class="introduce_box txt_right show">
+								<div class="face_box">
+									<p class="txt_name">{{x.name}}</p>
+									<p class="txt_tag">{{x.job}}</p>
+									<img src="images/hr-1/lzc.png" alt="刘智聪" class="png">
+								</div>
+								<div class="text_box">
+									<div class="tt_box">
+										<p class="txt_tt">{{x.p1}}</p>
+										<div>
+											<p class="txt_honor"><i class="ic_honor png"></i>{{x.p2}}</p>
+										</div>
+									</div>
+									<div class="cont_box">
+										<p class="txt_gx">{{x.p3}}</p>
+										<p ng-repeat="z in x.txta" class="txt_intr">{{z}}</p>
+									</div>
+								</div>
+							</div>
+							<div class="introduce_box txt_left show" ng-repeat="x in records1">
+								<div class="face_box">
+									<p class="txt_name">{{x.name}}</p>
+									<p class="txt_tag">{{x.job}}</p>
+									<img src="images/hr-1/jm.png" alt="敬宓" class="png">
+								</div>
+								<div class="text_box">
+									<div class="tt_box">
+										<p class="txt_tt">{{x.p1}}</p>
+										<div>
+											<p class="txt_honor"><i class="ic_honor png"></i>{{x.p2}}</p>
+										</div>
+									</div>
+									<div class="cont_box">
+										<p class="txt_gx">{{x.p3}}</p>
+										<p ng-repeat="z in x.txta" class="txt_intr">{{z}}</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="pic_wp" id="pic_wp">
+							<div class="pic_area" isclick="true">
+								<div class="img_box ib_1">
+									<a href="javascript:;"><img src="images/hr-1/01s.jpg"><span class="mask"></span></a>
+								</div>
+								<div class="img_box ib_2">
+									<a href="javascript:;"><img src="images/hr-1/06.jpg"><span class="mask"></span></a>
+								</div>
+								<div class="img_box ib_3">
+									<a href="javascript:;"><img src="images/hr-1/08.jpg"><span class="mask"></span></a>
+								</div>
+								<div class="img_box ib_4">
+									<a href="javascript:;"><img src="images/hr-1/07.jpg"><span class="mask"></span></a>
+								</div>
+								<div class="img_box ib_5">
+									<a href="javascript:;"><img src="images/hr-1/13.jpg"><span class="mask"></span></a>
+								</div>
+								<div class="img_box ib_6">
+									<a href="javascript:;"><img src="images/hr-1/14.jpg"><span class="mask"></span></a>
+								</div>
+								<div class="tip_box tb_1">
+									<p class="txt_tip">与迅雷一起<span class="txt_en">Together</span></p>
+								</div>
+								<div class="tip_box tb_2">
+									<div class="JSthreeImgCon">
+										<ul class="tip_list">
+											<li class="">
+												<p class="txt_tip"><span class="arr_box"><i></i></span>我们愿意与最优秀的工程师一起平等沟通，自我管理，共同成长。<span class="txt_name">——Sean</span></p>
+											</li>
+											<li class="">
+												<p class="txt_tip"><span class="arr_box"><i></i></span>勇于探索互联网精神，创新与共享云计算未来。<span class="txt_name">——Lei chen</span></p>
+											</li>
+											<li class="show">
+												<p class="txt_tip"><span class="arr_box"><i></i></span>我们一直在追求一种偏执精神、追求极客。<span class="txt_name">——Steve</span></p>
+											</li>
+										</ul>
+									</div>
+									<div class="btns_box JSthreeIndexCon">
+										<a href="javascript:;" class=""></a>
+										<a href="javascript:;" class=""></a>
+										<a href="javascript:;" class="cur"></a>
+									</div>
+								</div>
+								<div class="txt_bg"></div>
+							</div>
+						</div>
+						<div class="boss_wp" style="display: none">
+							<div class="boss_tt">
+								<p class="txt_tt">
+									<em>我们的使命<i class="ic_arr"></i></em>
+									<span class="txt_mission">通过产品和技术创新，让互联网数据的分发、储存<br>和计算机像家庭水电一样，简单、易用和接近免费</span>
+								</p>
+							</div>
+							<div class="boss_cont">
+								<div class="boss_box">
+									<img src="images/hr-1/sean.jpg" alt="sean">
+									<div class="boss_brief">
+										<p class="txt_name"><em>SEAN</em><br>迅雷创始人,董事长兼CEO</p>
+										<p class="txt_brief">我们愿意与最优秀的工程师一起平等沟通，自我管理，共同成长</p>
+									</div>
+								</div>
+								<div class="boss_box">
+									<img src="images/hr-1/leichen.jpg" alt="LEI CHEN">
+									<div class="boss_brief">
+										<p class="txt_name"><em>Lei chen</em><br>迅雷联席CEO,网心科技公司CEO</p>
+										<p class="txt_brief">勇于探索互联网精神，创新与共享云计算未来</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="fuli_wp">
+							<h3 class="tt_bg">薪酬福利</h3>
+							<div class="fuli_list clearfix">
+								<ul>
+									<li class="xzfl">
+										<span class="ic_fuli"></span>
+										<h4>薪资福利</h4>
+										<p class="txt_fuli">固定工资（双周薪模式发放）+年底双薪+年度奖金+特殊项目奖金+长期激励</p>
+									</li>
+									<li class="ajfl">
+										<span class="ic_fuli"></span>
+										<h4>安居福利</h4>
+										<p class="txt_fuli">政府住房补贴+深圳户口+低息贷款+无息贷款</p>
+									</li>
+									<li class="jqfl">
+										<span class="ic_fuli"></span>
+										<h4>假期福利</h4>
+										<p class="txt_fuli">年假、法定节假日、病假、调休假、婚假、产假、看护假、哺乳假、丧假、人流假、工伤假等</p>
+									</li>
+									<li class="bzfl">
+										<span class="ic_fuli"></span>
+										<h4>保障福利</h4>
+										<p class="txt_fuli">员工班车+弹性工作制+优质的办公环境（大阳台、咖啡吧、健身器材、乒乓球桌、桌上足球）</p>
+									</li>
+									<li class="xxfl">
+										<span class="ic_fuli"></span>
+										<h4>休闲福利</h4>
+										<p class="txt_fuli">年度旅游+部门团建+每周三周五足球、篮球、羽毛球、游泳活动</p>
+									</li>
+									<li class="jkfl">
+										<span class="ic_fuli"></span>
+										<h4>健康福利</h4>
+										<p class="txt_fuli">免费早晚餐+年度全面健康体检+慰问及救助金+关爱大讲堂</p>
+									</li>
+									<li class="ghfl">
+										<span class="ic_fuli"></span>
+										<h4>关怀福利</h4>
+										<p class="txt_fuli">Family Day+端午节、女生节、中秋节等重大节日活动+生日关怀</p>
+									</li>
+									<li class="fdfl">
+										<span class="ic_fuli"></span>
+										<h4>法定福利</h4>
+										<p class="txt_fuli">五险一金+平安商业保险</p>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--底部内容 -->
+				<div class="bottom_sec">
+					<div class="content">
+						<div class="want_box">
+							<p class="txt_want hide_txt">I WANT YOU!</p>
+							<a href="job_list.html" class="btn_join">快来加入我们!</a>
+							<a href="javascript:void(0);" class="btn_totop" title="回到顶部"></a>
+							<div class="sys_footer">
+								<div class="foot">
+									<p class="links">
+										<a href="hr-4.html" title="关于迅雷">关于迅雷</a><span>|</span>
+										<a href="####" title="下载迅雷">下载迅雷</a><span>|</span>
+										<a href="####" title="加盟迅雷">加盟迅雷</a><span>|</span>
+										<a href="####" title="商务合作">商务合作</a><span>|</span>
+										<a href="####" title="客服中心">客服中心</a><span>|</span>
+										<a href="####" title="安全中心">安全中心</a><span>|</span>
+										<a href="####" title="用户协议">用户协议</a>
+									</p>
+									<p>
+										<a href="####">信息网络传播视听节目许可证1908323号</a>
+										<a href="####">增值电信业务经营许可证粤B2-20050219号</a>
+										<a href="####">网络文化经营许可证文网文[2010]163号</a> 粤ICP备10240715号</p>
+									<p>© 2003-2016 Xunlei.com 版权所有</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="pop_area JSpop_area" style="display: none;">
+					<div class="pop_pic">
+						<div class="pp_cur JStwoImgCon">
+							<ul>
+								<li class=""><img src="images/hr-1/01.jpg"></li>
+								<li class="show"><img src="images/hr-1/02.jpg"></li>
+								<li class=""><img src="images/hr-1/03.jpg"></li>
+								<li class=""><img src="images/hr-1/04.jpg"></li>
+								<li class=""><img src="images/hr-1/05.jpg"></li>
+								<li class=""><img src="images/hr-1/06.jpg"></li>
+								<li class=""><img src="images/hr-1/07.jpg"></li>
+								<li class=""><img src="images/hr-1/08.jpg"></li>
+								<li class=""><img src="images/hr-1/09.jpg"></li>
+								<li class=""><img src="images/hr-1/10.jpg"></li>
+								<li class=""><img src="images/hr-1/11.jpg"></li>
+								<li class=""><img src="images/hr-1/12.jpg"></li>
+								<li class=""><img src="images/hr-1/13.jpg"></li>
+								<li class=""><img src="images/hr-1/14.jpg"></li>
+								<li class=""><img src="images/hr-1/15.jpg"></li>
+								<li class=""><img src="images/hr-1/16.jpg"></li>
+							</ul>
+						</div>
+						<div class="pp_small">
+							<div class="small_wp JStwoIndexCon">
+								<a href="javascript:void(0);" class="" style="display: block;"><img src="images/hr-1/01.jpg"><span class="mask"></span></a>
+								<a href="javascript:void(0);" class="cur" style="display: block;"><img src="images/hr-1/02.jpg"><span class="mask"></span></a>
+								<a href="javascript:void(0);" style="display: block;" class=""><img src="images/hr-1/03.jpg"><span class="mask"></span></a>
+								<a href="javascript:void(0);" style="display: block;" class=""><img src="images/hr-1/04.jpg"><span class="mask"></span></a>
+								<a href="javascript:void(0);" style="display: none;" class=""><img src="images/hr-1/05.jpg"><span class="mask"></span></a>
+								<a href="javascript:void(0);" style="display: none;" class=""><img src="images/hr-1/06.jpg"><span class="mask"></span></a>
+								<a href="javascript:void(0);" style="display: none;" class=""><img src="images/hr-1/07.jpg"><span class="mask"></span></a>
+								<a href="javascript:void(0);" style="display: none;" class=""><img src="images/hr-1/08.jpg"><span class="mask"></span></a>
+								<a href="javascript:void(0);" style="display: none;" class=""><img src="images/hr-1/09.jpg"><span class="mask"></span></a>
+								<a href="javascript:void(0);" style="display: none;" class=""><img src="images/hr-1/10.jpg"><span class="mask"></span></a>
+								<a href="javascript:void(0);" style="display: none;" class=""><img src="images/hr-1/11.jpg"><span class="mask"></span></a>
+								<a href="javascript:void(0);" style="display: none;" class=""><img src="images/hr-1/12.jpg"><span class="mask"></span></a>
+								<a href="javascript:void(0);" style="display: none;" class=""><img src="images/hr-1/13.jpg"><span class="mask"></span></a>
+								<a href="javascript:void(0);" style="display: none;" class=""><img src="images/hr-1/14.jpg"><span class="mask"></span></a>
+								<a href="javascript:void(0);" style="display: none;" class=""><img src="images/hr-1/15.jpg"><span class="mask"></span></a>
+								<a href="javascript:void(0);" style="display: none;" class=""><img src="images/hr-1/16.jpg"><span class="mask"></span></a>
+							</div>
+						</div>
+						<a href="javascript:;" class="btn_prev png JStwoPrev"></a>
+						<a href="javascript:;" class="btn_next png JStwoNext"></a>
+						<a href="javascript:;" class="btn_close png JSbtnclose" title="关闭"></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 页面声音-->
+		<div style="display:none">
+			<audio src="music/bg.mp3" id="m_bg" loop=""></audio>
+			<audio src="music/bird.mp3" id="m_bird"></audio>
+			<audio src="music/job_eft.mp3" id="m_job"></audio>
+			<audio src="music/key.mp3" id="m_key"></audio>
+		</div>
+
+		<script src="js/jquery-1.8.3.min.js"></script>
+		<script src="js/hr-1/canvas.js"></script>
+		<script src="js/hr-1/index.min.js"></script>
+		
+		<script>
+			(function() {
+				var wrap = document.getElementById("wrap");
+				var isCss3 = function() {
+					var style = document.createElement("div").style;
+					for(var k in style) {
+						if(k.toLowerCase().indexOf("animation") >= 0)
+							return true;
+					}
+					return false;
+				}();
+
+				/*首屏自适应高度*/
+				var topSec = document.getElementById("top_sec");
+				var picWp = document.getElementById("pic_wp");
+				var ww, wh;
+				var resize = function() {
+					wh = document.documentElement ? document.documentElement.clientHeight : document.body.clientHeight;
+					ww = document.documentElement ? document.documentElement.clientWidth : document.body.clientWidth;
+					if(isCss3) {
+						var zoom = getComputedStyle(wrap).zoom;
+						if(zoom)
+							wh /= zoom;
+					}
+					wh = Math.min(Math.max(wh, 700), 1080);
+					topSec.style.height = wh + "px";
+					topSec.className = "top_sec show";
+					if(ww < 1536)
+						picWp.className = "pic_wp small_pic";
+					else
+						picWp.className = "pic_wp";
+				}
+				resize();
+				window.onresize = resize;
+
+				/*往下翻按钮*/
+				var pageDown = document.getElementById("page_down");
+				$(pageDown).click(function() {
+					$("html,body").animate({
+						scrollTop: wh
+					}, 500);
+				});
+
+				/*css3动效*/
+				if(isCss3) {
+					/*标题及星星动效*/
+					var ie = new indexEffect();
+					ie.init();
+
+					/*音效处理*/
+					var myPlay = function(m) {
+						if(isSound) {
+							if(m.paused || m.ended) {
+								m.play();
+							} else {
+								m.currentTime = 0;
+							}
+						}
+					}
+					var isSound = true;
+					var mBg = document.getElementById("m_bg");
+					mBg.src = "music/bg.mp3";
+					mBg.loop = true;
+					mBg.play();
+
+					var mBird = document.getElementById("m_bird");
+					mBird.addEventListener("canplay", function() {
+						ie.start();
+						this.play();
+					}, false);
+					mBird.src = "music/bird.mp3";
+
+					var mJob = document.getElementById("m_job");
+					mJob.src = "music/job_eft.mp3";
+					var jobBtns = document.getElementById("classify_box").getElementsByClassName("job_feed");
+					for(var i = 0; i < jobBtns.length; i++) {
+						jobBtns[i].addEventListener("mouseenter", function() {
+							myPlay(mJob);
+						}, false)
+					}
+
+					var mKey = document.getElementById("m_key");
+					mKey.src = "music/key.mp3";
+
+					var btnSound = document.getElementById("btn_sound");
+					btnSound.addEventListener("click", function() {
+						if(isSound) {
+							isSound = false;
+							this.className = "btn_sound btn_no_sound";
+							mBg.pause();
+							if(!mBird.ended)
+								mBird.pause();
+						} else {
+							isSound = true;
+							this.className = "btn_sound";
+							mBg.play();
+						}
+					}, false);
+					/*头部导航下划线*/
+					var navList = document.getElementById("nav_list"),
+						navLinks = navList.getElementsByTagName("a"),
+						hLine = document.getElementById("h_line");
+					var ws = [32, 64, 64, 64, 64],
+						ls = [18, 86, 186, 286, 386];
+					for(var i = 0; i < navLinks.length; i++) {
+						navLinks[i].addEventListener("mouseenter", function(i) {
+							return function() {
+								hLine.style.display = "block";
+								hLine.style.width = ws[i] + "px";
+								hLine.style.left = ls[i] + "px";
+							}
+						}(i), false);
+					}
+					navList.addEventListener("mouseleave", function() {
+						hLine.style.display = "none";
+					}, false);
+
+					/*首屏关键词动效*/
+					wrap.className = wrap.className + " css3";
+					var keyBox = document.getElementById("key_box");
+					var keys = keyBox.getElementsByTagName("a");
+					var curKey = -1;
+					var keyAni = function(i) {
+						keyBox.className = "key_box status_" + i;
+					}
+					var keyHover = function() {
+						if(keys[curKey])
+							keys[curKey].className = "key_" + (curKey + 1);
+						curKey = (curKey + 1) % keys.length;
+						keyAni(curKey + 1)
+						keys[curKey].className = keys[curKey].className + " hover";
+					}
+					keyHover();
+					var keyTimer = setInterval(keyHover, 3200);
+					for(var i = 0, len = keys.length; i < len; i++) {
+						keys[i].addEventListener("mouseenter", function(i) {
+							return function() {
+								//音效
+								myPlay(mKey);
+								keyAni(i + 1);
+								clearInterval(keyTimer);
+								if(keys[curKey])
+									keys[curKey].className = "key_" + (curKey + 1);
+								curKey = i;
+							}
+						}(i), false);
+						keys[i].addEventListener("mouseleave", function() {
+							keyBox.className = "key_box";
+							keyHover();
+							keyTimer = setInterval(keyHover, 3200);
+						}, false);
+					}
+
+				}
+			})()
+		</script>
+
+	</body>
+
+</html>

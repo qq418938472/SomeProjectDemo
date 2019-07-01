@@ -1,0 +1,711 @@
+/* 
+* @Author: Marte
+* @Date:   2016-11-30 21:05:48
+* @Last Modified by:   Marte
+* @Last Modified time: 2016-12-07 13:54:31
+*/
+header{
+    width: 100%;
+    min-width: 1200px;
+    height: 62px;
+    background:#262529;
+    position: relative;
+}
+.hd_content{
+    font-size: 14px;
+    margin:0 auto;
+    position: relative;
+    width:1200px;
+    color: #333;
+}
+.logo{
+    float:left;
+    height:62px;
+    width:187px;
+}
+.nav{
+    padding-top: 25px;
+    float: left;
+}
+.nav li{
+    float:left;
+    display: inline-block;
+    margin:0 16px;
+    position:relative;
+}
+.nav li a{
+    color:#eee;
+}
+.nav li a:hover{
+    color:#2a87ef;
+}
+.nav_right{
+    float:right;
+    padding-top:19px;
+
+}
+.nav_right a{
+    color:#eee;
+}
+.nav_button1{
+    background-color: #262529;
+    color: #eee;
+    border:1px solid #2a87ef;
+    border-radius: 3px;
+    display:inline-block;
+    font-size: 14px;
+    line-height: 28px;
+    margin-left: 12px;
+    text-align: center;
+    width:80px;
+}
+.nav_button1:hover{
+    background:#2a87ef;
+}
+/*=====================导航栏结束=================*/
+.particles{
+    background: rgba(0, 0, 0, 0) url("../img/liveBeta/beta_banner.jpg") no-repeat scroll center top;
+    height: 664px;
+    position: relative;
+}
+.particles_txt{
+    margin:170px 0 0 -600px;
+    width:419px;
+    position:absolute;
+    left:50%;
+    top: 0;
+}
+.particles_txt h1{
+    background: rgba(0, 0, 0, 0) url("../img/liveBeta/beta_title.png") no-repeat scroll 0 0;
+    height: 77px;
+    left: 30px;
+    overflow: hidden;
+    width:419px;
+}
+.particles_txt a{
+    background-color: #02adea;
+    color: #fff;
+    font-size: 22px;
+    height: 60px;
+    left: 80px;
+    line-height: 60px;
+    position: absolute;
+    text-align: center;
+    top: 230px;
+    width: 260px;
+    border-radius: 4px;
+}
+.particles_txt a:hover{
+    background-color: #00bcff;
+}
+.content{
+    min-width: 1200px;
+    width: 100%;
+}
+.beta-box{
+    font-size: 14px;
+    margin: 0 auto;
+    position: relative;
+    width: 1200px;
+    padding: 70px 0;
+}
+.beta-odd .beta-box h3{
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+}
+.beta-txtbox{
+    color: #2c2c35;
+    font-size: 14px;
+    line-height: 2.2;
+    margin-top: 40px;
+    padding: 20px 30px;
+    position: relative;
+}
+.i-frame-left{
+    width: 16px;
+    height: 94px;
+    margin-top: -47px;
+    position: absolute;
+    top: 50%;
+    background:url("../img/liveBeta/spr_beta.png") no-repeat;
+    background-position: -250px -300px;
+    left:0;
+}
+.i-frame-right{
+    width: 16px;
+    height: 94px;
+    margin-top: -47px;
+    position: absolute;
+    top: 50%;
+    background:url("../img/liveBeta/spr_beta.png") no-repeat;
+    background-position: -275px -300px;
+    right:0;
+}
+/*==========================第一块开始==================*/
+.beta-even{
+    background:#f7fafc;
+}
+.beta-even .beta-box{
+    padding:0;
+}
+.beta-even .beta-txtpic{
+    font-size: 16px;
+    line-height: 1.8;
+    padding: 160px 0 160px 580px;
+    position: relative;
+}
+.beta-even h3{
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    white-space: nowrap;
+}
+.beta-picbox{
+    height: 220px;
+    left: 0;
+    margin-top: -110px;
+    width: 500px;
+    position: absolute;
+    top: 50%;
+}
+.i-live-1,.i-live-2,.i-live-3,.i-live-4,.i-live-5{
+    background: rgba(0, 0, 0, 0) url("../img/liveBeta/live.png") no-repeat scroll 0 0;
+    height: 220px;
+    position: absolute;
+    top: 0;
+}
+.beta-picbox .i-live-1{
+    background-position: 0 0;
+    left:0;
+    width:85px;
+    animation: 0.3s linear 0s normal both 1 paused easeIn1;
+}
+.beta-picbox .i-live-2 {
+    background-position: -85px 0;
+    left: 85px;
+    width: 40px;
+    animation: 0.3s linear 0.1s normal both 1 paused easeIn2;
+}
+.beta-picbox .i-live-3 {
+    background-position: -125px 0;
+    left: 125px;
+    width: 110px;
+    animation: 0.3s linear 0.2s normal both 1 paused easeIn3;
+}
+.beta-picbox .i-live-4 {
+    background-position: -235px 0;
+    left: 235px;
+    width: 96px;
+    animation: 0.3s linear 0.4s normal both 1 paused easeIn4;
+}
+.beta-picbox .i-live-5 {
+    background-position: -331px 0;
+    left: 331px;
+    width: 169px;
+    animation: 0.3s linear 0.6s normal both 1 paused easeIn5;
+}
+.i-live-5-bg{
+    background-color: #dadbdc;
+    height: 3px;
+    left: 30px;
+    overflow: hidden;
+    position: absolute;
+    top: 105px;
+    width: 106px;
+}
+.i-live-5-lvl {
+    background-color: #53b481;
+    display: block;
+    height: 3px;
+    width: 106px;
+    animation: 1.5s linear 1.2s normal both infinite running widthAni;
+}
+@-webkit-keyframes easeIn1{0% { left:-25px; opacity: 0.0;}100% { left:0px; opacity: 1;}}
+@-webkit-keyframes easeIn2{0% { left:60px; opacity: 0.0;}100% { left:85px; opacity: 1;}}
+@-webkit-keyframes easeIn3{0% { left:100px; opacity: 0.0;}100% { left:125px; opacity: 1;}}
+@-webkit-keyframes easeIn4{0% { left:200px; opacity: 0.0;}100% { left:235px; opacity: 1;}}
+@-webkit-keyframes easeIn5{0% { left:306px; opacity: 0.0;}100% { left:331px; opacity: 1;}}
+@-webkit-keyframes widthAni {
+    0% { width:0px ;}
+    100% { width:106px ;}
+}
+@-moz-keyframes widthAni {
+    0% { width:0px ;}
+    100% { width:106px ;}
+}
+@-ms-keyframes widthAni {
+    0% { width:0px ;}
+    100% { width:106px ;}
+}
+@-o-keyframes widthAni ;{
+    0% { width:0px ;}
+    100% { width:106px ;}
+}
+@keyframes widthAni {
+    0% { width:0px ;}
+    100% { width:106px; }
+}
+.beta-txtpic{
+    font-size: 16px;
+    line-height: 1.8;
+    padding: 170px 0;
+    position: relative;
+}
+/*===========================第二块开始=================*/
+.beta-odd .beta-txtpic{
+    padding-left: 0;
+    padding-right: 580px;
+}
+.beta-odd .beta-txtpic h3{
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    white-space: nowrap;
+    text-align: left;
+}
+.beta-txt, .beta-txtpic {
+    font-size: 16px;
+    line-height: 1.8;
+}
+.beta-box2{
+    font-size: 14px;
+    margin: 0 auto;
+    position: relative;
+    width: 1200px;
+    padding: 0;
+}
+.beta-box2 .beta-picbox-2 {
+    background: rgba(0, 0, 0, 0) url("../img/liveBeta/experience.png") no-repeat scroll 0 0;
+    height: 360px;
+    margin-top: -160px;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 446px;
+}
+.beta-picbox-2 i{
+    background:rgba(0, 0, 0, 0) url("../img/liveBeta/spr_beta.png") no-repeat scroll;
+}
+.beta-picbox-2 .i-exp-1 {
+    transform: scale(1.1);
+    background-position: 0 0;
+    height: 100px;
+    left: 30px;
+    position: absolute;
+    top: 175px;
+    width: 100px;
+    animation: 0.3s linear 0.1s normal both 1 paused scaleIn;
+}
+@keyframes scaleIn{
+    0%{transform: scale(0.5);opacity:0;}
+    50%{transform: scale(1.1);}
+    100%{transform: scale(1);opacity:1;}
+}
+.beta-picbox-2 .i-exp-2 {
+    background-position: -100px 0;
+    height: 75px;
+    left: 145px;
+    position: absolute;
+    top: 240px;
+    width: 75px;
+    animation: 0.3s linear 0.2s normal both 1 paused scaleIn;
+}
+.beta-picbox-2 .i-exp-3 {
+    background-position: -175px 0;
+    height: 50px;
+    left: 305px;
+    position: absolute;
+    top: 270px;
+    width: 50px;
+    animation: 0.3s linear 0.3s normal both 1 paused scaleIn;
+}
+.beta-picbox-2 .i-exp-4 {
+    background-position: -225px 0;
+    height: 75px;
+    left: 355px;
+    position: absolute;
+    top: 120px;
+    width: 75px;
+    animation: 0.3s linear 0.4s normal both 1 paused scaleIn;
+}
+.beta-picbox-2 .i-exp-5 {
+    background-position: -175px -50px;
+    height: 50px;
+    left: 265px;
+    position: absolute;
+    top: 24px;
+    width: 50px;
+    animation: 0.3s linear 0.5s normal both 1 paused scaleIn;
+}
+.beta-picbox-2 .i-exp-6 {
+    background-position: -300px 0;
+    height: 100px;
+    left: 180px;
+    position: absolute;
+    top: -70px;
+    width: 100px;
+    animation: 0.3s linear 0.6s normal both 1 paused scaleIn;
+}
+.beta-picbox-2 .i-exp-7 {
+    background-position: -400px 0;
+    height: 50px;
+    left: 160px;
+    position: absolute;
+    top: 50px;
+    width: 50px;
+    animation: 0.3s linear 0.7s normal both 1 paused scaleIn;
+}
+.beta-picbox-2 .i-exp-cdn {
+    background-position: 0 -100px;
+    height: 125px;
+    left: 170px;
+    position: absolute;
+    top: 90px;
+    width: 175px;
+    animation: 0.3s linear 0s normal both 1 paused scaleIn;
+}
+/*=====================================第三块开始=======================*/
+.beta-txtpic .beta-picbox-3 {
+    background: rgba(0, 0, 0, 0) url("../img/liveBeta/protect.png") no-repeat scroll 0 0;
+    height: 330px;
+    left: 120px;
+    margin-top: -165px;
+    width: 330px;
+    -webkit-animation: 0.5s linear 0s normal both 1 paused opcIn;
+}
+@keyframes opcIn{
+    0%{opacity:0;}
+    100%{opacity:1;}
+}
+.beta-rotatebox{
+    height: 330px;
+    position: relative;
+    width: 330px;
+    animation: 20s linear 1.2s normal both infinite paused rotateAni;
+}
+@keyframes rotateAni{
+    100%{
+        transform:rotate(360deg);
+    }
+}
+.i-protect-1, .i-protect-2, .i-protect-3, .i-protect-4 {
+    background:rgba(0, 0, 0, 0) url("../img/liveBeta/spr_beta.png") no-repeat scroll 0 0;
+    height: 100px;
+    position: absolute;
+    width: 100px;
+    animation: 20s linear 1.2s normal both infinite paused rotateAni2;
+}
+@keyframes rotateAni2{
+    100%{
+        transform:rotate(-360deg);
+    }
+}
+.i-protect-1{
+    background-position: -200px -100px;
+    left: 50%;
+    margin-left: -50px;
+    top: -50px;
+}
+.i-protect-2 {
+    background-position: -300px -200px;
+    left: -50px;
+    margin-top: -50px;
+    top: 50%;
+}
+.i-protect-3 {
+    background-position: -200px -200px;
+    bottom: -50px;
+    left: 50%;
+    margin-left: -50px;
+}
+.i-protect-4 {
+    background-position: -300px -100px;
+    margin-top: -50px;
+    right: -50px;
+    top: 50%;
+}
+/*===============================第四块开始===========================*/
+.beta-picbox-4 {
+    background: rgba(0, 0, 0, 0) url("../img/liveBeta/compare.png") no-repeat scroll 0 0;
+    font-size: 14px;
+    font-weight: bold;
+    height: 165px;
+    margin-top: -30px;
+    white-space: nowrap;
+    width: 465px;
+    position: absolute;
+    top: 50%;
+    right: 100px;
+    animation: 1s linear 0s normal both 1 paused opcIn;
+}
+.i-compare-1 em, .i-compare-2 em, .i-compare-3 em {
+    color: #fff;
+    display: inline-block;
+    font-size: 28px;
+    font-weight: bold;
+    height: 100px;
+    line-height: 80px;
+    margin-right: -20px;
+    text-align: center;
+    vertical-align: bottom;
+    width: 75px;
+    background:rgba(0, 0, 0, 0) url("../img/liveBeta/spr_beta.png") no-repeat scroll 0 0;
+}
+.i-compare-1 em {
+    background-position: 0 -300px;
+    animation: 1s linear 1s alternate both infinite paused floatAni;
+}
+.i-compare-2 em {
+    background-position: -75px -300px;
+    animation: 1s linear 1.2s alternate both infinite paused floatAni;
+}
+.i-compare-3 em {
+    background-position: -150px -300px;
+}
+.i-compare-1 {
+    left: 56px;
+    position: absolute;
+    top: -98px; 
+}
+.i-compare-2 {
+    left: 224px;
+    position: absolute;
+    top: -45px;  
+}
+@keyframes floatAni{
+    100%{
+        transform:translateY(-10px);
+    }
+}
+.i-compare-3 {
+    left: 391px;
+    position: absolute;
+    top: -10px;
+}
+/*=========================第五块开始=====================*/
+.beta-picbox-5 {
+    background: rgba(0, 0, 0, 0) url("../img/liveBeta/multy.png") no-repeat scroll 0 0;
+    height: 305px;
+    left: 40px;
+    margin-top: -150px;
+    width: 475px;
+    animation: 1s linear 0s normal both 1 paused opcIn;
+}
+.i-beta-file, .i-beta-file-sml {
+    background: rgba(0, 0, 0, 0) url("../img/liveBeta/spr_beta.png") no-repeat scroll 0 0;
+    overflow: hidden;
+}
+.i-beta-file {
+    background-position: 0 -225px;
+    color: #fff;
+    font-size: 14px;
+    height: 32px;
+    line-height: 32px;
+    padding-top: 18px;
+    position: absolute;
+    text-align: center;
+    top: 142px;
+    width: 75px;
+}
+.i-beta-file-1 {
+    left: 34px;
+    animation: 1s linear 1s alternate both infinite paused floatAni;
+}
+.i-beta-file-2 {
+    left: 200px;
+    animation: 1s linear 1.2s alternate both infinite paused floatAni;
+}
+.i-beta-file-3 {
+    font-size: 12px;
+    left: 370px;
+    animation: 1s linear 1.4s alternate both infinite paused floatAni;
+}
+.i-beta-file-4 {
+    left: 130px;
+}
+.i-beta-file-sml {
+    background-position: -75px -225px;
+    height: 50px;
+    position: absolute;
+    top: 180px;
+    width: 50px;
+}
+.i-beta-file-5 {
+    left: 300px;
+}
+.i-beta-file-sml {
+    background-position: -75px -225px;
+    height: 50px;
+    position: absolute;
+    top: 180px;
+    width: 50px;
+}
+.beta-example {
+    background-color: #036;
+    color: #fff;
+}
+.beta-ban, .beta-unit {
+    min-width: 1200px;
+    width: 100%;
+}
+.main {
+    font-size: 14px;
+    margin: 0 auto;
+    position: relative;
+    width: 1200px;
+}
+.beta-example .beta-txt {
+    padding: 60px 20px 30px;
+}
+.beta-txt, .beta-txtpic {
+    font-size: 16px;
+    line-height: 1.8;
+    padding: 160px 0;
+    position: relative;
+}
+.beta-example .beta-txt h3 {
+    font-size: 36px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+.clearfix::after {
+    clear: both;
+    content: "​";
+    display: block;
+    height: 0;
+}
+.beta-example-list {
+    border-top: 1px solid #1a4876;
+    margin-bottom: 30px;
+    padding-top: 30px;
+}
+.beta-example-list dt {
+    font-size: 20px;
+    margin: 0 0 10px 20px;
+}
+.beta-example-list dd {
+    float: left;
+    margin: 0 20px;
+    width: 360px;
+}
+.beta-example-logo {
+    background: rgba(0, 0, 0, 0) url("../img/liveBeta/example_bg.png") no-repeat scroll 0 0;
+    height: 450px;
+    position: relative;
+}
+.beta-exa-pic-1 {
+    left: 540px;
+    position: absolute;
+    top: 60px;
+     animation: 3s linear 0s alternate both infinite paused opcIn;
+}
+.beta-exa-pic-2 {
+    left: 640px;
+    position: absolute;
+    top: 270px;
+    animation: 3s linear 1.2s alternate both infinite paused opcIn;
+}
+.beta-exa-pic-3 {
+    left: 920px;
+    position: absolute;
+    top: 214px;
+    animation: 3s linear 1.6s alternate both infinite paused opcIn;
+}
+.beta-rule {
+    font-size: 16px;
+    margin: 0 auto;
+    padding: 70px 0;
+    width: 680px;
+}
+.beta-rule dt {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 40px;
+    text-align: center;
+}
+.beta-rule dd {
+    padding: 5px 0;
+}
+.hd, .extend, .ft, .site, .ft {
+    min-width: 1200px;
+    width: 100%;
+}
+.extend {
+    background-color: #0745a8;
+}
+.extend-txt {
+    color: #fff;
+    height: 34px;
+    line-height: 34px;
+    padding: 20px 0;
+    text-align: center;
+}
+.extend-txt-tit {
+    font-size: 22px;
+}
+.btn-e-gift {
+    background-color: #fff;
+    color: #0745a8;
+    display: inline-block;
+    font-size: 13px;
+    height: 34px;
+    margin-left: 40px;
+    text-align: center;
+    vertical-align: top;
+    width: 208px;
+}
+.i-e-gift {
+    background: rgba(0, 0, 0, 0) url("../img/liveBeta/spr_2.png") no-repeat scroll -25px -50px;
+    cursor: pointer;
+    display: inline-block;
+    height: 25px;
+    margin: -4px 4px 0 0;
+    vertical-align: middle;
+    width: 25px;
+}
+.site .main {
+    padding: 30px 0;
+}
+.site-links dl {
+    float: left;
+    width: 18%;
+}
+.site, .ft {
+    color: #666;
+    line-height: 28px;
+}
+.site-links dt {
+    color: #333;
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+.site a, .ft a {
+    color: #666;
+}
+.site-links .contact-us {
+    width: 28%;
+}
+.site-img img {
+    display: inline-block;
+    margin-right: 6px;
+    vertical-align: text-bottom;
+}
+.ft {
+    border-top: 1px solid #d6d5d5;
+}
+.ft-ect img {
+    height: 27px;
+    width: 20px;
+}
+
+.ft .main{
+    padding:20px 0;
+}
+.content .ani{
+    animation-play-state:running;
+}
+.content .paused{
+    animation-play-state:paused;
+}

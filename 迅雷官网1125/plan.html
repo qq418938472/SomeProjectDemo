@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <title>客户</title>
+    <link rel="stylesheet" href="./css/common.css">
+
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+    <!-- <script src="./js/jquery-3.1.0.min.js"></script> -->
+    <script src="./js/jquery-2.1.4.min.js"></script>
+    
+    <!-- 加载NG相关文件 -->
+    <script type="text/javascript" src="./js/angular.min.js"></script>
+    <script type="text/javascript" src="./js/angular-animate.min.js"></script>
+    <script src="./js/myApp.js"></script>
+    <!-- 引入对应用控制器文件 -->
+    <script src="./js/myCtrl.js"></script>
+    <script type="text/javascript">
+    $(function(){
+        // var leftBtn = $(".left_tab ul li");
+        // var rightBox = $(".Af_right");
+        $(".left_tab ul li:nth-child(1)").click(function(){
+            
+            $(".left_tab ul li:nth-child(1)").css({'background':'#fff','color':'#5881eb','border':'1px #fff solid'});
+            $(".left_tab ul li:nth-child(2)").css({'background':'#5881eb','color':'#fff','border':'1px #4d70e4 solid'});
+            $(".left_tab ul li:nth-child(3)").css({'background':'#5881eb','color':'#fff','border':'1px #4d70e4 solid'});
+            $(".left_tab ul li:nth-child(4)").css({'background':'#5881eb','color':'#fff','border':'1px #4d70e4 solid'});
+            $(".left_tab ul li:nth-child(5)").css({'background':'#5881eb','color':'#fff','border':'1px #4d70e4 solid'});
+            $(".left_tab ul li:nth-child(1) em").css({'background':'url(./img/spr.png) 0 -325px'});
+            $(".left_tab ul li:nth-child(2) em").css({'background':'url(./img/spr.png) -75px -250px'});
+            $(".left_tab ul li:nth-child(3) em").css({'background':'url(./img/spr.png) -150px -250px'});
+            $(".left_tab ul li:nth-child(4) em").css({'background':'url(./img/spr.png) -225px -250px'});
+            $(".left_tab ul li:nth-child(5) em").css({'background':'url(./img/spr.png) -300px -250px'});
+            $("#box1").css({'display':'inline-block'});
+            $("#box2").css({'display':'none'});
+            $("#box3").css({'display':'none'});
+            $("#box4").css({'display':'none'});
+            $("#box5").css({'display':'none'});
+        });
+
+
+
+        $(".left_tab ul li:nth-child(2)").click(function(){
+            // alert(1);
+            $(".left_tab ul li:nth-child(1)").css({'background':'#5881eb','color':'#fff','border':'1px #4d70e4 solid'});
+            $(".left_tab ul li:nth-child(2)").css({'background':'#fff','color':'#5881eb','border':'1px #fff solid'});
+            $(".left_tab ul li:nth-child(3)").css({'background':'#5881eb','color':'#fff','border':'1px #4d70e4 solid'});
+            $(".left_tab ul li:nth-child(4)").css({'background':'#5881eb','color':'#fff','border':'1px #4d70e4 solid'});
+            $(".left_tab ul li:nth-child(5)").css({'background':'#5881eb','color':'#fff','border':'1px #4d70e4 solid'});
+            $(".left_tab ul li:nth-child(1) em").css({'background':'url(./img/spr.png) 0 -250px'});
+            $(".left_tab ul li:nth-child(2) em").css({'background':'url(./img/spr.png) -75px -325px'});
+            $(".left_tab ul li:nth-child(3) em").css({'background':'url(./img/spr.png) -150px -250px'});
+            $(".left_tab ul li:nth-child(4) em").css({'background':'url(./img/spr.png) -225px -250px'});
+            $(".left_tab ul li:nth-child(5) em").css({'background':'url(./img/spr.png) -300px -250px'});
+            $("#box1").css({'display':'none'});
+            $("#box2").css({'display':'inline-block'});
+            $("#box3").css({'display':'none'});
+            $("#box4").css({'display':'none'});
+            $("#box5").css({'display':'none'});
+        });
+        
+        $(".left_tab ul li:nth-child(3)").click(function(){
+            // alert(1);
+            $(".left_tab ul li:nth-child(1)").css({'background':'#5881eb','color':'#fff','border':'1px #4d70e4 solid'});
+            $(".left_tab ul li:nth-child(2)").css({'background':'#5881eb','color':'#fff','border':'1px #5881eb solid'});
+            $(".left_tab ul li:nth-child(3)").css({'background':'#fff','color':'#5881eb','border':'1px #fff solid'});
+            $(".left_tab ul li:nth-child(4)").css({'background':'#5881eb','color':'#fff','border':'1px #4d70e4 solid'});
+            $(".left_tab ul li:nth-child(5)").css({'background':'#5881eb','color':'#fff','border':'1px #4d70e4 solid'});
+            $(".left_tab ul li:nth-child(1) em").css({'background':'url(./img/spr.png) 0 -250px'});
+            $(".left_tab ul li:nth-child(2) em").css({'background':'url(./img/spr.png) -75px -250px'});
+            $(".left_tab ul li:nth-child(3) em").css({'background':'url(./img/spr.png) -150px -325px'});
+            $(".left_tab ul li:nth-child(4) em").css({'background':'url(./img/spr.png) -225px -250px'});
+            $(".left_tab ul li:nth-child(5) em").css({'background':'url(./img/spr.png) -300px -250px'});
+            $("#box1").css({'display':'none'});
+            $("#box2").css({'display':'none'});
+            $("#box3").css({'display':'inline-block'});
+            $("#box4").css({'display':'none'});
+            $("#box5").css({'display':'none'});
+        });
+
+        $(".left_tab ul li:nth-child(4)").click(function(){
+            // alert(1);
+            $(".left_tab ul li:nth-child(1)").css({'background':'#5881eb','color':'#fff','border':'1px #4d70e4 solid'});
+            $(".left_tab ul li:nth-child(2)").css({'background':'#5881eb','color':'#fff','border':'1px #4d70e4 solid'});
+            $(".left_tab ul li:nth-child(3)").css({'background':'#5881eb','color':'#fff','border':'1px #4d70e4 solid'});
+            $(".left_tab ul li:nth-child(4)").css({'background':'#fff','color':'#5881eb','border':'1px #fff solid'});
+            $(".left_tab ul li:nth-child(5)").css({'background':'#5881eb','color':'#fff','border':'1px #4d70e4 solid'});
+            $(".left_tab ul li:nth-child(1) em").css({'background':'url(./img/spr.png) 0 -250px'});
+            $(".left_tab ul li:nth-child(2) em").css({'background':'url(./img/spr.png) -75px -250px'});
+            $(".left_tab ul li:nth-child(3) em").css({'background':'url(./img/spr.png) -150px -250px'});
+            $(".left_tab ul li:nth-child(4) em").css({'background':'url(./img/spr.png) -225px -325px'});
+            $(".left_tab ul li:nth-child(5) em").css({'background':'url(./img/spr.png) -300px -250px'});
+            $("#box1").css({'display':'none'});
+            $("#box2").css({'display':'none'});
+            $("#box3").css({'display':'none'});
+            $("#box4").css({'display':'inline-block'});
+            $("#box5").css({'display':'none'});
+        });
+
+        $(".left_tab ul li:nth-child(5)").click(function(){
+            // alert(1);
+            $(".left_tab ul li:nth-child(1)").css({'background':'#5881eb','color':'#fff','border':'1px #4d70e4 solid'});
+            $(".left_tab ul li:nth-child(2)").css({'background':'#5881eb','color':'#fff','border':'1px #4d70e4 solid'});
+            $(".left_tab ul li:nth-child(3)").css({'background':'#5881eb','color':'#fff','border':'1px #4d70e4 solid'});
+            $(".left_tab ul li:nth-child(4)").css({'background':'#5881eb','color':'#fff','border':'1px #4d70e4 solid'});
+            $(".left_tab ul li:nth-child(5)").css({'background':'#fff','color':'#5881eb','border':'1px #fff solid'});
+            $(".left_tab ul li:nth-child(1) em").css({'background':'url(./img/spr.png) 0 -250px'});
+            $(".left_tab ul li:nth-child(2) em").css({'background':'url(./img/spr.png) -75px -250px'});
+            $(".left_tab ul li:nth-child(3) em").css({'background':'url(./img/spr.png) -150px -250px'});
+            $(".left_tab ul li:nth-child(4) em").css({'background':'url(./img/spr.png) -225px -250px'});
+            $(".left_tab ul li:nth-child(5) em").css({'background':'url(./img/spr.png) -300px -325px'});
+            $("#box1").css({'display':'none'});
+            $("#box2").css({'display':'none'});
+            $("#box3").css({'display':'none'});
+            $("#box4").css({'display':'none'});
+            $("#box5").css({'display':'inline-block'});
+        });
+
+    });
+
+            
+        
+        
+    
+    </script>
+    <link rel="stylesheet" href="./css/plan.css">
+    <link rel="stylesheet" href="./css/template.css">
+    </head>
+    <body>
+        <div class="top">
+            <div class="top_box">
+                <div>
+                  <a href="index.html"><img src="./img/logo.png" style="margin:0 auto;"></a>
+                </div>
+                <div>
+                    <ul>
+                      <a href="price.html"><li>价格</li></a>
+                      <a href="plan.html"><li>解决方案</li></a>
+                      <a href="customer.html"><li>客户案例</li></a>
+                      <a href="####"><li>帮助中心</li></a>
+                      <a href="xycdn.html"><li>星域首页</li></a>
+                    </ul>
+                </div>
+                <div style="float:right;">
+                    <ul>
+                        <li>管理控制台</li>
+                        <span>免费试用</span><i></i>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="contentAf">
+            <div class="contentAf_box">
+                <div class="left_tab">
+                    <ul>
+                        <li>
+                            <em></em>
+                            <p>泛娱乐直播</p>
+                        </li>
+                        <li>
+                            <em></em>
+                            <p>教育直播</p>
+                        </li>
+                        <li>
+                            <em></em>
+                            <p>事件直播</p>
+                        </li>
+                        <li>
+                            <em></em>
+                            <p>移动户外直播</p>
+                        </li>
+                        <li>
+                            <em></em>
+                            <p>VR/全景直播</p>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="Af_right" id="box1">
+                    <h3>泛娱乐直播</h3>
+                    <p>星域CDN以行业领先技术实现首屏秒级打开，各项直播技术指标行业领先。独特的音视频互动功能，颠覆了传统的弹幕交互体验，让主播与观众面对面实时交流，情感沟通更密切！</p>
+
+                    <h3>直播互动</h3>
+                    <p>星域CDN独特的音视频互动技术，可以颠覆传统的弹幕互动体验，互动过程延时低于2秒，保障流畅的互动体验，让主播和观众真正亲密交流。</p>
+
+                    <h3>版权保护</h3>
+                    <p>视频预处理平台，针对具体需要实时添加水印；支持多种鉴权方式，有效防止盗链，极大限度的保护视频版权不受侵害。</p>
+                    <h4>应用场景</h4>
+                    <h2>
+                        <img src="./img/f1.jpg">
+                        <img src="./img/f2.jpg">
+                        <img src="./img/f3.jpg">
+                    </h2>
+                </div>
+
+                <div class="Af_right" id="box2">
+                    <h3>教育直播</h3>
+                    <p>星域播放器拥有慢同步、音视频分离等技术，可优化播放体验，应对不同网络环境，最大程度保障播放流畅。支持录播一体，云端实时转码，复习回看更加便捷，让学生身临其境，提高学习效率。</p>
+
+                    <h3>录播一体</h3>
+                    <p>播录一体化技术，支持视频回放，让观众不再错过直播，随时随地乐享精彩内容！</p>
+
+                    <h3>播放器SDK</h3>
+                    <p>通过集成星域播放器SDK，其独有的慢同步和音视频分离等技术，可以帮您实现流畅播放。SDK支持多种终端，无论是PC端还是移动端都能够适配，而且接入简单。</p>
+                    <h4>应用场景</h4>
+                    <h2>
+                        <img src="./img/j1.jpg">
+                        <img src="./img/j2.jpg">
+                        <img src="./img/j3.jpg">
+                    </h2>
+                </div>
+
+                <div class="Af_right" id="box3">
+                    <h3>事件直播</h3>
+                    <p>依托无限节点技术，星域CDN可以有效支撑T级带宽，带来极致的直播体验，流畅度高达99%。告别卡顿，不再错过精彩瞬间！</p>
+
+                    <h3>智能组网</h3>
+                    <p>创造性地采用非树状结构，改变传统CDN树状模型，智能动态选择事实上的最短路径。源流重建技术，极端情况网络无损重组，网络波动时无感切换。</p>
+
+                    <h3>播放加速/分发加速</h3>
+                    <p>独家的无限节点、并行传输、智能组网技术，提供快速、稳定、流畅的星域CDN分发加速服务。</p>
+                    <h4>应用场景</h4>
+                    <h2>
+                        <img src="./img/s1.jpg">
+                        <img src="./img/s2.jpg">
+                        <img src="./img/s3.jpg">
+                    </h2>
+                </div>
+
+                <div class="Af_right" id="box4">
+                    <h3>移动户外直播</h3>
+                    <p>针对户外复杂的网络环境，星域CDN提供码率和分辨率自适应采集的能力，同时应用行业内领先的弱网加速技术，有效减少推流卡顿，让移动户外直播流畅播放。</p>
+
+                    <h3>采集端SDK</h3>
+                    <p>专业的移动户外直播解决方案，对于网络较差的直播环境，通过自适应采集，降低对主播网络质量的要求；</p>
+
+                    <h3>弱网加速</h3>
+                    <p>底层协议优化以及喷泉码技术，有效对抗数据传输过程中各网络节点的波动，解决在下载速度低于50KB的弱网环境下下载失败、下载错误、速度慢等常见问题，将数据传输速度提升10倍。</p>
+                    <h4>应用场景</h4>
+                    <h2>
+                        <img src="./img/h1.jpg">
+                        <img src="./img/h2.jpg">
+                        <img src="./img/h3.jpg">
+                    </h2>
+                </div>
+
+                <div class="Af_right" id="box5">
+                    <h3>VR/全景直播</h3>
+                    <p>星域CDN与Insta360联合研发专门针对VR/全景直播的压缩编码算法，同时利用星域CDN H.265实时转码集群，在保证视频质量的同时大幅降低带宽使用，解决普通用户观看时带宽不足的问题。</p>
+
+                    <h3>H.265实时转码</h3>
+                    <p>星域CDN H.265实时转码集群，帮助用户可以在有限带宽下，观看更高质量的网络视频和直播节目，在相同的图象质量下，相比于H.264转码，经过星域CDN H.265转码的视频大小将减少大约40%。</p>                    
+
+                    <h4>应用场景</h4>
+                    <h2>
+                        <img src="./img/vr1.jpg">
+                        <img src="./img/vr2.jpg">
+                        <img src="./img/vr3.jpg">
+                    </h2>
+                </div>
+            </div>
+        </div>
+        
+            
+        
+        
+
+        <div class="footer_Af" style="float: left;">
+            <div class="footer_Af_box">
+                <span>星域重新定义CDN</span>
+                <a href="#"><i></i>立即领取100G流量包</a>
+            </div>
+        </div>
+        <div class="footer_Bf" style="float: left;">
+            <div class="footer_Bf_box">
+                <dl>
+                    <dl>
+                        <dt>产品与价格</dt>
+                        <dd><a href="#">直播极速版</a></dd>
+                        <dd><a href="#">直播旗舰版</a></dd>
+                        <dd><a href="#">价格</a></dd>
+                    </dl>
+                    <dl>
+                        <dt>热门活动</dt>
+                        <dd><a href="#">星耀计划</a></dd>
+                    </dl>
+                    <dl>
+                        <dt>技术支持</dt>
+                        <dd><a href="#">帮助文档</a></dd>
+                        <dd><a href="#">API文档</a></dd>
+                    </dl>
+                    <dl>
+                        <dt>其他</dt>
+                        <dd><a href="#">管理控制台</a></dd>
+                        <dd><a href="#">解决方案</a></dd>
+                        <dd><a href="#">新闻动态</a></dd>
+                        <dd><a href="#">联系我们</a></dd>
+                    </dl>
+                    <dl>
+                        <dt>联系我们</dt>
+                        <dd>电话：400-926-2228 0755-86240150</dd>
+                        <dd>邮箱：xycdn-help@xunlei.com</dd>
+                        <dd>地址：深圳市南山区高新南环道威新软件园5号楼4层</dd>
+                        <dd><img src="./img/company_code.jpg">扫描关注微信公众号</dd>
+                    </dl>
+                </dl>
+            </div>
+        </div>
+        <div class="footer_Cf" style="float: left;">
+            <div class="footer_Cf_box">
+                <p>友情链接：<a href="#">迅雷</a><span>|</span><a href="#">迅雷赚钱宝</a></p>
+                <p>Copyright © 2015-2016 xycdn.All Rights Reserved 深圳市网心科技有限公司版权所有 粤ICP备15018633号-1</p>
+            </div>
+        </div>
+        
+    
+    </body>
+</html>

@@ -1,0 +1,192 @@
+body{
+	background: #F8F8F8`;
+    min-width: 500px;
+}
+.clear{
+	clear: both;
+}
+/*=================================头部样式====================*/
+a{
+	color: black;
+}
+a:focus{
+	outline: none;
+}
+a:hover, a:focus{
+	color: #555;
+	text-decoration: none;
+}
+ul, ol{
+	margin-bottom: 0;
+}
+.row{
+	margin-left: 0;
+	margin-right: 0;
+}
+.header_button{
+	text-align: right;
+} 
+.header_top{
+	white-space: nowrap;
+}
+.header_top ul{
+	display: inline-block;
+	height: 44px;
+	line-height:44px;
+	overflow: hidden;
+	border:none;
+}
+.header_top ul li a{
+	font-size: 19px;
+}
+.header_top ul li{
+	white-space: nowrap;
+	margin: 0 auto;
+	float: left;
+	display: inline;
+
+}
+.header_top .nav-tabs a:hover{
+	background: #F5F5F5;
+	border:none;
+}
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus{
+	background: none;
+	border:none;
+	border-bottom:2px solid #222222;
+	font-weight: bold;
+}
+.header_top a{
+    color: #555;
+}
+.header_top ul li a{
+	display: inline;
+	color: #555;
+	height: auto;
+	padding:12px 15px;
+
+}
+.header_top div{
+	display: inline;
+}
+.header_top{
+	background: #F5F5F5;
+	border-bottom: 1px solid #BFBFBF;
+}
+.header_button span{
+	height: 20px;
+	width: 20px;
+	margin: 8px 10px 0;
+}
+.jd-header-shortcut {
+    background: #404042 none repeat scroll 0 0;
+    display: table;
+    height: 57px;
+    width: 100%;
+    list-style: none;
+    padding:0;
+    display: none;
+}
+.jd-header-shortcut a{
+	color: #fff;
+}
+.jd-header-shortcut li {
+    display: table-cell;
+    text-align: center;
+    width: 25%
+}
+.jd-header-shortcut span {
+    height: 30px;
+    margin-top: 6px;
+    width: 30px;
+}
+.jd-header-shortcut strong{
+ 	display: block;
+ 	font-weight: normal;
+}
+/*=============================内容=================*/
+.form{
+	width: 100%;
+	max-width: 640px;
+	min-width: 320px;
+	margin: 0 auto;
+	overflow: hidden;
+	font-size: 16px;
+}
+.input1{
+	width: 100%;
+	float: left;
+	padding:17px 0;
+	border-bottom: 1px solid #cccccc;
+	position: relative;
+}
+.left{
+	display: inline;
+	float: left;
+}
+.right{
+	outline: none;
+	display: inline;
+	float: left; 
+
+}
+.right_color{
+	color: #888888;
+}
+.right input{
+	border: none;
+}
+.input1 .fa-angle-right{
+	position: absolute;
+	right: 1px;
+	top: 10px;
+}
+.red{
+	height: 40px;
+	width: 52px;
+	position: absolute;
+	right: 13px;
+	top: 33px;
+	background: rgba(0, 0, 0, 0) url("../images/kaiguan.png") no-repeat scroll 0px 0 / 200px 200px;
+}
+.white{
+	height: 40px;
+	width: 52px;
+	position: absolute;
+	right: 13px;
+	top: 33px;
+	display: none;
+	background: rgba(0, 0, 0, 0) url("../images/kaiguan.png") no-repeat scroll -100px 0 / 200px 200px;
+}
+
+.check-btn-auto {
+    margin: 0 auto;
+    max-width: 640px;
+    min-width: 320px;
+    overflow: hidden;
+    width: 100%;
+}
+
+.check-btn-total {
+    background: #fff none repeat scroll 0 0;
+    bottom: 10px;
+    height: 4em;
+    max-width: 640px;
+    padding-top: 0.6em;
+    position: fixed;
+    text-align: center;
+    width: 100%;
+    z-index: 6;
+}
+.check-btn-total .check-btn-red {
+    background: #f23030 none repeat scroll 0 0;
+    border: 1px solid #f23030;
+    border-radius: 3px;
+    color: #fff;
+    display: inline-block;
+    font-size: 16px;
+    height: 2.75em;
+    line-height: 2.75em;
+    text-align: center;
+    width: 93.75%;
+}

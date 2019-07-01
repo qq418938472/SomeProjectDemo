@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>2017迅雷校园招聘</title>
+		<link rel="stylesheet" href="css/hr-2-style.css">
+		<link rel="stylesheet" href="css/hr-2-index.css">
+	</head>
+	<body>
+		<body>
+<div class="header hd_index">
+	<div class="head">
+		<h1><a href="index.html" class="logo" title="迅雷招聘">迅雷招聘</a></h1>
+		<div class="nav" id="nav">
+			<a href="hr-1.html" class="">首页</a>
+			<a href="####" class="cur">走进迅雷</a>
+			<a href="####">招聘职位</a>
+			<a href="####">招聘动态</a>
+			<a href="hr-4.html">社会招聘</a>
+		</div>
+
+	</div>
+</div>
+
+<!--遮罩-->
+<div class="cover" style="display: none;"></div>
+<!--登录-->
+<div class="pop_form" id="s_loginDiv" style="display: none;">
+	<a href="" class="pop_close" title="关闭">关闭</a>
+	<h2>登录</h2>
+	<p class="tips" style="display: none;" id="tips_login">请输入正确的帐号！</p>
+	<div class="form_box">
+		<i class="ico_email"></i>
+		<input class="ipt_info" data-type="email" placeholder="邮箱地址" type="text">
+	</div>
+	<div class="form_box"><!--获取焦点时叠加类名“focus”-->
+		<i class="ico_lock"></i>
+		<input class="ipt_info" data-type="pass" placeholder="登录密码" type="password">
+	</div>
+	<div class="opt">
+		<a href="javascript:;" class="remem" id="remember"><span class="ico_chk checked"></span>记住密码</a><!-- 叠加checked为选中，去掉为不选 -->
+		<a href="javascript:void(0);" class="go_findPwd">忘记密码?</a>
+		<a href="javascript:void(0);" class="link_res go_register">注册帐号</a>
+	</div>
+	<a href="javascript:;" class="btn_submit" id="login">登录</a>
+	<div class="form_code">
+		<h3>扫码关注招聘动态</h3>
+		<span class="code_box">
+            	<img src="images/code.png" alt="二维码">
+            </span>
+		<p class="code_num">微信号：xunlei-job</p>
+	</div>
+</div>
+<!--注册-->
+<div class="pop_form register" id="s_registerDiv" style="display: none;">
+	<a href="####" class="pop_close" title="关闭">关闭</a>
+	<h2>注册</h2>
+	<p class="tips" style="display: none;" id="tips">请输入正确的帐号！</p>
+	<div class="form_box">
+		<i class="ico_email"></i>
+		<input class="ipt_info" data-type="email" placeholder="邮箱地址" type="text">
+	</div>
+	<div class="form_box"><!--输入正确叠加类名“correct”-->
+		<i class="ico_lock"></i>
+		<input class="ipt_info" data-type="pass" placeholder="登录密码" type="password">
+		<i class="ico_f_ok" style="display: none;"></i>
+	</div>
+	<div class="form_box"><!--输入错误时叠加类名“error”-->
+		<i class="ico_lock"></i>
+		<input class="ipt_info" data-type="repass" placeholder="重复密码" type="password">
+		<i class="ico_f_error" style="display: none;"></i>
+	</div>
+	<a href="javascript:void(0);" class="btn_submit" id="register">注册</a>
+	<div class="form_code">
+		<h3>扫码关注招聘动态</h3>
+		<span class="code_box">
+            <img src="images/code.png" alt="二维码">
+        </span>
+		<p class="code_num">微信号：xunlei-job</p>
+	</div>
+</div>
+<!--找回密码-->
+<div class="pop_form" id="s_forgetpwdDiv" style="display: none;">
+	<a href="####" class="pop_close" title="关闭">关闭</a>
+	<h2>找回密码</h2>
+	<div class="form_box">
+
+		<i class="ico_email"></i>
+		<input class="ipt_info" name="user_email" id="s_user_email" placeholder="邮箱地址" type="text">
+	</div>
+	<p class="text_pwd">确认后，密码将会发送到您的邮箱。</p>
+	<a href="javascript:void(0);" id="reGetPassword" class="btn_submit">找回密码</a>
+	<a href="####" class="btn_submit back">返回</a>
+	<div class="form_code">
+		<h3>扫码关注招聘动态</h3>
+		<span class="code_box">
+            <img src="images/code.png" alt="二维码">
+        </span>
+		<p class="code_num">微信号：xunlei-job</p>
+	</div>
+</div>
+
+<div class="sliderbox anin" id="sliderbox" style="overflow: hidden; width: 1920px; height: 560px;">
+<div class="index" id="index" style="transition: transform 0.8s ease 0s; height: 560px; width: 11520px; transform: translateX(-5460px);">
+	<!-- index1 -->
+	<div id="index1" class="index_box index_box_1" style="float: left; height: 100%; width: 1920px;"> 
+		<div class="person">
+			<div class="pbox">
+				<span class="p1"></span>
+				<span class="p2"></span>
+				<span class="p3"></span>
+				<span class="p4"></span>
+			</div>
+			<span class="n1"></span>
+			<span class="n2"></span>
+			<span class="n3"></span>
+			<span class="n4"></span>
+		</div>
+		<div class="ele">
+			<span class="ele1 e1"></span>
+			<span class="ele1 e2"></span>
+			<span class="ele1 e3"></span>
+			<span class="ele1 e4"></span>
+			<span class="ele1 e5"></span>
+			<span class="ele1 e6"></span>
+		</div>
+		<div class="index_main">			
+			<div class="title">
+				<h2>不约而同</h2>
+				<p class="title_des">青春本色不做看客</p>
+				<span class="tit1">
+					<i class="txt1"></i>
+					<i class="txt2"></i>
+					<i class="txt3"></i>
+					<i class="txt4"></i>
+					<b class="line1"></b>
+					<b class="line1 line_1"></b>
+				</span>
+				<span class="tit2">
+					<i class="txt1"></i>
+					<i class="txt2"></i>
+					<i class="txt3"></i>
+					<i class="txt4"></i>
+					<b class="line1"></b>
+				</span>
+				<i class="tit_point"></i>
+				<span class="tit3">
+					<i class="txt1"></i>
+					<i class="txt2"></i>
+					<i class="txt3"></i>
+					<i class="txt4"></i>
+					<b class="line1"></b>
+				</span>
+				<span class="tit4">
+					<i class="txt1"></i>
+					<i class="txt2"></i>
+					<i class="txt3"></i>
+					<i class="txt4"></i>
+					<b class="line1"></b>
+					<b class="line1_1"></b>
+				</span>
+			</div>			
+			<a href="javascript:;" class="btn_send s_mailHead">投递简历</a>
+
+		</div>
+		<div class="job_nav">
+			<div class="inner">
+				<a href="####"><span class="ico_tec"></span>技术</a>
+				<a href="####" class=""><span class="ico_pm"></span>产品</a>
+				<a href="####"><span class="ico_design"></span>设计</a>
+				<a href="####"><span class="ico_market"></span>运营</a>
+			</div>
+		</div>
+		<div class="footer">
+			<div class="foot">
+				<div class="f_nav">
+					<span>Copyright © 2003-2016 Xunlei.com. All rights reserved.</span>
+					<a  href="hr-4.html">关于迅雷</a>
+					<a  href="####">下载迅雷</a>
+					<a  href="####">加盟迅雷</a>
+					<a  href="####">商务合作</a>
+					<a  href="####">客服中心</a>
+					<a  href="####">安全中心</a>
+					<a  href="####">用户协议</a>
+				</div>
+				<div class="f_top">
+					<a href="hr-2.html"><span class="ico_logo_f"></span>2017年迅雷校园招聘</a>
+				</div>
+			</div>
+		</div>
+		<span class="arrow">右翻</span>
+		<div class="code_show" style="display: none;">
+			<h4>扫一扫 查看面试流程</h4>
+			<img src="images/code_wx.png" alt="code">
+			<p>校招面试通知<span>9月21-22号</span>陆续发出，<br>请注意查收！</p>
+			<a href="javascript:void(0);" class="pop_close" title="关闭">关闭</a>
+		</div>
+	</div>
+	<!-- index1 end -->
+	<!-- index2 -->
+	<div class="index_box index_box_2" style="float: left; height: 100%; width: 1920px;"> 
+		<div class="inner">
+			<span class="ele2"></span>
+			<div class="index_about" style="transform: translate3d(-3972.99px, 0px, 0px);">
+				<h2>公司介绍</h2>
+				<p>深圳市迅雷网络技术有限公司<br>于2003年成立</p>
+				<p>以领先的云加速技术和系列产品为用户提供基于<br>大容量娱乐数据传输的云计算服务<br>在帮助用户在多终端上快速获得数字内容<br>从而推进大互联网时代的数据传输加速</p>
+				<a href="####" class="btn_more">了解更多<span>&gt;</span></a>
+			</div>
+			
+			<div id="videoBox" class="video_box" style="transform: translate3d(2625.32px, 0px, 0px);">
+				<video src="./video/xl.mp4" id="video" preload="none" class="video"></video>
+				<div class="pic_front">
+					<img src="video/front.jpg" alt="封面">
+				</div>
+				<a href="javascript:;" id="btnPlayer" title="点击播放" class="btn_player">点击播放</a>
+			</div>
+		</div>
+	</div>
+	<!-- index2 end-->
+	<!-- index3 -->
+	<div class="index_box index_box_3" style="float: left; height: 100%; width: 1920px;"> 
+		<div class="inner"> 
+			<h2>迅雷大事记</h2>
+			<div class="time_list" id="time_list">
+				<span class="l1 light"></span>
+				<span class="l1 l1-1 light"></span>
+				<ul>
+					<li class="time1 light">
+						<p class="time_txt"><span>成立</span>
+						迅雷公司
+						</p>
+						<p class="year">2003</p>
+					</li>
+					<li class="time2 light">
+						<p class="time_txt"><span>亿</span>
+						用户突破
+						</p>
+						<p class="year">2006</p>
+					</li>
+					<li class="time3 light">
+						<p class="time_txt"><span>100</span>
+						付费用户(万)
+						</p>
+						<p class="time_txt"><span>3</span>
+						用户突破(亿)
+						</p>
+						<p class="year">2010</p>
+					</li>
+					<li class="time4 light">
+						<p class="time_txt"><span>520</span>
+						付费用户(万)
+						</p>
+						<p class="time_txt"><span>4.6</span>
+						用户突破(亿)
+						</p>
+						<p class="year">2013</p>
+					</li>
+					<li class="time5 light">
+						<p class="time_txt_1"><span>上市</span>
+						美国纳斯达克
+						</p>
+						<p class="year">2014</p>
+					</li>
+					<li class="time6 light">
+						<p class="time_txt"><span>VR</span>
+							战略布局
+						</p>
+						<p class="time_txt_1"><span>人工智能</span>
+							战略布局
+						</p>
+						<b class="l2"></b>
+						<p class="year">2016</p>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!-- index3 -->
+	<div class="index_box index_box_4 ani" style="float: left; height: 100%; width: 1920px;"> 
+		<div class="inner_box">
+			<h2>工程师文化</h2>
+			<span class="ele4"></span>
+			<div class="culture" id="culture" style="">
+				<div class="c_box1 cb1">
+					<img src="images/hr-2/pic1.png" alt="技术创新">
+				</div>
+				<div class="c_box2 cb2">
+					<h3 class="pd40">技术创新</h3>
+					<p>迅雷率先并创新地实现了P2SP技术，建立了超过60亿条的全球最大的进制文件索引库，并吸引了超过3亿的互联网用户使用我们的产品。</p>
+					<span class="ico_c_arw"></span>
+				</div>
+				<div class="c_box2 cb3">
+					<img src="images/hr-2/pic2.jpg" alt="平等沟通">
+				</div>
+				<div class="c_box2 cb4">
+					<h3 class="pd55">平等沟通</h3>
+					<p>直截了当地表达是最有效的沟通无论是你对于事物对错的看法，还是具体的实施建议</p>
+					<span class="ico_c_arw"></span>
+				</div>
+				<div class="c_box2 cb5">
+					<img src="images/hr-2/pic3.jpg" alt="平等沟通">
+				</div>
+				<div class="c_box2 cb6">
+					<h3 class="pd85">自我管理</h3>
+					<p class="al_c">简单做人，积极做事。</p>
+					<span class="ico_c_arw"></span>
+				</div>
+				<div class="c_box1 cb7">
+					<img src="images/hr-2/pic4.jpg" alt="技术创新">
+				</div>
+				<div class="c_box2 bgblue cb8">
+					<h3 class="pd50">数据导向</h3>
+					<p>应对“海量”和“实时”，从无限可能的维度组合里找到有效的数据，并理解产品的商业模式和用户的行为模式。</p>
+					<span class="ico_c_arw"></span>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- index4 end -->
+	<div class="index_box index_box_5 ani" style="float: left; height: 100%; width: 1920px;">
+		<div class="inner">
+			<span class="ele5"></span>
+			<h2>迅雷技术</h2>
+			<div class="tec" id="tec" style="">
+				 <ul>
+				 	<li class="style1 tc1">
+				 		<h3>云存储实验室</h3>
+				 		<p>分布式存储</p>
+				 		<p>自主海量文件存储</p>
+				 	</li>
+				 	<li class="tc2">
+				 		<h3>P2P实验室</h3>
+				 		<p>下一代P2P协议</p>
+				 		<p>迅雷核心专利技术</p>
+				 	</li>
+				 	<li class="tc1"><img src="images/hr-2/pic5.jpg"></li>
+				 	<li class="style2 tc2">
+				 		<h3>UI引擎实验室</h3>
+				 		<p>下一代交互开发技术</p>
+				 		<p>第四代界面引擎迅雷特有</p>
+				 	</li>
+				 	<li class="tc3"><img src="images/hr-2/pic6.jpg"></li>
+				 	<li class="tc4 style2">
+				 		<h3>多媒体实验室</h3>
+				 		<p>指纹技术</p>
+				 		<p>视频内容识别<br>相似文件P2SP加速</p>
+				 	</li>
+				 	<li class="style1 tc3">
+				 		<h3>大数据实验室</h3>
+				 		<p>服务器搭建与调度</p>
+				 		<p>云计算，并行计算<br>大规模数据挖掘应用</p>
+				 	</li>
+				 	<li class="tc4">
+				 		<h3>DCDN实验室</h3>
+				 		<p>互联网热点资源发现与预测</p>
+				 		<p>分布式CDN技术<br>结合大规模数据分析<br>P2P技术的新兴网络加速技术</p>
+				 	</li>
+				 </ul>
+			</div>
+		</div>
+	</div>
+	<!-- index5 end -->
+	<!-- index6 -->
+	<div id="index6" class="index_box index_box_6" style="float: left; height: 100%; width: 1920px;">
+		<div class="inner">
+			<h2>迅雷福利</h2>
+			<div class="ele_box" id="ceBox" data-ani="0">
+				<div class="com_ele ce1" data-num="1">
+					<h3>薪资福利</h3>
+					<p>固定工资（双周薪模式发放）<br>年度奖金<br>特殊项目奖金、长期激励</p>
+					<a href="javascript:;" class="com_close" title="关闭">关闭</a>
+				</div>
+				<div class="com_ele ce2" data-num="2">
+					<h3>休闲旅游</h3>
+					<p>年度旅游 、部门团建<br>每周三周五足球、篮球<br>羽毛球、游泳活动</p>
+					<a href="javascript:;" class="com_close" title="关闭">关闭</a>
+				</div>
+				<div class="com_ele ce3" data-num="3">
+					<h3>安居计划</h3>
+					<p>政府租房补贴<br>深圳户口 、安居工程<br>无息贷款、低息贷款</p>
+					<a href="javascript:;" class="com_close" title="关闭">关闭</a>
+				</div>
+				<div class="com_ele ce4" data-num="4">
+					<h3>VIP礼包</h3>
+					<p>公司会员大礼包<br>各种产品优先体验抢购权</p>
+					<a href="javascript:;" class="com_close" title="关闭">关闭</a>
+				</div>
+				<div class="com_ele ce5" data-num="5">
+					<h3>环境保障</h3>
+					<p>员工班车、弹性工作制<br>优质的办公环境(大阳台、咖啡吧、<br>健身器材、乒乓球桌、桌上足球)</p>
+					<a href="javascript:;" class="com_close" title="关闭">关闭</a>
+				</div>
+				<div class="com_ele ce6" data-num="6">
+					<h3>带薪假期</h3>
+					<p>年假、法定节假日、病假、<br>调休假、婚假、产假、看护假、<br>乳假、丧假、人流假、<br>工伤假等带薪假期</p>
+					<a href="javascript:;" class="com_close" title="关闭">关闭</a>
+				</div>
+				<div class="com_ele ce7" data-num="7">
+					<h3>节日活动</h3>
+					<p>Family Day、端午节<br>女生节、中秋节<br>等重大节日活动、 生日关怀</p>
+					<a href="javascript:;" class="com_close" title="关闭">关闭</a>
+				</div>
+				<div class="com_ele ce8" data-num="8">
+					<h3>健康关怀</h3>
+					<p>免费早晚餐、年度全面健康体检<br>慰问及救助金、关爱大讲堂</p>
+					<a href="javascript:;" class="com_close" title="关闭">关闭</a>
+				</div>
+				<div class="com_ele ce9" data-num="9">
+					<h3>法定保险</h3>
+					<p>五险一金 + 平安商业保险</p>
+					<a href="javascript:;" class="com_close" title="关闭">关闭</a>
+				</div>
+				<div class="com_ball ce10"></div>
+				<div class="com_ball ce11"></div>
+				<div class="com_ball ce12"></div>
+				<div class="com_ball ce13"></div>
+				<div class="com_ball ce14"></div>
+				<div class="com_ball ce15"></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="birdBox" class="bird_box" style="transform: perspective(1000px) rotateY(0deg) translate3d(0px, 100px, 0px);">
+	<span class="bird ani" style="display: block;"></span>
+</div>
+
+	<div id="idxPage" class="idx_page" style="display: block;">
+		<a href="javascript:;"></a>
+		<a href="javascript:;" class=""></a>
+		<a href="javascript:;" class=""></a>
+		<a href="javascript:;" class="cur"></a>
+		<a href="javascript:;"></a>
+		<a href="javascript:;"></a>
+	</div>
+	
+</div>
+<!-- 加载进度条 -->
+<div class="loading_area" id="loading_area" style="display: none;">
+	<span class="loading"><i></i></span>
+	<div class="progress_box">
+		<span class="progress" id="progress_bar" style="width: 0%"></span>
+	</div>
+</div>
+<div class="pop_s tipAlert" style="display: none;">
+	<a href="javascript:void(0);" title="关闭" class="pop_close">关闭</a>
+	<div class="pop_con">
+		<span class="ico_face face2"></span>
+		<p class="txt_result">网络异常，请重试</p>
+		<p class="txt_opt" style="display: none;">你可以继续对简历进行 <a href="####">修改</a> 和 <a href="####">预览</a></p>
+	</div>
+</div>
+<div class="pop_s tipAlertExchange" style="display: none;">
+	<a href="javascript:void(0);" title="关闭" class="pop_close" style="display: none;">关闭</a>
+	<div class="pop_con">
+		<span class="ico_face face2"></span>
+		<a href="####" class="txt_result" style="font-size:16px;">请前往个人中心再次确认您的交流会城市</a>
+		<a href="####" class="btn_write" style="width:120px;height:50px;margin-left:15px;margin-top:20px;">确定</a>
+		<p class="txt_opt" style="display: none;">你可以继续对简历进行 <a href="####">修改</a> 和 <a href="####">预览</a></p>
+	</div>
+</div>
+
+
+
+<script src="js/hr-2/jquery.js" type="text/javascript"></script>
+<script src="js/hr-2/loading.js" type="text/javascript"></script>
+<script src="js/hr-2/slider.js" type="text/javascript"></script>
+<script src="js/hr-2/common.min.js" type="text/javascript"></script>
+<script src="js/hr-2/index.js" type="text/javascript"></script>
+<script type="text/javascript">
+$(function(){
+        function indexLoad(){
+			$("#sliderbox").css("display","none");
+			$("#loading_area").show();
+			var srcs=[];
+			srcs = ["img/hr-2/spr_main.png", 
+						  "img/hr-2/spr_index.png",
+						  "img/hr-2/spr_bird.png",
+						  "img/hr-2/ele1.png",
+						  "img/hr-2/ele2.png",
+						  "img/hr-2/ele3.png",
+						  "img/hr-2/1.png",
+						  "img/hr-2/2.png",
+						  "img/hr-2/3.png",
+						  "img/hr-2/4.png",           
+						  "img/hr-2/c-1.png",
+						  "img/hr-2/c-2.png",
+						  "img/hr-2/c-3.png",
+						  "img/hr-2/c-4.png",
+						  "img/hr-2/n-1.png",
+						  "img/hr-2/n-2.png",
+						  "img/hr-2/n-3.png",
+						  "img/hr-2/n-4.png"];
+			for(var i=1;i<4;i++){
+				srcs.push("img/hr-2/bg_index_"+i+".jpg")
+			}
+			preLoad({
+				lid:      "loading_area",        //loading页的id
+				pid:      "progress_bar",        //进度条的id
+				nid:  	  "txt_progress",        //数字进度的id
+				srcs:     srcs,  
+				time:      0,            
+				callback:  function(){
+					$("#loading_area").fadeOut(1000);
+					$("#sliderbox").addClass("anin").show();
+				}
+			});
+			Tools.setCookie('indexLoadOne','One');
+		}
+	var indexLoadNum=Tools.getCookie('indexLoadOne');
+	if(indexLoadNum!='One') {
+		indexLoad();
+	}else{
+		$("#loading_area").hide();
+		$("#sliderbox").addClass("anin").show();
+		//$("#sliderbox").show();
+	}
+	var $idxPage = $("#idxPage");
+		var $eleBox = $('#ceBox');
+		var NUMARR = [],
+			DELTA = 60;
+
+		//构造数组
+		buildNum(DELTA);
+		function buildNum(delta) {
+
+			var num1 = [-20,-30,-40,-50,-60,-60,15,20,30,45,60,30,20,10,0,30,60,60,60,300,300,300,200,150,130,60,30,0,60,60,60,60,60,60,60,60,60,60,60,60,60,60,60,60,60,60,60,60,60],
+
+				num2 = [170,180,180,160,150,140,140,150,160,170,180,150,160,165,170,180,180,0,-20,-50,-60,-60,-70,-70,-60,0,20,30,30,110,110,110,110,11,0,310,210,110,110,110,110,110,110,110,110,11],
+
+				num3 = [],
+				num3_oth = [245, 225, 205, 185, 165, 145, 125, 105, 85, 65, 45, 25, -5, -25,   -45, -65, -75, -75, -75, -75, -75, -75, -75, -75, -75, -75, -75, -75, -75, -75, -75],
+
+				num4 = [],
+				num4_oth = [40,50,70,100,130,160,190,220,260, 270,280,290,300,320,310,300,300,300, 300,300,300,300,300,260,260,260,260,260,260,260,260,260,260,260,260],
+
+				num5 = [],
+				num5_oth = [100,180,200,250,  280,300,310,320, 310,300,200,160, 120,110,100,90,  100,120,100,100,120,120,120,120,100,100,120,100,100,120],
+
+				num6 = [100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100];
+
+			var winWidth = 	$(window).outerWidth();
+
+			//第三页数组构造	
+			var distance = 	(winWidth - $('#time_list').width()) / 2;
+			for(var i = 0, len = Math.round(distance / delta); i < len; i += 1) {
+				num3.push(240);
+			}
+			num3 = num3.concat(num3_oth);
+
+			//第四页数据构造
+			var distance = 	(winWidth - $('#culture').width()) / 2;
+			for(var i = 0, len = Math.round(distance / delta); i < len; i += 1) {
+				num4.push(40);
+			}
+			num4 = num4.concat(num4_oth);
+
+			//第五页数据构造
+			var distance = 	(winWidth - $('#tec').width()) / 2;
+			for(var i = 0, len = Math.round(distance / delta); i < len; i += 1) {
+				num5.push(100);
+			}
+			num5 = num5.concat(num5_oth);
+			NUMARR.push(num1);
+			NUMARR.push(num2);
+			NUMARR.push(num3);
+			NUMARR.push(num4);
+			NUMARR.push(num5);
+			NUMARR.push(num6);
+		}
+
+		//页面链接hash值
+		var INITPAGE = +toJsonObj(window.location.hash.slice(1)).page;
+		function toJsonObj(str) {
+            var obj = {};
+            str.replace(/([^?&=]+)=?([^&=]*)?/gi, function($0, $1, $2) {
+                obj[$1] = $2;
+            });
+            return obj;
+        }
+        function serialize(obj) {
+            var str = '';
+            for(var key in obj) {
+                str += (key + '=' + obj[key] + '&');
+            }
+            str = str.slice(0, str.length-1);
+            return str;
+        }
+
+        //鸟飞动 
+        //direction：方向;
+        //    index：鼠标滑动几格;
+        //      num: 当前页数据集合;
+        //     page: 当前页码
+		function bird(direction, index, num, page){
+			var $birdBox = $('#birdBox');
+			$('.bird').addClass('ani');
+
+			var transform,
+				drift = num[index];
+
+			if(direction == 1) {	//正向飞
+				transform = 'perspective(1000px) rotateY(0) translate3d('+ '0,'  + drift + 'px,0)'
+				$birdBox.css({
+					'-webkit-transform': transform,
+					'transform': transform
+				})
+
+			}
+			else {		//反向飞
+				transform = 'perspective(1000px) rotateY(-180deg) translate3d('+ '0,'  + drift + 'px,0)';
+				$birdBox.css({
+					'-webkit-transform': transform,
+					'transform': transform
+				})
+			}
+
+			//第一页起点停止动画
+			if(page == 0 && index == 0){
+				$('.bird').removeClass('ani')
+				$birdBox.css('transform', 'perspective(1000px) rotateY(0) translate3d(0,0,0)')
+			}
+		}
+
+		//处理第一页
+		function dealPage2(pageinfo) {
+			if(pageinfo.percent > 10 && pageinfo.percent < 200) {	
+				var l = pageinfo.percent,
+				l1 = l * l / 10 + 35,
+				l2 = l * l / 15;
+				l1 = -l1,
+				l2 = l2;
+				pageMove1 = 'translate3d('+  l1 + 'px,' + '0px ,0)';
+				pageMove2 = 'translate3d('+  l2 + 'px,' + '0px ,0)';
+				$('.index_about').css({
+					'-webkit-transform': pageMove1,
+					'transform': pageMove1
+				})
+				
+				$('.video_box').css({
+					"-webkit-transform":pageMove2,
+					"transform":pageMove2
+				})
+			}	
+		}
+
+		//处理第三页
+		function dealPage3(pageinfo) {
+
+				var $span = $('#time_list>span'),
+					$timelist = $('#time_list ul li'),
+					distance = 	($(window).outerWidth() - $('#time_list').width()) / 2,
+					_diff = pageinfo.pos - $(window).outerWidth() / 2;
+
+
+			if(_diff <= distance) {
+				$($span.get(0)).addClass('light');
+			}
+			else if(_diff >= $('#time_list').width() + distance) {
+				$($span.get(1)).addClass('light');
+				$timelist.addClass('light');
+			}
+			else {
+				var curli = Math.floor(Math.abs((_diff - distance) / $($timelist.get(0)).width()));
+				for(var i = 0; i <= curli; i += 1) {
+					$($timelist.get(i)).addClass('light');
+				}
+					
+			}
+		}
+		//处理第六页
+		function dealPage6(pageinfo) {
+			if(pageinfo.percent > 30 && pageinfo.percent < 200) {	
+				if(+$eleBox.attr('data-ani') === 0)	{
+					$eleBox.addClass('move0');
+					$eleBox.attr('data-ani', '1');						
+				}
+				$eleBox.css('display', 'block');
+			}
+			if(pageinfo.percent > 50){
+				$('.bird').css('display', 'none')
+			}
+			else{
+				$('.bird').css('display', 'block')
+			}
+		}
+
+function pageChg(idx){
+			if(idx == 0 ){
+				$idxPage.css("display","none")
+			}else{
+				$idxPage.css("display","block")
+				$idxPage.find("a").eq(idx).addClass("cur").siblings().removeClass("cur")
+			}
+		}
+		$("#idxPage a").click(function(){
+			var idx = $(this).index();
+			slider.gotoPage(idx,  .6)
+		})
+
+		var slider = new Slider({
+			 id         : 'sliderbox'
+			,sliderClass: 'index'
+			,pageClass  : 'index_box'
+			,initPage   : INITPAGE
+			,delta      : DELTA
+			,transition : .8
+			
+			,callback: function(data) {
+				//data.pos      ：页面滚动的值px
+				//data.percent  : 百分比
+				//data.paging   : 屏幕显示左边的页面为当前页
+				//data.direction: 方向(1：向前，-1：向后)
+				//data.pagesInfo: 每一页单独信息集合
+				//                data.pagesInfo[i].pos
+				//				  data.pagesInfo[i].percent
+
+				//hash值
+				window.location.hash = '#' + serialize({page: data.paging});
+var idx = data.paging;
+				pageChg(idx);
+                if(data.paging == 1){
+					$(".nav a").eq(1).addClass("cur").siblings().removeClass("cur");
+				}
+				if(INITPAGE > 0) {
+					$('#birdBox').css({
+						'animation-delay': '.2s',
+						'-webkit-animation-delay': '.2s'
+					})
+				}
+
+				//鸟动画
+				for(var i = 0, len = data.pagesInfo.length; i < len; i += 1) {
+					var cur = data.pagesInfo[i];
+					if(cur.percent > 50 && cur.percent < 150 && NUMARR.length) {
+						var _pos = 0;
+						if(i === 0) {	//第一页
+							pos = cur.pos - $(window).outerWidth();
+						}
+						else {		//其他页
+							pos = cur.pos - $(window).outerWidth() / 2;
+						}
+						bird(data.direction, Math.abs(Math.floor(pos / DELTA)), NUMARR[i], i);
+					}						
+				}
+
+				//第二页动画
+				dealPage2(data.pagesInfo[1]);
+
+				//第三页点亮
+				dealPage3(data.pagesInfo[2]);
+
+				//第四页
+				if(data.pagesInfo[3].percent > 30 && data.pagesInfo[3].percent < 150) {
+					$('.index_box_4').addClass('ani');
+				}
+				//第五页
+				if(data.pagesInfo[4].percent > 10 && data.pagesInfo[4].percent < 150) {
+					$('.index_box_5').addClass('ani');
+				}
+
+				//第六页动画
+				dealPage6(data.pagesInfo[5]);
+
+				
+			}
+		});
+
+
+		//页面绑定hashchage事件
+		$(window).on('hashchange' ,function() {
+			var hashObj = toJsonObj(window.location.hash.slice(1)),
+				page = +hashObj.page,
+				jump = +hashObj.jump;
+			if(jump) {
+				slider.gotoPage(page);
+			}	
+			
+		});
+		
+		//第六页动画结束事件
+		var ceCount = 0;	
+		$eleBox.on('webkitAnimationEnd animationEnd', function (e) {
+			ceCount += 1;
+			if(ceCount >= $('#ceBox>div').length) {
+
+			$eleBox.removeClass('move0');
+
+		}
+
+	});
+	/* page5 */
+	$eleBox.on('click', '.com_ele', function(e) {
+e.stopPropagation();
+		if($eleBox.hasClass('move0')){
+			$eleBox.removeClass('move0');
+		}
+		var $this = $(this),
+			n = $this.attr('data-num');	
+
+		if($this.hasClass('open')) {
+			$eleBox.removeClass().addClass('ele_box');
+			$this.removeClass('open');
+		}
+		else {
+			if($eleBox.hasClass('move')) {
+				return;
+			}
+			else {
+				$eleBox.addClass('move' + n +' ' + 'move');
+				$this.addClass('open');
+			}
+		}
+	});
+$('.inner').click(function(e){
+		$('#ceBox').removeClass().addClass("ele_box");
+		$('#ceBox').find('.open').removeClass('open')
+	});
+	$(".nav a").eq(1).click(function(){
+		$(this).addClass("cur").siblings().removeClass("cur");
+	});
+	
+	//视频播放
+	var video = document.getElementById('video'),
+		videoBox = $(".video_box"),
+		btnPlayer = $("#btnPlayer");
+
+		btnPlayer.click(function(){
+		$(".pic_front").fadeOut(1000);
+			if(video.paused){
+				video.play();
+				btnPlayer.removeClass("paused");
+				videoBox.hover(function(){
+					btnPlayer.css("display","block");
+				},function(){
+					btnPlayer.css("display","none");
+				})
+			}else{
+				video.pause();
+				btnPlayer.css("display","block");
+				btnPlayer.addClass("paused");
+			}			
+		});
+		//监听播放结束
+		var eventEnd = function(e){
+			video.addEventListener(e,function(){
+				btnPlayer.css("display","block");
+			},false);
+		};
+		eventEnd("ended");
+
+	})		
+</script>
+</body>
+	</body>
+</html>

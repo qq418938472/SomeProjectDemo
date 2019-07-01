@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <title>价格</title>
+    <link rel="stylesheet" href="./css/common.css">
+
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+    <!-- <script src="./js/jquery-3.1.0.min.js"></script> -->
+    <script src="./js/jquery-2.1.4.min.js"></script>
+    
+    <!-- 加载NG相关文件 -->
+    <script type="text/javascript" src="./js/angular.min.js"></script>
+    <script type="text/javascript" src="./js/angular-animate.min.js"></script>
+    <script src="./js/myApp.js"></script>
+    <!-- 引入对应用控制器文件 -->
+    <script src="./js/myCtrl.js"></script>
+    <script type="text/javascript">
+    $(function(){
+       $(".contentBf ul li").eq(0).click(function(){
+            $(".price_list_1").css({'display':'block'});
+            $(".price_list_2").css({'display':'none'});
+            $(".price_list_3").css({'display':'none'});
+            $(".contentBf ul li").eq(0).addClass('Bf_on');
+            $(".contentBf ul li").eq(1).removeClass('Bf_on');
+            $(".contentBf ul li").eq(2).removeClass('Bf_on');
+       });
+       $(".contentBf ul li").eq(1).click(function(){
+            $(".price_list_1").css({'display':'none'});
+            $(".price_list_2").css({'display':'block'});
+            $(".price_list_3").css({'display':'none'});
+            $(".contentBf ul li").eq(0).removeClass('Bf_on');
+            $(".contentBf ul li").eq(1).addClass('Bf_on');
+            $(".contentBf ul li").eq(2).removeClass('Bf_on');
+       });
+       $(".contentBf ul li").eq(2).click(function(){
+            $(".price_list_1").css({'display':'none'});
+            $(".price_list_2").css({'display':'none'});
+            $(".price_list_3").css({'display':'block'});
+            $(".contentBf ul li").eq(0).removeClass('Bf_on');
+            $(".contentBf ul li").eq(1).removeClass('Bf_on');
+            $(".contentBf ul li").eq(2).addClass('Bf_on');
+       });
+
+
+       $("#cal_btn").click(function(){
+            $(".calculator_bg").css({'display':'block'});
+            $(".calculator").css({'display':'block'});
+       });
+       $("#close_cal").click(function(){
+            $(".calculator_bg").css({'display':'none'});
+            $(".calculator").css({'display':'none'});
+       });
+
+
+
+    });
+    </script>
+    <link rel="stylesheet" href="./css/price.css">
+    <link rel="stylesheet" href="./css/template.css">
+    </head>
+    <body ng-app="myApp" ng-controller="myCtrl">
+    
+    <div class="calculator_bg">
+        <div class="calculator">
+            <h3>按带宽峰值计算<em id="close_cal"></em></h3>
+            <div class="calculator_2">
+                <div class="calculator_zz">
+                    <span>视频分辨率</span>
+                    
+                    <select ng-model="selectedSite1">
+                    <option ng-repeat="x in sites" value="{{x.url}}">{{x.site}}</option>
+                    </select>
+                </div>
+                <div class="calculator_zz">
+                    <span>观看并发数 </span>
+                   
+                    <select ng-model="selectedSite2">
+                    <option ng-repeat="x in numbers" value="{{x.site}}">{{x.site}}</option>
+                    </select>
+                </div>
+                <div class="calculator_zz">
+                    <span>直播产品</span>
+                    
+                    <select ng-model="selectedSite3">
+                    <option ng-repeat="x in type" value="{{x.url}}">{{x.site}}</option>
+                    </select>
+
+                </div>
+                <div class="calculator_zz" style="margin-top:30px;">
+                    <span>峰值宽带</span>
+                    <b>{{(selectedSite1*selectedSite2)/1000}}</b><i>Mbps</i>
+                </div>
+                <div class="calculator_zz" style="margin-top:20px;">
+                    <span>直播费用</span>
+                    <strong>{{selectedSite1*selectedSite2*selectedSite3}}</strong><i>元(当日)</i>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+        <div class="top">
+            <div class="top_box">
+                <div>
+                  <a href="index.html"><img src="./img/logo.png" style="margin:0 auto;"></a>
+                </div>
+                <div>
+                    <ul>
+                      <a href="price.html"><li>价格</li></a>
+                      <a href="plan.html"><li>解决方案</li></a>
+                      <a href="customer.html"><li>客户案例</li></a>
+                      <a href="####"><li>帮助中心</li></a>
+                      <a href="xycdn.html"><li>星域首页</li></a>
+                    </ul>
+                </div>
+                <div style="float:right;">
+                    <ul>
+                        <li>管理控制台</li>
+                        <span>免费试用</span><i></i>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="contentAf">
+            
+        </div>
+        <div class="contentBf">
+            <ul>
+                <li class="Bf_on">直播价格</li>
+                <li>直播增值服务</li>
+                <li>点播/下载价格</li>
+            </ul>
+            <div class="price_list_1">
+                <p><span id="cal_btn">价格计算器</span></p>
+                <h3>直播加速</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <td>带宽区间</td>
+                            <td>极速版（元/Mbps/天）</td>
+                            <td>旗舰版（元/Mbps/天）</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>0-500Mbps</td>
+                            <td>0.7</td>
+                            <td>0.35</td>
+                        </tr>
+                        <tr>
+                            <td>500Mbps-5Gbps</td>
+                            <td>0.6</td>
+                            <td>0.3</td>
+                        </tr>
+                        <tr>
+                            <td>>5Gbps</td>
+                            <td>0.5</td>
+                            <td>0.27</td>
+                        </tr>
+                    </tbody>
+                    
+                </table>
+                <p style="color:#777;">*按 [ 带宽 ] 计费</p>
+                <h2>按峰值带宽计费方式，默认带宽上限支持5Gbps，如需要更大的用量，请联系我们：service@xunlei.com。</h2>
+                <h2>按带宽峰值计费是以当日国内节点服务产生的带宽最高值（单位Mbps)为结算标准。</h2>
+                <h2><strong>计费规则：</strong>计费项，峰值带宽</h2>
+                <h2>1.付费方式：后付费；</h2>
+                <h2>2.计费规则：按国内节点峰值带宽阶梯价格计费，当日分别超额累进（以自然日为1个累计周期）；</h2>
+                <h2>3.计费周期：起始和终止时间为每日0：00-24：00，次日8时前生成账单并执行扣费；</h2>
+                <h2>CDN按带宽计费方式是采用阶梯计费，直播极速版举例说明：</h2>
+                <h2>用户当日的峰值带宽为900Mbps</h2>
+                <h2>则用户的账单费用应为500*0.7+400*0.6=590元（小于500Mbps单价为0.7元，大于500Mbps小于5Gpbs单价为0.6元）</h2>
+                <h2>峰值带宽计费公示</h2>
+                <h2>设当日CDN带宽峰值为A Mbps,当日CDN带宽费用为B元</h2>
+                <h2>当A＜500，B=A*0.7</h2>
+                <h2>当500＜A＜5000，B=【500*0.7+（A-500）*0.6】</h2>
+                <h2>当A＞5000，B=【500*0.7+（5000-500）*0.6+（A-5000）*0.5】</h2>
+                <h2><strong>说明：</strong>账单出账时间为当前计费周期结束（自然日）。账单出账时间通常在当前计费周期结束后一小时内，4月29日账单会在4月30日零点以后生成，具体以系统出账为准，账单生成后会自动从您的账户余额中扣除费用以结算账单；如您的账户欠费超过7天，我们将终止服务。</h2>
+                <h3 style="margin-top: 40px;">大客户专享直播价格</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <td>带宽区间</td>
+                            <td>极速版（元/Mbps/月）</td>
+                            <td>旗舰版（元/Mbps/月）</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>0-50Gbps</td>
+                            <td>14.9</td>
+                            <td>7.9</td>
+                        </tr>
+                        <tr>
+                            <td>>50Gbps</td>
+                            <td>13.9</td>
+                            <td>6.9</td>
+                        </tr>
+                        
+                    </tbody>
+                    
+                </table>
+                <p style="color:#777;">*按 [ 带宽 ] 计费</p>
+            </div>
+
+            <div class="price_list_2">
+            <p></p>
+                <h3>转码服务</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <td>输出规格</td>
+                            <td>单价（元/分钟）</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>360P</td>
+                            <td>0.0074</td>
+                        </tr>
+                        <tr>
+                            <td>480P</td>
+                            <td>0.0105</td>
+                        </tr>
+                        <tr>
+                            <td>720P</td>
+                            <td>0.0185</td>
+                        </tr>
+                        <tr>
+                            <td>1080P</td>
+                            <td>0.0371</td>
+                        </tr>
+                    </tbody>
+                    
+                </table>
+                <p style="color:#777;">*按 [ 规格 ] 计费</p>
+                
+                <h3 style="margin-top: 20px;">截图服务</h3>
+                <table>
+                   
+                    <tbody>
+                        <tr>
+                            <td style="width:1200px;">0.08元/千次</td>
+                        </tr>
+                    </tbody>
+                    
+                </table>
+                <p style="color:#777;">*按 [ 次数 ] 计费</p>
+
+                <h3 style="margin-top: 20px;">存储服务</h3>
+                <table>
+                   
+                    <tbody>
+                        <tr>
+                            <td style="width:1200px;">0.14元/GB/月</td>
+                        </tr>
+                    </tbody>
+                    
+                </table>
+                <p style="color:#777;">*访问转存内容产生的带宽费用，计入到点播业务里</p>
+            </div>
+
+
+            <div class="price_list_3">
+            <p></p>
+                <h3>大客户专享价格</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <td>带宽区间</td>
+                            <td>单价（元/Mbps/月）</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>0-5Gbps</td>
+                            <td>13</td>
+                        </tr>
+                        <tr>
+                            <td>5-50Gbps</td>
+                            <td>12</td>
+                        </tr>
+                        <tr>
+                            <td>50-500Gbps</td>
+                            <td>11</td>
+                        </tr>
+                        <tr>
+                            <td>>500Gbps</td>
+                            <td>10</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p style="color:#777;">*按 [ 带宽 ] 计费</p>
+                <h3 style="margin-top: 20px;">大客户专享价格</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <td>流量区间</td>
+                            <td>单价（元/GB）</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>0-50TB</td>
+                            <td>0.15</td>
+                        </tr>
+                        <tr>
+                            <td>50TB-0.5PB</td>
+                            <td>0.13</td>
+                        </tr>
+                        <tr>
+                            <td>0.5PB-50PB</td>
+                            <td>0.12</td>
+                        </tr>
+                        <tr>
+                            <td>>50PB</td>
+                            <td>0.10</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p style="color:#777;">*按 [ 流量 ] 计费</p>
+            </div>
+            
+        </div>
+        
+
+        <div class="footer_Af">
+            <div class="footer_Af_box">
+                <span>星域重新定义CDN</span>
+                <a href="#"><i></i>立即领取100G流量包</a>
+            </div>
+        </div>
+        <div class="footer_Bf">
+            <div class="footer_Bf_box">
+                <dl>
+                    <dl>
+                        <dt>产品与价格</dt>
+                        <dd><a href="#">直播极速版</a></dd>
+                        <dd><a href="#">直播旗舰版</a></dd>
+                        <dd><a href="#">价格</a></dd>
+                    </dl>
+                    <dl>
+                        <dt>热门活动</dt>
+                        <dd><a href="#">星耀计划</a></dd>
+                    </dl>
+                    <dl>
+                        <dt>技术支持</dt>
+                        <dd><a href="#">帮助文档</a></dd>
+                        <dd><a href="#">API文档</a></dd>
+                    </dl>
+                    <dl>
+                        <dt>其他</dt>
+                        <dd><a href="#">管理控制台</a></dd>
+                        <dd><a href="#">解决方案</a></dd>
+                        <dd><a href="#">新闻动态</a></dd>
+                        <dd><a href="#">联系我们</a></dd>
+                    </dl>
+                    <dl>
+                        <dt>联系我们</dt>
+                        <dd>电话：400-926-2228 0755-86240150</dd>
+                        <dd>邮箱：xycdn-help@xunlei.com</dd>
+                        <dd>地址：深圳市南山区高新南环道威新软件园5号楼4层</dd>
+                        <dd><img src="./img/company_code.jpg">扫描关注微信公众号</dd>
+                    </dl>
+                </dl>
+            </div>
+        </div>
+        <div class="footer_Cf">
+            <div class="footer_Cf_box">
+                <p>友情链接：<a href="#">迅雷</a><span>|</span><a href="#">迅雷赚钱宝</a></p>
+                <p>Copyright © 2015-2016 xycdn.All Rights Reserved 深圳市网心科技有限公司版权所有 粤ICP备15018633号-1</p>
+            </div>
+        </div>
+        
+    
+    </body>
+</html>

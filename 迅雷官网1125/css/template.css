@@ -1,0 +1,184 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-family: "微软雅黑";
+}
+.top{
+        height: 60px;
+        line-height: 60px;
+        width: 100%;
+        background: #262529;
+        z-index: 20;
+    }
+    .top em{
+        font-size: 40px;
+        border: 1px #ccc solid;
+        padding:5px 16px;
+        margin-top: 25px;
+        line-height: 40px;
+        position: absolute;
+        right: 20px;
+        top: -20px;
+        height: 50px;
+        width: 60px;
+        background: rgba(255,255,255,.8);
+        cursor: pointer;
+        border-radius: 5px;
+        float: right;
+        z-index: 21;
+        transition: 0.2s linear;
+    }
+    .top em:hover{
+        opacity: 0.9;
+        transition: 0.2s linear;
+    }
+    .top_box{
+        width: 1200px;
+        margin: 0 auto;
+    }
+    .top img{
+        height: 60px;
+        margin: 0px auto;
+    }
+    .top ul{
+        color: #fff;
+    }
+    .top ul li{
+        display: inline-block;
+        width: 80px;
+        text-align: center;
+        cursor: pointer;
+    }
+    .top ul a{
+        color:#fff;
+    }
+    .top ul li:hover{
+        color: #2a87ef;
+    }
+    .list_box{
+        width: 270px;
+        height: 100%;
+        position: fixed;
+        background: rgba(255,255,255,1);
+        box-shadow: 0px 0px 20px #666;
+        left: -300px;
+        z-index: 10000;
+        padding: 0px 25px;
+    }
+    .top_box div{
+        float: left;
+        height: 60px;
+    }
+    .top_box span{
+        width: 80px;
+        height: 30px;
+        line-height: 28px;
+        cursor: pointer;
+        border: 1px solid #2a87ef;
+        display: inline-block;
+        text-align: center;
+        border-radius: 3px;
+        margin-left: 5px;
+        transition: 0.2s linear;
+    }
+    .top_box span:hover{
+        background: #2a87ef;
+        transition: 0.2s linear;
+    }
+    .top_box i{
+        width: 25px;
+        height: 25px;
+        background: url(../img/hot.png);
+        display: inline-block;
+        font-style: normal;
+        margin-left: -5px;
+        margin-bottom: 5px;
+    }
+    .footer_Af{
+            background: #0745a8;
+            width: 100%;
+        }
+        .footer_Af_box{
+            width: 1200px;
+            margin: 0 auto;
+            height: 75px;
+            text-align: center;
+        }
+        .footer_Af_box span{
+            color: #fff;
+            font-size: 24px;
+            line-height: 75px;
+        }
+        .footer_Af_box a{
+            width: 200px;
+            height: 38px;
+            line-height: 32px;
+            margin-left: 20px;
+            color: #0745a8;
+            font-size: 14px;
+            background: #fff;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .footer_Af_box a i{
+            width: 25px;
+            height: 25px;
+            margin-right: 5px;
+            display: inline-block;
+            background: url(../img/spr_2.png) 0 -73px;
+        }
+        .footer_Bf{
+            width: 100%;
+            height: 230px;
+            line-height: 28px;
+            margin-top: -10px;
+            color: #666;
+            background: #f4f4f5;
+        }
+        .footer_Bf_box{
+            width: 1200px;
+            margin: 0 auto;
+        }
+        .footer_Bf_box dl{
+            margin-top: 10px;
+        }
+        .footer_Bf_box dl dl{
+            float: left;
+            width: 225px;
+        }
+        .footer_Bf_box dl dl:nth-child(5){
+            width: 286px;
+        }
+        .footer_Bf_box dl dl dt{
+            font-weight: bold;
+            color: #444;
+        }
+        .footer_Bf_box dl dl dd{
+            color: #777;
+        }
+        .footer_Bf_box dl dl dd a{
+            color: #777;
+        }
+        .footer_Cf{
+            width: 100%;
+            background: #f4f4f5;
+            border-top: 1px #ccc solid;
+            padding-top: 10px;
+            color: #777;
+            padding-bottom: 30px;
+        }
+        .footer_Cf a{
+            color: #777;
+        }
+        .footer_Cf p{
+            margin-top: 20px;
+        }
+        .footer_Cf span{
+            color: #777;
+            margin: 0 5px;
+        }
+        .footer_Cf_box{
+            width: 1200px;
+            margin: 0 auto;
+        }

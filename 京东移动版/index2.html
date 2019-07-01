@@ -1,0 +1,1409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>京东触屏版</title>
+	<link rel="stylesheet" href="./css/bootstrap.min.css">
+	<link rel="stylesheet" href="./font-awesome-4.6.3/css/font-awesome.min.css">
+	<script src="./js/jquery-3.1.0.min.js"></script>
+	<script src="./js/bootstrap.min.js"></script>
+	<style>
+	.container{
+		margin: 0 auto;
+		padding: 0;
+		max-width: 640px;
+		overflow: hidden;
+		min-width: 330px;
+	}
+	.content_Af{
+		margin: 0 auto;
+		max-width:640px;
+		/*max-height: 280px;*/
+		position: relative;
+	}
+	.carousel-indicators{
+		bottom: -8px;
+	}
+	.fixed{
+		position: fixed;
+		top: 0;
+		height: 36px;
+		width: 100%;
+		max-width: 640px;
+		z-index: 2;
+		white-space: nowrap;
+	}
+	.fixed .row{
+		padding:0 0 5px 0;
+		margin: 0;
+		transition: 0.5s;
+		white-space: nowrap;
+	}
+	.row .logo{
+		width: 56px;
+		margin: 10px 0 0 5px;
+	}
+	.form_left{
+		padding: 0;
+	}
+	.form_frame{
+		padding: 0 0 0 25px;
+	}
+	.form-horizontal .form-group{
+		background: #fff;
+		border-radius: 15px;
+		margin: 5px 0 0 0;
+	}
+	.form_right a{
+		color: #fff;
+	}
+	.denglu{
+		white-space: nowrap;
+	}
+	.form_right{
+		margin: 0;
+		padding:  9px 0px 0 6px;
+		color: #fff;
+	}
+	.fa-search{
+		color: #888888;
+		margin:  0px 0 0 5px;
+		padding-top: 5px;
+	}
+	.form-control{
+		box-shadow: none;
+		border: none;
+		width: 100%;
+		margin:0 auto;
+		display: inline;
+		max-width: 300px;
+	}
+	.jd-search-tb{
+		height:100%;
+		margin:0 10px;
+		line-height: 40px;
+	}
+	.jd-search-form{
+		display:inline-block;
+		height: 100%;
+		width: 100%;
+		background: url("./images/logo.png") no-repeat 0px 5px;
+	}
+	.form-control{
+		border-radius: 15px;
+		width: 80%;
+		max-width: 472px;
+		color: #ccc;
+		padding: 0;
+		height: 31px;
+	}
+	.form-control:focus{
+		box-shadow: none;
+	}
+	.btn{
+		color: #fff;
+		font-size: 16px;
+	}
+	.btn:hover{
+		color: #fff;
+	}
+	.btn-default{
+		border: none;
+		color: #000;
+		background: #F3F3F3;
+		font-size: 17px;
+		height: 40%;
+		border-radius: 0px;
+	}
+	.btn-default:hover{
+		color: #000;
+		background: #F3F3F3;
+	}
+	.btn-group{
+		background: #F3F3F3;
+		text-align: center;
+		padding:0;
+	}
+	.btn-group a{
+		color: black;
+		font-size: 20px;
+		font-weight: bold;
+	}
+	.btn-group a:hover{
+		text-decoration: none;
+	}
+	.img1{
+		background: #F3F3F3;
+	}
+	.img1 img{
+		margin:9px auto -25px;
+		width: 70px;
+	}
+	.jd_new{
+		width: 100%;
+		height: 48px;
+		background: #F3F3F3;
+		padding: 8px 8px;
+	}
+	.jd_new img{
+		width: 73px;
+		margin: -18px 0 0 8px;
+	}
+	.jd_new_frame{
+		padding: 5px 5px 0 5px;
+		text-align: left;
+		border-radius: 5px;
+		width: 100%;
+		background: #fff;
+		float: left;
+	}
+	.jd_new_left{
+		float: left;
+		display: inline;
+		width: 90%;
+	}
+	.jd_new_right{
+		float: right;
+		display: inline;
+		margin-top: 3px;
+	}
+	.row_tuodong{
+		width: 500%;
+	}
+	.row_tuodong_img{
+		width: 126px;
+		display: inline;
+		float: left;
+	}
+	.panel{
+		border:none;
+		box-shadow: none;
+		margin-bottom: 0;
+	}
+	.panel-body{
+		padding-top: 0;
+		border: none;
+	}
+	.content_Cf .panel-heading{
+		background: #fff;
+		border: none;
+	}
+	.panel-heading_left{
+		color: red;
+	}
+	.panel-heading_right{
+		float: right;
+	}
+	.thumbnail{
+		border: none;
+	}
+	.thumbnail img{
+		min-width: 60px;
+	}
+	.caption{
+		text-align: center;
+	}
+	.caption h3{
+		font-size: 14px;
+		color: red;
+	}
+	.caption p{
+		font-size: 10px;
+		color: #888888;
+	}
+	.content_Cf_bottom{
+		width: 100%;
+		float: left;
+		margin: 0 0 10px 0;
+	}
+	.bottom_left{
+		width: 50%;
+		display: inline-block;
+		float: left;
+	}
+	.bottom_right{
+		width: 50%;
+		display: inline-block;
+		float: left;
+	}
+	.content_Cf_bottom .left{
+		width: 58%;
+		float: left;
+
+	}
+	.content_Cf_bottom .left h2{
+		font-size: 28px;
+		margin-bottom: 0px;
+	}
+	.content_Cf_bottom .left h3{
+		font-size: 22px;
+		color: #888888;
+		margin-top: 0px;
+	}
+	.content_Cf_bottom .right{
+		width: 42%;
+		float: right;
+	}
+	.right img{
+		margin: 30px 0 0 0;
+		width: 100%;
+	}
+	.floor{
+		float: left;
+		width: 100%;
+	}
+	.floor .title{
+		background: url("./images/floor_bg.png") no-repeat;
+	}
+	* h2{
+		font-weight: bold;
+	}
+	.floor_bottom h2,.floor_bottom h3{
+		margin:0;
+	}
+	.floor_bottom{
+		width: 100%;
+		float: left;
+	}
+	.floor_bottom_A{
+		width: 25%;
+		display: inline;
+		float: left;
+	}
+	.floor_bottom h3{
+		color: #888888;
+
+	}
+	.floor_bottom img{
+		margin: 30px 0 0 0 ; 
+		width: 90%;
+ 	}
+ 	.floor_lunbo .carousel{
+ 		float: left;
+ 		margin: 20px 0 0 0;
+ 	}
+ 	.recommend{
+ 		width: 100%;
+ 		float: left;
+ 		background: #F0F2F5;
+ 	}
+ 	.recommend span{
+ 		color: #848689;
+ 	}
+ 	.recommend_title{
+ 		padding-top: 20px;
+ 		width: 100%;
+ 		height: 50px;
+ 	}
+ 	.recommend .bottom_left{
+ 		background: #fff;
+ 		width: 49%;
+ 		float: left;
+ 	}
+ 	.bottom_left span,.bottom_right span{
+ 		color: #000;
+ 	}
+ 	.recommend .bottom_right{
+ 		background: #fff;
+ 		width: 49%;
+ 		float: right;
+ 	}
+ 	.recommend img{
+ 		width: 100%;
+ 	}
+ 	.recommend .span2{
+ 		float: left;
+ 		color: red;
+ 		font-size: 16px;
+ 		margin-bottom: 8px;
+ 	}
+ 	.recommend .content_Cf_bottom{
+ 		margin-bottom: 5px;
+ 		float: left;
+ 	}
+ 	.recommend button{
+ 		color: #888888;
+ 		float: right;
+ 		background: #fff;
+ 		border: 1px solid #ccc;
+ 		margin: 0 5px 0 0;
+ 	}
+ 	.floor_bar{
+ 		float: left;
+ 		background: #fff;
+ 		position: fixed;
+ 		bottom: 0;
+ 		left: 0;
+ 		box-shadow: 1px 0px 2px #cccccc; 
+ 	}
+ 	.floor_bar button{
+ 		background: #fff;
+ 		padding-bottom: 0px;
+ 	}
+ 	.floor_bar p{
+ 		margin-bottom:0;
+ 		font-size:10px;
+ 		color: #888888;
+ 	}
+ 	.floor_bar i{
+ 		color: #888888;
+ 	}
+ 	.first_button, .first_button i{
+ 		color: red;
+ 	}
+ 	.add{
+ 		border-top: 1px solid #cccccc;
+ 		border-bottom: 1px solid #cccccc;
+ 		padding-top: 5px;
+ 		padding-bottom: 5px;
+ 	}
+ 	.add a{
+ 		color: #888888;
+ 	}
+ 	.add a:hover{
+ 		color: none;
+ 		text-decoration: none;
+ 	}
+ 	.clear{
+ 		clear:both;
+ 	}
+ 	.jd_footer_Af{
+ 		width: 100%;
+		background: #F0F2F5;
+ 	}
+ 	.jd_footer_Af ul{
+ 		margin: 0;
+ 		list-style: none;
+ 		text-align: center;
+ 		padding:18px 0 18px 0;
+ 	}
+ 	.jd_footer_Af ul li{
+ 		width: 90px;
+ 		display: inline-block;
+ 		border-right: 1px solid #cccccc;
+ 	}
+ 	.jd_footer_Af ul li:last-child {
+ 		border-right: none;
+ 	}
+ 	.jd_footer_Af ul li a{
+ 		width: 70px;
+ 		color: #888888;
+ 		text-decoration: none;
+ 		font-size: 12px;
+ 	}
+ 	.jd_footer_Bf ul{
+ 		padding:10px 0;
+ 	}
+ 	.jd_footer_Bf{
+ 		border-top: 1px solid #cccccc;
+ 		border-bottom: 1px solid #cccccc;
+ 	}
+ 	.jd_footer_Bf ul li{
+ 		border: none;
+ 		height: 50px;
+ 	}
+ 	.jd_footer_Bf ul li a{
+ 		width: 45px;
+ 		font-size: 10px;
+ 	}
+ 	.app{
+ 		width: 36%;
+ 	}
+ 	.jd_footer_Bf .jd_footer_Bf_active{
+ 		color: #000;
+ 	}
+ 	.jd_footer_Cf{
+ 		background: #F0F2F5;
+ 		color: #888888;
+ 		padding: 10px 0 60px 0px;
+ 	}
+ 	.jd_footer_Cf span{
+ 		font-size: 12px;
+ 	}
+ 	#outer{
+ 		padding: 0;
+ 	}
+ 	#inner{
+ 		position: relative;
+ 		left: 0px;
+ 	}
+ 	#scrollDiv{
+ 		width:35%;
+ 		height:25px;
+ 		line-height:25px;
+ 		overflow:hidden;
+ 		display: inline-block;
+ 	}
+ 	#scrollDiv ul{
+ 		padding:0;
+ 		list-style: none; 
+ 	}
+ 	#scrollDiv li{
+ 		height:25px;
+ 		padding-left:10px;
+ 	}
+ 	.EZ{
+ 		width: 100%;
+ 	}
+ 	@media screen and (max-width: 768px) {
+	    .btn-group  a{
+	        font-size: 20px;
+	    }
+	    .content_Cf_bottom .left h2{
+	    	 font-size: 20px;
+	    }
+	    .content_Cf_bottom .left h3{
+	    	 font-size: 20px;
+	    }
+	    .floor_bottom h2,.floor_bottom h3{
+	    	font-size: 20px;
+	    }
+	    .content_Cf_bottom span{
+	    	font-size: 20px;
+	    }
+	}
+ 	@media screen and (max-width: 568px) {
+	    .btn-group  a{
+	        font-size: 15px;
+	    }
+	    .content_Cf_bottom .left h2{
+	    	 font-size: 15px;
+	    }
+	    .content_Cf_bottom .left h3{
+	    	 font-size: 15px;
+	    }
+	    .floor_bottom h2,.floor_bottom h3{
+	    	font-size: 15px;
+	    }
+	    .content_Cf_bottom span{
+	    	font-size: 15px;
+	    }
+	}
+ 	@media screen and (max-width: 368px) {
+	    .btn-group  a{
+	        font-size: 12px;
+	    }
+	    .content_Cf_bottom .left h2{
+	    	 font-size: 12px;
+	    }
+	    .content_Cf_bottom .left h3{
+	    	 font-size: 12px;
+	    }
+	    .floor_bottom h2,.floor_bottom h3{
+	    	font-size: 12px;
+	    }
+	    .content_Cf_bottom span{
+	    	font-size: 12px;
+	    }
+	}
+	</style>
+	<script type="text/javascript">
+		window.onload = function(){
+			/*
+				触摸事件 
+				三种在规范中列出并获得跨移动设备广泛实现的基本触摸事件：
+				     1. touchstart：手指放在一个DOM元素上。
+				     2. touchmove：手指拖曳一个DOM元素。
+				     3. touchend：手指从一个DOM元素上移开。
+				     每个触摸事件都包括了三个触摸列表：
+				     1. touches：当前位于屏幕上的所有手指的一个列表。
+				     2. targetTouches：位于当前DOM元素上的手指的一个列表。
+				3. changedTouches：涉及当前事件的手指的一个列表。
+				     例如，在一个touchend事件中，这就会是移开的手指。
+				     这些列表由包含了触摸信息的对象组成：
+				     1. identifier：一个数值，唯一标识触摸会话（touch session）中的当前手指。
+				     2. target：DOM元素，是动作所针对的目标。
+				     3. 客户/页面/屏幕坐标：动作在屏幕上发生的位置。
+				     4. 半径坐标和 rotationAngle：画出大约相当于手指形状的椭圆形。
+			*/
+
+		    var startX,//触摸时的坐标   
+		        startY,   
+		        x, //滑动的距离   
+		        y,   
+		        aboveX=0; //设一个全局变量记录上一次内部块滑动的位置    
+
+	     	var inner=document.getElementById("inner");   
+	        
+	        function touchStart(e){			//触摸   
+	            e.preventDefault();   		// 取消原本的事件 
+	            var touch=e.touches[0];  	// 当前位于屏幕上的所有手指 
+	            startX = touch.pageX;   	// 刚触摸时的坐标 
+	            console.log(startX) ;              
+	        }   
+
+	        function touchMove(e){//滑动             
+	             e.preventDefault();      // 取消原本的事件     
+	             var  touch = e.touches[0];                  
+	             x = touch.pageX - startX;//滑动的距离   
+	            //inner.style.webkitTransform = 'translate(' + 0+ 'px, ' + y + 'px)';  //也可以用css3的方式        
+	            if (aboveX+x > 0) {
+	            	inner.style.left = 0
+	            	return 0;
+	            }
+	            if (aboveX+x < -727) {
+	            	inner.style.left = -727
+	            	return 0;
+	            }   
+	            inner.style.left=aboveX+x+"px"; //这一句中的aboveY是inner上次滑动后的位置                 
+	        }     
+
+	        function touchEnd(e){//手指离开屏幕   
+	          e.preventDefault();                      
+	          aboveX=parseInt(inner.style.left);//touch结束后记录内部滑块滑动的位置 在全局变量中体现 一定要用parseInt()将其转化为整数字;   
+	          if (aboveX>=0) {
+	          	inner.style.left = 0;
+	          }
+	        }//   
+	        /*
+				addEventListener() 为指定元素添加指定的事件
+				共3个参数
+				event：	必须。字符串，指定事件名。注意: 不要使用 "on" 前缀。 例如，使用 "click" ,而不是使用 "onclick"。 
+				function:必须。指定要事件触发时执行的函数。
+				useCapture:可选。布尔值，指定事件是否在捕获或冒泡阶段执行。
+							可能值:
+							true - 事件句柄在捕获阶段执行
+							false- false- 默认。事件句柄在冒泡阶段执行
+	        */
+	         document.getElementById("outer").addEventListener('touchstart', touchStart,false);     
+	         document.getElementById("outer").addEventListener('touchmove', touchMove,false);     
+	         document.getElementById("outer").addEventListener('touchend', touchEnd,false);  
+			window.onscroll = function(){
+				Scroll();
+			}
+		}
+		function Scroll(){				//上部滚动条菜单显示与隐藏的函数
+			var Scroll = document.documentElement.scrollTop || document.body.scrollTop;
+			var header_Af = document.getElementById('row');
+			if (Scroll > 280) {
+				// alert(1);
+				header_Af.style.background = '#CD323E';
+			}else{
+				header_Af.style.background = 'none';
+			}
+		}
+		//倒计时
+		function GetRTime(){
+		  var EndTime= new Date('2017/2/30 00:00:00');
+		  var NowTime = new Date();
+		  var t =EndTime.getTime() - NowTime.getTime();
+		  var d=0;
+		  var h=0;
+		  var m=0;
+		  var s=0;
+		  if(t>=0){
+		    // d=Math.floor(t/1000/60/60/24);
+		    h=Math.floor(t/1000/60/60);
+		    m=Math.floor(t/1000/60%60);
+		    s=Math.floor(t/1000%60);
+		  }
+		  // document.getElementById("t_d").innerHTML = d + "天";
+		  document.getElementById("t_h").innerHTML = h + "时";
+		  document.getElementById("t_m").innerHTML = m + "分";
+		  document.getElementById("t_s").innerHTML = s + "秒";
+		}
+		setInterval(GetRTime,0);
+		// 单行滚动
+		function AutoScroll(obj){
+		    $(obj).find("ul:first").animate({
+		        marginTop:"-25px"
+		    },500,function(){
+		        $(this).css({marginTop:"0px"}).find("li:first").appendTo(this);
+		    });
+		}
+		$(document).ready(function(){
+		    setInterval('AutoScroll("#scrollDiv")',1500)
+		});
+	</script>
+</head>
+<body>
+	<div class="container">
+		<!-- 导航条 -->
+		<div class="fixed">
+			<div class="row" id="row">
+				<div class="col-xs-1  col-sm-1 col-md-1 form_left">
+					<img class="logo" src="./images/logo.png">
+				</div>
+				<!-- <div class="col-md-10"> -->
+				 <div class="col-xs-10 col-sm-10 col-md-10 form_frame">
+					<form class="form-horizontal" role="form">
+					  <div class="form-group">
+					    	<span class="fa fa-search fa-1x"></span>
+					      	<input type="email" class="form-control" id="inputEmail3" placeholder="不买难受，买不到想哭">
+					  </div>
+					</form>
+				 </div>
+				<!-- </div> -->
+				<div class="col-xs-1 col-sm-1 col-md-1 form_right">
+					<a class="denglu" href="#">登录</a>
+				</div>
+			</div>
+		</div>
+		<!-- 轮播图 -->
+		<div class="content_Af">
+			<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+			  <!-- Indicators -->
+			  <ol class="carousel-indicators">
+			    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+			    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+			    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+			  </ol>
+			  <!-- Wrapper for slides -->
+			  <div class="carousel-inner" role="listbox">
+			    <div class="item active">
+			      <img src="./images/11.jpg" alt="...">
+			      <div class="carousel-caption">
+			      </div>
+			    </div>
+			    <div class="item">
+			      <img src="./images/12.jpg" alt="...">
+			      <div class="carousel-caption">
+			      </div>
+			    </div>
+				<div class="item">
+				  <img src="./images/13.jpg" alt="...">
+				  <div class="carousel-caption">
+				  </div>
+				</div>
+			  </div>
+			</div>
+		</div><!--Af -->
+		<div class="content_Bf">
+			<div class="btn-group btn-group-justified">
+			  <div class="btn-group text-center">
+			  	<a class="img1" href="#"><img class="img-responsive" src="./images/chaoshi.png" alt=""><br>京东超市</a>
+			  </div>
+			  <div class="btn-group ">
+			    <a class="img1" href="#"><img class="img-responsive" src="./images/jinkou.png" alt=""><br>全球购</a>
+			  </div>
+			  <div class="btn-group">
+			    <a class="img1" href="#"><img class="img-responsive" src="./images/yi.png" alt=""><br>服装城</a>
+			  </div>
+			  <div class="btn-group">
+			  	<a class="img1" href="#"><img class="img-responsive" src="./images/xian.png" alt=""><br>京东生鲜</a>
+			  </div>
+			  <div class="btn-group">
+			  	<a class="img1" href="#"><img class="img-responsive" src="./images/2xiaoshi.png" alt=""><br>京东到家</a>
+			  </div>
+			</div>
+			<div class="btn-group btn-group-justified">
+			  <div class="btn-group">
+			  	<a class="img1" href="#"><img class="img-responsive" src="./images/chong.png" alt=""><br>充值中心</a>
+			  </div>
+			  <div class="btn-group">
+			  	<a class="img1" href="#"><img class="img-responsive" src="./images/jinrong.png" alt=""><br>京东金融</a>
+			  </div>
+			  <div class="btn-group">
+			  	<a class="img1" href="#"><img class="img-responsive" src="./images/juan.png" alt=""><br>领卷</a>
+			  </div>
+			  <div class="btn-group">
+			  	<a class="img1" href="#"><img class="img-responsive" src="./images/che.png" alt=""><br>物流查询</a>
+			  </div>
+			  <div class="btn-group">
+			  	<a class="img1" href="NewBalance.html"><img class="img-responsive" src="./images/xin.png" alt=""><br>我的关注</a>
+			  </div>
+			</div>
+			<div class="jd_new">
+				<div class="jd_new_frame">
+					<div class="jd_new_left">
+						<a href="#"><img src="./images/京东快报.png" alt=""></a>
+						<div id="scrollDiv">
+							
+						    <ul>
+						        <li>告诉大家</li>
+						        <li>一个秘密</li>
+						        <li>其实</li>
+						        <li>小明</li>
+						        <li>是一个</li>
+						        <li>穿的正正经经</li>
+						        <li>外表又很斯文的</li>
+						        <li>衣冠禽兽！！！！</li>
+						    </ul>
+						</div>
+					</div>
+					<div class="jd_new_right">
+						<span>更多</span>
+					</div>
+				</div>
+			</div>
+		</div><!--Bf -->
+		<div class="content_Cf">
+			<div class="panel panel-default">
+			  <div class="panel-heading">
+				<span class="fa fa-clock-o"></span>
+				<span class="panel-heading_left">京东秒杀</span>
+				<span id="t_d">天</span>
+				<span id="t_h">时</span>
+				<span id="t_m">分</span>
+				<span id="t_s">秒</span>
+				<span class="panel-heading_right">更多秒杀></span>
+			  </div>
+			  <div class="panel-body" id="outer">
+			    <div class="row row_tuodong" id="inner">
+			      <div class="row_tuodong_img">
+			        <div class="thumbnail">
+			          <img src="./images/chocolate.jpg" data-src="holder.js/300x300">
+			          <div class="caption">
+			            <h3>￥79</h3>
+			            <p><s>￥140</s></p>
+			          </div>
+			        </div>
+			      </div>
+			       <div class="row_tuodong_img">
+			        <div class="thumbnail">
+			          <img src="./images/mao.jpg" data-src="holder.js/300x300">
+			          <div class="caption">
+			            <h3>￥79</h3>
+			            <p><s>￥140</s></p>
+			          </div>
+			        </div>
+			      </div>
+			       <div class="row_tuodong_img">
+			        <div class="thumbnail">
+			          <img src="./images/you.jpg" data-src="holder.js/300x300">
+			          <div class="caption">
+			            <h3>￥79</h3>
+			            <p><s>￥140</s></p>
+			          </div>
+			        </div>
+			      </div>
+			      <div class="row_tuodong_img">
+			        <div class="thumbnail">
+			          <img class="thumbnail_img" src="./images/girl.jpg" data-src="holder.js/300x300">
+			          <div class="caption">
+			            <h3>￥79</h3>
+			            <p><s>￥140</s></p>
+			          </div>
+			        </div>
+			      </div>
+			      <div class="row_tuodong_img">
+			        <div class="thumbnail">
+			          <img class="thumbnail_img" src="./images/yifu.jpg" data-src="holder.js/300x300">
+			          <div class="caption">
+			            <h3>￥79</h3>
+			            <p><s>￥140</s></p>
+			          </div>
+			        </div>
+			      </div>
+			      <div class="row_tuodong_img">
+			        <div class="thumbnail">
+			          <img class="thumbnail_img" src="./images/TV.jpg" data-src="holder.js/300x300">
+			          <div class="caption">
+			            <h3>￥79</h3>
+			            <p><s>￥140</s></p>
+			          </div>
+			        </div>
+			      </div>
+			      <div class="row_tuodong_img">
+			        <div class="thumbnail">
+			          <img class="thumbnail_img" src="./images/luyouqi.jpg" data-src="holder.js/300x300">
+			          <div class="caption">
+			            <h3>￥79</h3>
+			            <p><s>￥140</s></p>
+			          </div>
+			        </div>
+			      </div>
+			      <div class="row_tuodong_img">
+			        <div class="thumbnail">
+			          <img class="thumbnail_img" src="./images/diannao.jpg" data-src="holder.js/300x300">
+			          <div class="caption">
+			            <h3>￥79</h3>
+			            <p><s>￥140</s></p>
+			          </div>
+			        </div>
+			      </div>
+			      <div class="row_tuodong_img">
+			        <div class="thumbnail">
+			          <img class="thumbnail_img" src="./images/kongtiao.jpg" data-src="holder.js/300x300">
+			          <div class="caption">
+			            <h3>￥79</h3>
+			            <p><s>￥140</s></p>
+			          </div>
+			        </div>
+			      </div>
+			      <div class="row_tuodong_img">
+			        <div class="thumbnail">
+			          <img class="thumbnail_img" src="./images/qianbao.jpg" data-src="holder.js/300x300">
+			          <div class="caption">
+			            <h3>￥79</h3>
+			            <p><s>￥140</s></p>
+			          </div>
+			        </div>
+			      </div>
+			      <div class="row_tuodong_img">
+			        <div class="thumbnail">
+			          <img class="thumbnail_img" src="./images/lizhishi.jpg" data-src="holder.js/300x300">
+			          <div class="caption">
+			            <h3>￥79</h3>
+			            <p><s>￥140</s></p>
+			          </div>
+			        </div>
+			      </div>
+			    </div>
+			    <div class="content_Cf_bottom">
+			    	<div class="bottom_left">
+			    	  <div class="left">
+			    	  	<h2>排行榜</h2>
+			    	  	<h3>EZ未来战士皮肤</h3>
+			    	  </div>
+			    	  <div class="right">
+			    	  	<img src="./images/ez1.jpg">
+			    	  </div>
+			    	</div>
+			    	<div class="bottom_right">
+			    	  <div class="left">
+			    	  	<h2>劲爆皮肤</h2>
+			    	  	<h3>品牌折扣只要99</h3>
+			    	  </div>
+			    	  <div class="right">
+			    	  	<img src="./images/ez2.png">
+			    	  </div>
+			    	</div>
+			    </div>
+			    <div class="clear"></div>
+			    <div class="video_frame">
+			    	<video class="EZ" src="./video/EZ未来战士皮肤_超清.mp4" controls="control"></video>
+			    </div> 
+			  </div>
+			</div>
+		</div><!--C层结束-->
+		<div class="floor">
+			<div class="title text-center"><img src="./images/floor_bg_text.jpg"></div>
+			<div class="content_Cf_bottom">
+				<div class="bottom_left">
+				  <div class="left">
+				  	<h2>玩3C</h2>
+				  	<h3>荣耀畅玩6X</h3>
+				  </div>
+				  <div class="right">
+				  	<img src="./images/floor_img1.jpg">
+				  </div>
+				</div>
+				<div class="bottom_right">
+				  <div class="left">
+				  	<h2>京东家电</h2>
+				  	<h3>爆款提前抢</h3>
+				  </div>
+				  <div class="right">
+				  	<img src="./images/floor_img2.jpg">
+				  </div>
+				</div>
+			</div> 
+			<div class="content_Cf_bottom">
+				<div class="bottom_left">
+				  <div class="left">
+				  	<h2>京东超市</h2>
+				  	<h3>山姆店开业</h3>
+				  </div>
+				  <div class="right">
+				  	<img src="./images/floor_img3.jpg">
+				  </div>
+				</div>
+				<div class="bottom_right">
+				  <div class="left">
+				  	<h2>爱家</h2>
+				  	<h3>家具3件8.8折</h3>
+				  </div>
+				  <div class="right">
+				  	<img src="./images/floor_img4.jpg">
+				  </div>
+				</div>
+			</div> 
+			<div class="floor_bottom">
+				<div class="floor_bottom_A">
+					<h2>爱宝宝</h2>
+					<h3>爆款免费领</h3>
+					<img src="./images/floor_bottom_img1.jpg">
+				</div>
+				<div class="floor_bottom_A">
+					<h2>爱宝宝</h2>
+					<h3>迪奥变色唇膏</h3>
+					<img src="./images/floor_bottom_img2.png">
+				</div>
+				<div class="floor_bottom_A">
+					<h2>爱宝宝</h2>
+					<h3>牛奶买1赠1</h3>
+					<img src="./images/floor_bottom_img3.png">
+				</div>
+				<div class="floor_bottom_A">
+					<h2>爱宝宝</h2>
+					<h3>箱包300-100</h3>
+					<img src="./images/floor_bottom_img4.jpg">
+				</div>
+			</div>
+			<div class="floor_lunbo">
+				<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+				  <!-- Indicators -->
+				  <ol class="carousel-indicators">
+				    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+				    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+				  </ol>
+				  <!-- Wrapper for slides -->
+				  <div class="carousel-inner" role="listbox">
+				    <div class="item active">
+				      <img src="./images/lunbo_img1.jpg" alt="...">
+				      <div class="carousel-caption">
+				      </div>
+				    </div>
+				    <div class="item">
+				      <img src="./images/lunbo_img2.jpg" alt="...">
+				      <div class="carousel-caption">
+				      </div>
+				    </div>
+				  </div>
+				</div>
+			</div>
+		</div>
+		<div class="floor">
+			<div class="title text-center"><img src="./images/floor_title.png"></div>
+			<div class="content_Cf_bottom">
+				<div class="bottom_left">
+				  <div class="left">
+				  	<h2>玩3C</h2>
+				  	<h3>荣耀畅玩6X</h3>
+				  </div>
+				  <div class="right">
+				  	<img src="./images/floor_img5.jpg">
+				  </div>
+				</div>
+				<div class="bottom_right">
+				  <div class="left">
+				  	<h2>京东家电</h2>
+				  	<h3>爆款提前抢</h3>
+				  </div>
+				  <div class="right">
+				  	<img src="./images/floor_img9.jpg">
+				  </div>
+				</div>
+			</div> 
+			<div class="content_Cf_bottom">
+				<div class="bottom_left">
+				  <div class="left">
+				  	<h2>京东超市</h2>
+				  	<h3>山姆店开业</h3>
+				  </div>
+				  <div class="right">
+				  	<img src="./images/floor_img10.jpg">
+				  </div>
+				</div>
+				<div class="bottom_right">
+				  <div class="left">
+				  	<h2>爱家</h2>
+				  	<h3>家具3件8.8折</h3>
+				  </div>
+				  <div class="right">
+				  	<img src="./images/floor_img7.jpg">
+				  </div>
+				</div>
+			</div>
+			<div class="content_Cf_bottom">
+				<div class="bottom_left">
+				  <div class="left">
+				  	<h2>京东超市</h2>
+				  	<h3>山姆店开业</h3>
+				  </div>
+				  <div class="right">
+				  	<img src="./images/floor_img8.jpg">
+				  </div>
+				</div>
+				<div class="bottom_right">
+				  <div class="left">
+				  	<h2>爱家</h2>
+				  	<h3>家具3件8.8折</h3>
+				  </div>
+				  <div class="right">
+				  	<img src="./images/floor_img6.jpg">
+				  </div>
+				</div>
+			</div>  
+			
+			<div class="floor_lunbo">
+				<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+				  <!-- Indicators -->
+				  <ol class="carousel-indicators">
+				    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+				    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+				  </ol>
+				  <!-- Wrapper for slides -->
+				  <div class="carousel-inner" role="listbox">
+				    <div class="item active">
+				      <img src="./images/lunbo_img1.jpg" alt="...">
+				      <div class="carousel-caption">
+				      </div>
+				    </div>
+				    <div class="item">
+				      <img src="./images/lunbo_img2.jpg" alt="...">
+				      <div class="carousel-caption">
+				      </div>
+				    </div>
+				  </div>
+				</div>
+			</div>
+		</div>
+		<div class="floor">
+			<div class="title text-center"><img src="./images/floor_bg_text.jpg"></div>
+			<div class="content_Cf_bottom">
+				<div class="bottom_left">
+				  <div class="left">
+				  	<h2>玩3C</h2>
+				  	<h3>荣耀畅玩6X</h3>
+				  </div>
+				  <div class="right">
+				  	<img src="./images/floor_img1.jpg">
+				  </div>
+				</div>
+				<div class="bottom_right">
+				  <div class="left">
+				  	<h2>京东家电</h2>
+				  	<h3>爆款提前抢</h3>
+				  </div>
+				  <div class="right">
+				  	<img src="./images/floor_img2.jpg">
+				  </div>
+				</div>
+			</div> 
+			<div class="content_Cf_bottom">
+				<div class="bottom_left">
+				  <div class="left">
+				  	<h2>京东超市</h2>
+				  	<h3>山姆店开业</h3>
+				  </div>
+				  <div class="right">
+				  	<img src="./images/floor_img3.jpg">
+				  </div>
+				</div>
+				<div class="bottom_right">
+				  <div class="left">
+				  	<h2>爱家</h2>
+				  	<h3>家具3件8.8折</h3>
+				  </div>
+				  <div class="right">
+				  	<img src="./images/floor_img4.jpg">
+				  </div>
+				</div>
+			</div> 
+			<div class="floor_bottom">
+				<div class="floor_bottom_A">
+					<h2>爱宝宝</h2>
+					<h3>爆款免费领</h3>
+					<img src="./images/floor_bottom_img1.jpg">
+				</div>
+				<div class="floor_bottom_A">
+					<h2>爱宝宝</h2>
+					<h3>迪奥变色唇膏</h3>
+					<img src="./images/floor_bottom_img2.png">
+				</div>
+				<div class="floor_bottom_A">
+					<h2>爱宝宝</h2>
+					<h3>牛奶买1赠1</h3>
+					<img src="./images/floor_bottom_img3.png">
+				</div>
+				<div class="floor_bottom_A">
+					<h2>爱宝宝</h2>
+					<h3>箱包300-100</h3>
+					<img src="./images/floor_bottom_img4.jpg">
+				</div>
+			</div>
+			<div class="floor_lunbo">
+				<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+				  <!-- Indicators -->
+				  <ol class="carousel-indicators">
+				    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+				    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+				  </ol>
+				  <!-- Wrapper for slides -->
+				  <div class="carousel-inner" role="listbox">
+				    <div class="item active">
+				      <img src="./images/lunbo_img1.jpg" alt="...">
+				      <div class="carousel-caption">
+				      </div>
+				    </div>
+				    <div class="item">
+				      <img src="./images/lunbo_img2.jpg" alt="...">
+				      <div class="carousel-caption">
+				      </div>
+				    </div>
+				  </div>
+				</div>
+			</div>
+		</div>
+		<div class="floor">
+			<div class="title text-center"><img src="./images/floor_bg_text.jpg"></div>
+			<div class="content_Cf_bottom">
+				<div class="bottom_left">
+				  <div class="left">
+				  	<h2>玩3C</h2>
+				  	<h3>荣耀畅玩6X</h3>
+				  </div>
+				  <div class="right">
+				  	<img src="./images/floor_img1.jpg">
+				  </div>
+				</div>
+				<div class="bottom_right">
+				  <div class="left">
+				  	<h2>京东家电</h2>
+				  	<h3>爆款提前抢</h3>
+				  </div>
+				  <div class="right">
+				  	<img src="./images/floor_img2.jpg">
+				  </div>
+				</div>
+			</div> 
+			<div class="content_Cf_bottom">
+				<div class="bottom_left">
+				  <div class="left">
+				  	<h2>京东超市</h2>
+				  	<h3>山姆店开业</h3>
+				  </div>
+				  <div class="right">
+				  	<img src="./images/floor_img3.jpg">
+				  </div>
+				</div>
+				<div class="bottom_right">
+				  <div class="left">
+				  	<h2>爱家</h2>
+				  	<h3>家具3件8.8折</h3>
+				  </div>
+				  <div class="right">
+				  	<img src="./images/floor_img4.jpg">
+				  </div>
+				</div>
+			</div> 
+			<div class="floor_bottom">
+				<div class="floor_bottom_A">
+					<h2>爱宝宝</h2>
+					<h3>爆款免费领</h3>
+					<img src="./images/floor_bottom_img1.jpg">
+				</div>
+				<div class="floor_bottom_A">
+					<h2>爱宝宝</h2>
+					<h3>迪奥变色唇膏</h3>
+					<img src="./images/floor_bottom_img2.png">
+				</div>
+				<div class="floor_bottom_A">
+					<h2>爱宝宝</h2>
+					<h3>牛奶买1赠1</h3>
+					<img src="./images/floor_bottom_img3.png">
+				</div>
+				<div class="floor_bottom_A">
+					<h2>爱宝宝</h2>
+					<h3>箱包300-100</h3>
+					<img src="./images/floor_bottom_img4.jpg">
+				</div>
+			</div>
+			<div class="floor_bottom">
+				<div class="floor_bottom_A">
+					<h2>爱宝宝</h2>
+					<h3>爆款免费领</h3>
+					<img src="./images/floor_bottom_img1.jpg">
+				</div>
+				<div class="floor_bottom_A">
+					<h2>爱宝宝</h2>
+					<h3>迪奥变色唇膏</h3>
+					<img src="./images/floor_bottom_img2.png">
+				</div>
+				<div class="floor_bottom_A">
+					<h2>爱宝宝</h2>
+					<h3>牛奶买1赠1</h3>
+					<img src="./images/floor_bottom_img3.png">
+				</div>
+				<div class="floor_bottom_A">
+					<h2>爱宝宝</h2>
+					<h3>箱包300-100</h3>
+					<img src="./images/floor_bottom_img4.jpg">
+				</div>
+			</div>
+			<div class="floor_lunbo">
+				<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+				  <!-- Indicators -->
+				  <ol class="carousel-indicators">
+				    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+				    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+				  </ol>
+				  <!-- Wrapper for slides -->
+				  <div class="carousel-inner" role="listbox">
+				    <div class="item active">
+				      <img src="./images/lunbo_img1.jpg" alt="...">
+				      <div class="carousel-caption">
+				      </div>
+				    </div>
+				    <div class="item">
+				      <img src="./images/lunbo_img2.jpg" alt="...">
+				      <div class="carousel-caption">
+				      </div>
+				    </div>
+				  </div>
+				</div>
+			</div>
+		</div>
+		<div class="floor">
+			<div class="title text-center"><img src="./images/floor_title.png"></div>
+			<div class="content_Cf_bottom">
+				<div class="bottom_left">
+				  <div class="left">
+				  	<h2>玩3C</h2>
+				  	<h3>荣耀畅玩6X</h3>
+				  </div>
+				  <div class="right">
+				  	<img src="./images/floor_img5.jpg">
+				  </div>
+				</div>
+				<div class="bottom_right">
+				  <div class="left">
+				  	<h2>京东家电</h2>
+				  	<h3>爆款提前抢</h3>
+				  </div>
+				  <div class="right">
+				  	<img src="./images/floor_img9.jpg">
+				  </div>
+				</div>
+			</div> 
+		</div>
+		<div class="recommend">
+			<div class="recommend_title text-center">
+				<span>为您推荐</span>
+			</div>
+			<div class="content_Cf_bottom">
+				<div class="bottom_left">
+				  	<img src="./images/recommend1.jpg">
+				  	<span>GeeFour春秋季男士修身刺绣徽章牛仔夹克韩版复古休闲时尚破洞什么鬼玩意我曹那么多字</span>
+				  	<span class="span2">￥128.00</span>
+				  	<button>看相似</button>
+				</div>
+				<div class="bottom_right">
+				  	<img src="./images/recommend2.jpg">
+				  	<span>GeeFour春秋季男士修身刺绣徽章牛仔夹克韩版复古休闲时尚破洞什么鬼玩意我曹那么多字</span>
+				  	<span class="span2">￥128.00</span>
+				  	<button>看相似</button>
+				</div>
+			</div> 
+			<div class="content_Cf_bottom">
+				<div class="bottom_left">
+				  	<img src="./images/recommend1.jpg">
+				  	<span>GeeFour春秋季男士修身刺绣徽章牛仔夹克韩版复古休闲时尚破洞什么鬼玩意我曹那么多字</span>
+				  	<span class="span2">￥128.00</span>
+				  	<button>看相似</button>
+				</div>
+				<div class="bottom_right">
+				  	<img src="./images/recommend2.jpg">
+				  	<span>GeeFour春秋季男士修身刺绣徽章牛仔夹克韩版复古休闲时尚破洞什么鬼玩意我曹那么多字</span>
+				  	<span class="span2">￥128.00</span>
+				  	<button>看相似</button>
+				</div>
+			</div> 
+			<div class="content_Cf_bottom">
+				<div class="bottom_left">
+				  	<img src="./images/recommend1.jpg">
+				  	<span>GeeFour春秋季男士修身刺绣徽章牛仔夹克韩版复古休闲时尚破洞什么鬼玩意我曹那么多字</span>
+				  	<span class="span2">￥128.00</span>
+				  	<button>看相似</button>
+				</div>
+				<div class="bottom_right">
+				  	<img src="./images/recommend2.jpg">
+				  	<span>GeeFour春秋季男士修身刺绣徽章牛仔夹克韩版复古休闲时尚破洞什么鬼玩意我曹那么多字</span>
+				  	<span class="span2">￥128.00</span>
+				  	<button>看相似</button>
+				</div>
+			</div> 
+			<div class="content_Cf_bottom">
+				<div class="bottom_left">
+				  	<img src="./images/recommend1.jpg">
+				  	<span>GeeFour春秋季男士修身刺绣徽章牛仔夹克韩版复古休闲时尚破洞什么鬼玩意我曹那么多字</span>
+				  	<span class="span2">￥128.00</span>
+				  	<button>看相似</button>
+				</div>
+				<div class="bottom_right">
+				  	<img src="./images/recommend2.jpg">
+				  	<span>GeeFour春秋季男士修身刺绣徽章牛仔夹克韩版复古休闲时尚破洞什么鬼玩意我曹那么多字</span>
+				  	<span class="span2">￥128.00</span>
+				  	<button>看相似</button>
+				</div>
+			</div> 
+			<div class="content_Cf_bottom">
+				<div class="bottom_left">
+				  	<img src="./images/recommend1.jpg">
+				  	<span>GeeFour春秋季男士修身刺绣徽章牛仔夹克韩版复古休闲时尚破洞什么鬼玩意我曹那么多字</span>
+				  	<span class="span2">￥128.00</span>
+				  	<button>看相似</button>
+				</div>
+				<div class="bottom_right">
+				  	<img src="./images/recommend2.jpg">
+				  	<span>GeeFour春秋季男士修身刺绣徽章牛仔夹克韩版复古休闲时尚破洞什么鬼玩意我曹那么多字</span>
+				  	<span class="span2">￥128.00</span>
+				  	<button>看相似</button>
+				</div>
+			</div> 
+			<div class="content_Cf_bottom">
+				<div class="bottom_left">
+				  	<img src="./images/recommend1.jpg">
+				  	<span>GeeFour春秋季男士修身刺绣徽章牛仔夹克韩版复古休闲时尚破洞什么鬼玩意我曹那么多字</span>
+				  	<span class="span2">￥128.00</span>
+				  	<button>看相似</button>
+				</div>
+				<div class="bottom_right">
+				  	<img src="./images/recommend2.jpg">
+				  	<span>GeeFour春秋季男士修身刺绣徽章牛仔夹克韩版复古休闲时尚破洞什么鬼玩意我曹那么多字</span>
+				  	<span class="span2">￥128.00</span>
+				  	<button>看相似</button>
+				</div>
+			</div> 
+			<div class="content_Cf_bottom">
+				<div class="bottom_left">
+				  	<img src="./images/recommend1.jpg">
+				  	<span>GeeFour春秋季男士修身刺绣徽章牛仔夹克韩版复古休闲时尚破洞什么鬼玩意我曹那么多字</span>
+				  	<span class="span2">￥128.00</span>
+				  	<button>看相似</button>
+				</div>
+				<div class="bottom_right">
+				  	<img src="./images/recommend2.jpg">
+				  	<span>GeeFour春秋季男士修身刺绣徽章牛仔夹克韩版复古休闲时尚破洞什么鬼玩意我曹那么多字</span>
+				  	<span class="span2">￥128.00</span>
+				  	<button>看相似</button>
+				</div>
+			</div> 
+			<div class="clear"></div>
+			<div class="add text-center"><a href="#">点击继续加载</a></div>
+		</div>
+		<div class="clear"></div>
+		<!-- 底部灰色块 -->
+		<div class="jd_footer">
+			<div class="jd_footer_Af">
+				<ul>
+					<li><a href="#"><div class=""></div>登录</a></li>
+					<li><a href="#">注册</a></li>
+					<li><a href="#">反馈</a></li>
+					<li><a href="#">回到顶部</a></li>
+				</ul>
+			</div>
+			<div class="jd_footer_Af jd_footer_Bf">
+				<ul>
+					<li><a href="#"><img class="app" src="./images/app.png"><br>客户端</a></li>
+					<li><a class="jd_footer_Bf_active" href="#"><img class="app" src="./images/chuping.png"><br>触屏版</a></li>
+					<li><a href="#"><img class="app" src="./images/PC.png"><br>电脑版</a></li>
+				</ul>
+			</div>
+			<div class="jd_footer_Cf text-center">
+				<span>Copyright © 2004-2016 京东JD.com 版权所有</span>
+			</div>
+		</div>
+
+		<div class="floor_bar text-center">
+			<div class="btn-group btn-group-justified">
+			  <div class="btn-group first_button">
+			    <button type="button" class="btn btn-default"><i class="glyphicon glyphicon-home"></i><p>首页</p></button>
+			  </div>
+			  <div class="btn-group">
+			    <button type="button" class="btn btn-default"><i class="glyphicon glyphicon-th-list"></i><p>分类</p></button>
+			  </div>
+			  <div class="btn-group">
+			    <button type="button" class="btn btn-default"><i class="glyphicon glyphicon-shopping-cart"></i> <p>购物车</p></button>
+			  </div>
+			   <div class="btn-group">
+			    <button type="button" class="btn btn-default"><i class="glyphicon glyphicon-user"></i><p>我的</p></button>
+			  </div>
+			</div>
+		</div>
+		
+	</div>
+</body>
+</html>

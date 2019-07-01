@@ -1,0 +1,452 @@
+
+.insidepage {
+    background: #f1f1f1 none repeat scroll 0 0;
+    padding-top: 90px;
+    min-width: 1200px;
+}
+
+.tqyouxiban {
+    background: #e0e0e0 none repeat scroll 0 0;
+    margin-bottom: 40px;
+    margin-top: -20px;
+    overflow: hidden;
+    position: relative;
+}
+.tqyouxiban .hd_gameban .hdbanbox .img_wp {
+    display: block;
+    min-width: 1200px;
+}
+
+.clearfix, .modwp::after, .vip-header::after, .vip-footer .mapin::after {
+    clear: both;
+    content: " ";
+    display: block;
+    height: 0;
+}
+.tqyouxiban .modwp {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+    width: 1200px;
+}
+
+.tqyouxiban .hd_gameban {
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+.tqyouxiban .hd_gameban .hdbanbox {
+    background: #fff none repeat scroll 0 0;
+    float: left;
+    position: relative;
+    width: 73.3%;
+    z-index: 10;
+}
+
+.tqyouxiban .bsid01 {
+    left: -101.7%;
+}
+.tqyouxiban .bansidmol {
+    opacity: 0.1;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.tqyouxiban .bsid02 {
+    right: -138.06%;
+}
+.tqyouxiban .bansidmol {
+    opacity: 0.1;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+.tqyouxiban .interlinkbox a {
+    background: rgba(0, 0, 0, 0) url("../images/vip_game/hdbanlink.png") no-repeat scroll 0 -9999em;
+    height: 50px;
+    line-height: 999;
+    margin-top: -25px;
+    overflow: hidden;
+    position: absolute;
+    top: 50%;
+    width: 50px;
+}
+.tqyouxiban .interlinkbox .linkup {
+    background-position: 0 0;
+    left: -25px;
+}
+.tqyouxiban .interlinkbox .linknext {
+    background-position: -50px 0;
+    right: -25px;
+}
+.hdbansid {
+    background: #fff none repeat scroll 0 0;
+    float: right;
+    height: 360px;
+    position: relative;
+    width: 24.73%;
+    z-index: 10;
+}
+.game_sidlogbox {
+    padding: 6.94% 10.42% 0;
+}
+.game_sidlogbox .logbtn {
+    border-bottom: 1px dashed #e3e3e3;
+    padding: 0 0 11.4%;
+    text-align: center;
+}
+.game_sidlogbox .link_logbtn {
+    animation: 1s linear 0s normal none 1 running log01;
+    color: #8b8b8b;
+    display: inline-block;
+    font-size: 14px;
+    width: 85px;
+}
+.game_sidlogbox .link_logbtn .iconlog {
+    background: rgba(0, 0, 0, 0) url("../images/vip_game/bg_index.png") no-repeat scroll 0 0;
+    cursor: pointer;
+    display: inline-block;
+    height: 85px;
+    margin-bottom: 5px;
+    overflow: hidden;
+    position: relative;
+    width: 85px;
+}
+.game_sidlogbox .link_logbtn:hover{
+    color: red;
+}
+.game_sidlogbox .link_logbtn:hover .iconlog{
+    background-position: -630px 0;
+}
+
+.game_sidlogbox .typebtn {
+    margin-top: 9.21%;
+    padding-top: 7.02%;
+    text-align: center;
+}
+.game_sidlogbox a.btn_red,.game_sidlogbox a.btn_yellow {
+    background: #e41e27 none repeat scroll 0 0;
+    border-radius: 21px;
+    color: #fff;
+    display: inline-block;
+    font-size: 16px;
+    height: 41px;
+    line-height: 41px;
+    min-width: 103px;
+    padding: 0 20px;
+    text-align: center;
+    transition: background 0.2s ease 0s;
+}
+.game_sidlogbox a.btn_red:hover,.game_sidlogbox a.btn_yellow:hover{
+    background: #f7222c;
+}
+.game_sidlogbox .logtip {
+    color: #8b8b8b;
+    font-size: 12px;
+    padding: 12.28% 0 0;
+    text-align: center;
+}
+.clearfix, .modwp::after, .vip-header::after, .vip-footer .mapin::after {
+    clear: both;
+    content: " ";
+    display: block;
+    height: 0;
+}
+.modwp {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+}
+.game_alltypebox {
+    background: #fafafa none repeat scroll 0 0;
+    border-left: 1px solid #e53935;
+    height: auto !important;
+    min-height: 100px;
+    padding-left: 285px;
+    position: relative;
+}
+.game_alltypebox .game_alltit {
+    color: #8b8b8b;
+    font-size: 24px;
+    left: 62px;
+    position: absolute;
+    top: 30px;
+}
+.game_alltypebox .game_alltit .icontit {
+    background: rgba(0, 0, 0, 0) url("../images/vip_game/youxibgspr.png") no-repeat scroll -174px -83px;
+    display: inline-block;
+    height: 50px;
+    margin-right: 10px;
+    overflow: hidden;
+    vertical-align: middle;
+    width: 50px;
+}
+.game_alltypebox .game_allcon {
+    border-left: 1px solid #f1f1f1;
+}
+.game_alltypebox .game_allcon .game_allnav {
+    background: #f1f1f1 none repeat scroll 0 0;
+    overflow: hidden;
+}
+.game_alltypebox .game_allcon .game_allnav li {
+    color: #808080;
+    float: left;
+    font-size: 18px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    width: 130px;
+}
+.game_alltypebox .game_allcon .game_allnav .on {
+    background: #fff none repeat scroll 0 0;
+    color: #dc0000;
+}
+.game_alltypebox .game_allcon .game_linkcon {
+    background: #fff none repeat scroll 0 0;
+    color: #383838;
+    height: auto !important;
+    min-height: 52px;
+}
+.game_alltypebox .game_allcon .game_linkcon .link_box {
+    padding-bottom: 15px;
+}
+.game_alltypebox .game_allcon .game_linkcon .link_gname {
+    display: inline-block;
+    font-size: 14px;
+    margin: 15px 0 0 32px;
+}
+.modmag {
+    margin-bottom: 40px;
+}
+.modwp .modtit {
+    height: 24px;
+    margin-bottom: 20px;
+}
+.modwp .modtit h2 {
+    color: #525252;
+    float: left;
+    font-size: 24px;
+    font-weight: normal;
+    height: 26px;
+    line-height: 1;
+}
+.gameyouxitq {
+    overflow: hidden;
+}
+.rowline {
+    margin-left: -18px;
+    position: relative;
+}
+.nol-item {
+    position: relative;
+    width: 999rem;
+}
+.nol-item li:hover{
+    margin-top: -2px;
+}
+.gameyouxitqbig li {
+    height: auto;
+    position: relative;
+}
+.nol-item li {
+    background: #fff none repeat scroll 0 0;
+    display: inline;
+    float: left;
+    height: 390px;
+    line-height: 1;
+    margin-left: 18px;
+    text-align: center;
+    transition: all 0.3s ease-in 0s;
+    width: 286px;
+}
+.gameyouxitq .fuwuimg {
+    position: relative;
+}
+.gameyouxitq .fuwuimg img {
+    width: 100%;
+}
+.gameyouxitq .gametqinfos {
+    font-size: 12px;
+    padding: 30px 30px 0;
+    position: relative;
+}
+.gameyouxitq .gametqname {
+    font-size: 18px;
+    height: 19px;
+    margin-bottom: 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.gameyouxitqbig .gamesubt {
+    color: #808080;
+    font-size: 14px;
+    height: 19px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.game_fahao {
+    overflow: hidden;
+}
+.rowline {
+    margin-left: -18px;
+    position: relative;
+}
+.rowline {
+    margin-left: -18px;
+    position: relative;
+}
+.game_fahao .fuliinterul li {
+    background: #fff none repeat scroll 0 0;
+    display: inline;
+    float: left;
+    height: auto;
+    line-height: 1;
+    margin-left: 20px;
+    position: relative;
+    width: 386px;
+}
+.game_fahao .fuliinterul .interimg {
+    left: 0;
+    top: 0;
+    width: 100%;
+}
+.game_fahao .fuliinterul .interimg img {
+    display: block;
+    width: 100%;
+}
+.iconyx {
+    background: rgba(0, 0, 0, 0) url("../images/vip_game/youxibgspr.png") no-repeat scroll 0 -9999em;
+    height: 80px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 80px;
+}
+.ic_dy {
+    background-position: -160px 0;
+}
+.game_fahao .fuliinterul .bomlast {
+    bottom: 0;
+    height: 21px;
+    left: 0;
+    position: absolute;
+    width: 100%;
+}
+.game_fahao .fuliinterul .bomlast .bg {
+    background: #000 none repeat scroll 0 0;
+    bottom: 0;
+    height: 21px;
+    left: 0;
+    opacity: 0.5;
+    position: absolute;
+    width: 100%;
+}
+.game_fahao .fuliinterul .bomlast .lastname {
+    color: #fff;
+    height: 21px;
+    left: 15px;
+    line-height: 21px;
+    overflow: hidden;
+    position: absolute;
+    text-align: left;
+    text-overflow: ellipsis;
+    top: 0;
+    white-space: nowrap;
+    width: 280px;
+}
+.game_fahao .fuliinterul .bomlast .lastnum {
+    color: #fff;
+    height: 21px;
+    line-height: 21px;
+    position: absolute;
+    right: 20px;
+    top: 0;
+}
+.ic_yy {
+    background-position: -80px 0;
+}
+.titsubpic {
+    background: rgba(0, 0, 0, 0) url("../images/vip_game/youxibgspr.png") no-repeat scroll 0 -167px;
+    display: inline;
+    float: left;
+    height: 28px;
+    margin-left: 10px;
+    overflow: hidden;
+    width: 118px;
+}
+.downsgame .dmod01 {
+    border-left: 1px solid #e73835;
+}
+.downsgame .downmod {
+    background: #fafafa none repeat scroll 0 0;
+    margin-bottom: 30px;
+    overflow: hidden;
+}
+.downsgame .dmodtit .icontit01, .downsgame .dmodtit .icontit02 {
+    background: rgba(0, 0, 0, 0) url("../images/vip_game/youxibgspr.png") no-repeat scroll 0 -83px;
+    display: block;
+    height: 80px;
+    margin: 40px auto 10px;
+    overflow: hidden;
+    width: 84px;
+}
+.downsgame .dmodtit {
+    background: #fafafa none repeat scroll 0 0;
+    color: #898989;
+    float: left;
+    font-size: 24px;
+    height: 100%;
+    text-align: center;
+    width: 14.17%;
+}
+.downsgame .dlistcon {
+    background: #fff none repeat scroll 0 0;
+    overflow: hidden;
+    padding: 30px 0;
+}
+.downsgame .dlistcon ul li img {
+    width: 100%;
+}
+.downsgame .dlistcon ul li {
+    display: inline;
+    float: left;
+    font-size: 14px;
+    margin: 0 3.41%;
+    text-align: center;
+    width: 9.72%;
+}
+.downsgame .dlistcon .dname {
+    height: 19px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.downsgame .dlistcon .dname {
+    height: 19px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.downsgame .dlistcon .getbtndown {
+    height: 27px;
+    line-height: 27px;
+    width: 70px;
+}
+.nolmod-btn {
+    border: 1px solid #dc0000;
+    border-radius: 4px;
+    color: #dc0000;
+    display: inline-block;
+    font-size: 14px;
+    text-align: center;
+}
+.nolmod-btn:hover{
+    background: #dc0000;
+    color: #fff;
+}
+.downsgame .dmod02 {
+    border-left: 1px solid #ffac12;
+}
+.downsgame .dmodtit .icontit02 {
+    background-position: -87px -83px;
+    margin: 30px auto 0;
+}

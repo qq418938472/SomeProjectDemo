@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>迅雷会员 因快而乐</title>
+	<link rel="stylesheet" type="text/css" href="./css/vip_index.css">
+	<link rel="stylesheet" type="text/css" href="./css/common.css">
+	<link rel="stylesheet" type="text/css" href="./css/daohang.css">
+	<link rel="stylesheet" type="text/css" href="./css/dibu.css">
+	<script type="text/javascript" src="./js/jquery-3.1.0.min.js"></script>
+	<script type="text/javascript" src="./js/vip_index.js"></script>
+	
+</head>
+<body>
+	<div class="themebg_wp"></div>
+	<header class="header_top">
+	<!-- 导航条 -->
+		<div class="header_top_father" >
+			<div class="header_top_mian">
+				<h1 class="logo">
+					<a href="index.html" title="迅雷会员"></a>
+				</h1>
+				<div class="header_navin" id="navbar1">
+					<ul class="menu">
+						<li>
+							<a class="mid_link" title="首页" href="####">首页</a>
+						</li>
+						<li>
+							<a class="mid_link" title="功能特权" href="./vip_function.html">功能特权</a>
+						</li>
+						<li>
+							<a class="mid_link" title="游戏特权" href="./vip_game.html">游戏特权</a>
+						</li>
+						<li>
+							<a class="mid_link" title="会员等级" href="./vip_rank.html"> 会员等级 </a>
+						</li>
+						<li>
+							<a class="mid_link" title="会员等级" href="./vip_rank.html"> 超级会员 </a>
+						</li>
+						<li>
+							<a class="mid_link" title="会员等级" href="./vip_rank.html"> 会员商城 </a>
+						</li>
+						<li>
+							<a class="mid_link" title="会员等级" href="./vip_rank.html"> 商城特权 </a>
+						</li>
+					</ul>
+				</div>
+				
+			</div>
+			
+		</div>
+		<!-- end -->
+		<div class="header_content">
+			<div class="carousel" id="carousel">
+				<ul id="list">
+					<li index="1" style="">
+						<a class="img_wp" href="">
+							<img src="./images/vip_index/header_l_1.png">
+						</a>
+					</li>
+					<li index="2" style="display: none;">
+						<a class="img_wp" href="">
+							<img src="./images/vip_index/header_l_2.png">
+						</a>
+					</li>
+					<li index="3" style="display: none;">
+						<a class="img_wp" href="">
+							<img src="./images/vip_index/header_l_3.png">
+						</a>
+					</li>
+					<li index="4" style="display: none;">
+						<a class="img_wp" href="">
+							<img src="./images/vip_index/header_l_4.png">
+						</a>
+					</li>
+					<li index="5" style="display: none;">
+						<a class="img_wp" href="">
+							<img src="./images/vip_index/header_l_5.png">
+						</a>
+					</li>
+
+				</ul>
+				<div class="pic_guide" id="pic_guide">
+					<i class="dot on" index="1">年费专区</i>
+					<i class="dot off" index="2">金融超市</i>
+					<i class="dot off" index="3">会员福利</i>
+					<i class="dot off" index="4">酒窝直播</i>
+					<i class="dot off" index="5">游戏特权</i>
+				</div>
+				<div class="btn_arrow_wp">
+					<a class="prev" id="prev" href="javascript:;">上一精彩</a>
+					<a class="next" id="next" href="javascript:;">下一精彩</a>
+				</div>
+			</div>
+			<div class="mission_wp">
+				<ul class="mission_tabs" id="mission_tabs">
+					<li class="item cash-div on">
+						<a href="javascript:;">
+							<span class="ico_lottery"></span>
+							<span class="Ico">
+								<span class="tit">每日领钱</span>
+								<span class="txt">会员专享免费领</span>
+							</span>
+						</a>
+					</li>
+					<li class="item sign-div">
+						<a href="javascript:;">
+							<span class="ico_signin"></span>
+							<span class="Ico">
+								<span class="tit">打卡</span>
+								<span class="txt">连续打卡领好礼</span>
+							</span>
+						</a>
+					</li>
+					<li class="item fuli-div">
+						<a href="javascript:;">
+							<span class="ico_stamp"></span>
+							<span class="Ico">
+								<span class="tit">福利券</span>
+								<span class="txt">生活福利领不停</span>
+							</span>
+						</a>
+					</li>
+					<li class="item jifen-div">
+						<a href="javascript:;">
+							<span class="ico_shop"></span>
+							<span class="Ico">
+								<span class="tit">兑换</span>
+								<span class="txt">迅雷积分兑换</span>
+							</span>
+						</a>
+					</li>
+					<li class="item huodong-div">
+						<a href="javascript:;">
+							<span class="ico_crown"></span>
+							<span class="Ico">
+								<span class="tit">活动</span>
+								<span class="txt">年费会员免费拿</span>
+							</span>
+						</a>
+					</li>
+				</ul>
+				<div class="mission_cont">
+					<div class="tab_area mission_area mission_cashback" id="cash-div" style="display: block;">
+						<div class="cashback_left">
+							<span class="coin">0.00</span>
+							<div class="cont">
+								<p class="tit">今日可领
+									<span class="money"><i>0.05</i>元</span>
+								</p>
+								<span class="txt">
+									亲，您还没有登录，
+									<a class="login" href="javascript:;">点击登录></a>
+								</span>
+								<div class="btn_wp">
+						        	<a href="javascript:;" id="get-cash-btn" class="btn_red get-cash">立即领钱</a>
+
+						        </div>
+
+							</div>
+						</div>
+						<div class="cashback_right">
+							<div class="func">
+								<div class="cont">
+									<p class="tit">提现</p>
+									<p class="txt">累计金额满10元可提现</p>
+								</div>
+								<a class="link_go" href="#">
+									<span>去提现></span>
+								</a>
+							</div>
+							<div class="func">
+								<div class="cont">
+									<p class="tit">余额翻倍</p>
+									<p class="txt">50%翻倍几率</p>
+								</div>
+								<a class="link_go double-btn" href="#">
+									<span>博一把></span>
+								</a>
+							</div>
+							<div class="func">
+								<div class="cont">
+									<p class="tit">礼包兑换</p>
+									<p class="txt">1元兑换酒窝价值2元礼包</p>
+								</div>
+								<a class="link_go exchange_jiuwo" href="#">
+									<span>去兑换></span>
+								</a>
+							</div>
+						</div>
+					</div>
+
+					<div class="tab_area mission_area mission_signin" id="sign-div" style="display: none;">
+						<div class="active_wp">
+	                        <div class="active">
+	                          <div class="img_active"><img src="./images/vip_index/201612021629004444.png" alt="1年超级会员体验"></div>
+	                          <div class="cont">
+	                            <p class="tit">1年超级会员体验</p>
+	                            <p class="txt">再送399元礼包</p>
+	                            <a href="" class="btn_trans">限时领取</a>
+	                          </div>
+	                          <a href="" class="mask_click"></a>
+	                        </div>
+	                        <div class="active">
+	                          <div class="img_active"><img src="./images/vip_index/201610101625442072.png" alt="免费领会员"></div>
+	                          <div class="cont">
+	                            <p class="tit">免费领会员</p>
+	                            <p class="txt">还有清纯学妹陪你聊</p>
+	                            <a href="" class="btn_trans">立即领取</a>
+	                          </div>
+	                          <a href="" class="mask_click"></a>
+	                        </div>
+	                        <div class="active">
+	                          <div class="img_active"><img src="./images/vip_index/201611031957435394.png" alt="超级会员"></div>
+	                          <div class="cont">
+	                            <p class="tit">超级会员</p>
+	                            <p class="txt">开通即送丰富礼包</p>
+	                            <a href="" class="btn_trans">立即开通</a>
+	                          </div>
+	                          <a href="" class="mask_click"></a>
+	                        </div>
+                        </div>
+                    </div>
+					<div class="tab_area mission_area mission_ticket" id="fuli-div" style="display: none;">
+						<ul class="awards_list" id="fuli">
+						   <li class="item">
+				                <a href="javascript:;" class="img_wp"><img src="./images/vip_index/201605111701058695.png" style="display: block;" width="170" height="145"></a>
+				                <div class="cont">
+				                  <p class="tit">美每购</p>
+				                  <p class="tit_small c_gray">家用大功率冷热风电吹风筒 </p>
+				                  <div class="btn_wp">
+				                    <a href="javascript:void(0)" class="get-fuli">会员免费领取</a>
+				                  </div>
+				                </div>
+				            </li>
+				            <li id="APPHUI-0302" class="item" had-get="0" get-type="3">
+				                <a href="javascript:;" class="img_wp"><img src="./images/vip_index/201605111405184428.jpg"  style="display: block;" width="170" height="145"></a>
+				                <div class="cont">
+				                  <p class="tit">优生活</p>
+				                  <p class="tit_small c_gray">夏季多功能冰凉降温坐垫</p>
+				                  <div class="btn_wp">
+				                    <a href="javascript:void(0)" class="get-fuli">会员免费领取</a>
+				                  </div>
+				                </div>
+				            </li>
+				            <li id="APPHUI-0306" class="item" had-get="0" get-type="3">
+				                <a href="javascript:;" class="img_wp"><img src="./images/vip_index/201604151443583681.png" style="display: block;" width="170" height="145"></a>
+				                <div class="cont">
+				                  <p class="tit">电动牙刷</p>
+				                  <p class="tit_small c_gray">声波炫白</p>
+				                  <div class="btn_wp">
+				                    <a href="javascript:void(0)" class="get-fuli">会员免费领取</a>
+				                  </div>
+				                </div>
+				            </li>
+				            <li id="APPHUI-SP" class="item" had-get="0" get-type="3">
+				                <a href="javascript:;" class="img_wp"><img src="./images/vip_index/201609231846332187.png" style="display: block;" width="170" height="145"></a>
+				                <div class="cont">
+				                  <p class="tit">手机屏幕放大器</p>
+				                  <p class="tit_small c_gray">仅需10元包邮到家</p>
+				                  <div class="btn_wp">
+				                    <a href="javascript:void(0)" class="get-fuli">会员免费领取</a>
+				                  </div>
+				                </div>
+				            </li>
+				            <li id="APPHUI-PC" class="item" had-get="0" get-type="3">
+				                <a href="javascript:;" class="img_wp"><img src="./images/vip_index/201609231848496431.png" style="display: block;" width="170" height="145"></a>
+				                <div class="cont">
+				                  <p class="tit">手机平板二合一支架</p>
+				                  <p class="tit_small c_gray">仅需10元包邮到家</p>
+				                  <div class="btn_wp">
+				                    <a href="javascript:void(0)" class="get-fuli">会员免费领取</a>
+				                  </div>
+				                </div>
+				            </li>
+						</ul>
+					</div>
+					
+					<div class="tab_area mission_area mission_exchange" id="jifen-div" style="display: none;">
+						<ul class="awards_list" id="fuli">
+						   <li class="item">
+				                <a href="javascript:;" class="img_wp"><img src="./images/vip_index/201610241834053801.jpg" style="display: block;" width="170" height="145"></a>
+				                <div class="cont">
+				                  <p class="tit">美每购</p>
+				                  <p class="tit_small c_gray">家用大功率冷热风电吹风筒 </p>
+				                  <div class="btn_wp">
+				                    <a href="javascript:void(0)" class="get-fuli">会员免费领取</a>
+				                  </div>
+				                </div>
+				            </li>
+				            <li id="APPHUI-0302" class="item" had-get="0" get-type="3">
+				                <a href="javascript:;" class="img_wp"><img src="./images/vip_index/201604151453534139.png"  style="display: block;" width="170" height="145"></a>
+				                <div class="cont">
+				                  <p class="tit">优生活</p>
+				                  <p class="tit_small c_gray">夏季多功能冰凉降温坐垫</p>
+				                  <div class="btn_wp">
+				                    <a href="javascript:void(0)" class="get-fuli">会员免费领取</a>
+				                  </div>
+				                </div>
+				            </li>
+				            <li id="APPHUI-0306" class="item" had-get="0" get-type="3">
+				                <a href="javascript:;" class="img_wp"><img src="./images/vip_index/201604151456146884.png" style="display: block;" width="170" height="145"></a>
+				                <div class="cont">
+				                  <p class="tit">电动牙刷</p>
+				                  <p class="tit_small c_gray">声波炫白</p>
+				                  <div class="btn_wp">
+				                    <a href="javascript:void(0)" class="get-fuli">会员免费领取</a>
+				                  </div>
+				                </div>
+				            </li>
+				            <li id="APPHUI-SP" class="item" had-get="0" get-type="3">
+				                <a href="javascript:;" class="img_wp"><img src="./images/vip_index/201604151451266114.png" style="display: block;" width="170" height="145"></a>
+				                <div class="cont">
+				                  <p class="tit">手机屏幕放大器</p>
+				                  <p class="tit_small c_gray">仅需10元包邮到家</p>
+				                  <div class="btn_wp">
+				                    <a href="javascript:void(0)" class="get-fuli">会员免费领取</a>
+				                  </div>
+				                </div>
+				            </li>
+						</ul>
+					</div>
+
+					<div class="tab_area mission_area mission_activity" id="huodong-div" style="display: none;">
+                        <div class="active_wp">
+	                        <div class="active">
+	                          <div class="img_active"><img src="./images/vip_index/201612021629004444.png" alt="1年超级会员体验"></div>
+	                          <div class="cont">
+	                            <p class="tit">1年超级会员体验</p>
+	                            <p class="txt">再送399元礼包</p>
+	                            <a href="" class="btn_trans">限时领取</a>
+	                          </div>
+	                          <a href="" class="mask_click"></a>
+	                        </div>
+	                        <div class="active">
+	                          <div class="img_active"><img src="./images/vip_index/201610101625442072.png" alt="免费领会员"></div>
+	                          <div class="cont">
+	                            <p class="tit">免费领会员</p>
+	                            <p class="txt">还有清纯学妹陪你聊</p>
+	                            <a href="" class="btn_trans">立即领取</a>
+	                          </div>
+	                          <a href="" class="mask_click"></a>
+	                        </div>
+	                        <div class="active">
+	                          <div class="img_active"><img src="./images/vip_index/201611031957435394.png" alt="超级会员"></div>
+	                          <div class="cont">
+	                            <p class="tit">超级会员</p>
+	                            <p class="txt">开通即送丰富礼包</p>
+	                            <a href="" class="btn_trans">立即开通</a>
+	                          </div>
+	                          <a href="" class="mask_click"></a>
+	                        </div>
+                        </div>
+                        <!--html 请求  http://vip.xunlei.com/pagepiece/huodong.html-->
+                    </div>
+					
+				</div>
+			</div>
+		</div>
+	</header>
+	<content>
+		<div class="scnitem scnitem_1">
+			<div class="img_scn">
+			<img src="./images/vip_index/scn_01.jpg">
+			</div>
+			<div class="cont_scn">
+				<div class="tex_hide">
+					
+				</div>
+				<div class="btnwp">
+					<a class="btn_trans" href="#" >超级会员</a>
+				</div>
+			</div>
+		</div>
+		<div class="scnitem scnitem_2">
+			<div class="img_scn">
+			<img src="./images/vip_index/scn_02.jpg">
+			</div>
+			<div class="cont_scn">
+				<div class="tex_hide">
+					
+				</div>
+				<div class="btnwp">
+					<a class="btn_trans" href="#" >白金会员</a>
+				</div>
+			</div>
+		</div>
+		<div class="scnitem scnitem_3">
+			<div class="img_scn">
+			<img src="./images/vip_index/scn_03.jpg">
+			</div>
+			<div class="cont_scn">
+				<div class="tex_hide">
+					
+				</div>
+				<div class="btnwp">
+					<a class="btn_trans" href="#" >菜鸟会员</a>
+				</div>
+			</div>
+		</div>
+	</content>
+	<!-- 底部 -->
+	<footer>
+		<div class="modwp">
+			<div class="mapin">
+				<dl class="fuwu">
+					<dt>迅雷会员服务</dt>
+					<dd>
+						<a class="links" href="">
+							<i class="sicontq ic-xlpd"></i>
+							迅雷官网
+						</a>
+						<a class="links" href="">
+							<i class="sicontq ic-xlbbs"></i>
+							迅雷论坛
+						</a>
+						<a class="links" href="">
+							<i class="sicontq ic-netjsq"></i>
+							迅雷加速
+						</a>
+						<a class="links" href="">
+							<i class="sicontq ic-jinrong"></i>
+							蜂鸟金融
+						</a>
+						<a class="links" href="">
+							<i class="sicontq ic-jwzb"></i>
+							酒窝直播
+						</a>
+						<a class="links" href="">
+							<i class="sicontq ic-tieba"></i>
+							迅雷贴吧
+						</a>
+					</dd>
+				</dl>
+				<dl class="kefu">
+					<dt>迅雷会员专属客服</dt>
+					<dd>
+						<p class="">
+							<span class="txt_kf">客服热线：400-1111-000 7x12小时服务</span>
+						</p>
+						<p>
+							<a class="" href="">帮助中心</a>
+							<em class="line">|</em>
+							<a class="" >在线客服</a>
+						</p>
+					</dd>
+				</dl>
+				<dl class="gz">
+					<dt>关注我们</dt>
+					<dd>
+						<a class="ic_gz" href="" >
+							<i class="sicontq iconwb ic-sinawb"></i>
+						关注新浪微博
+						</a>
+					</dd>
+					<dd style="z-index:99">
+						<a class="ic_gz ic-wxgz" href="javascript:void(0)" title="">
+							<i class="sicontq iconwb ic-wx"></i>
+						关注微信
+						</a>
+					</dd>
+					<dd style="z-index:1">
+						<a class="ic_gz ic-qqgz" href="javascript:void(0)" title="">
+							<i class="sicontq iconwb ic-qq"></i>
+						关注QQ
+						</a>
+					</dd>
+				</dl>
+			</div>
+			<div class="foot">
+				<p class="f-nav">
+				<a href="">关于迅雷</a>
+				<a href="">下载迅雷</a>
+				<a href="">加盟迅雷</a>
+				<a href="">广告服务</a>
+				<a href="">商务合作</a>
+				<a href="">客服中心</a>
+				<a href="">安全中心</a>
+				<a href="">用户协议</a>
+				<span>|</span>
+				© 2003-2016 Xunlei.com 版权所有
+				</p>
+			</div>
+		</div>
+	</footer>
+	<!-- 二维码 -->
+	<div class="p_getbom" style="display: none;">
+
+		<a class="goerwei" href="javascript:void(0)" title="扫描二维码">扫描二维码</a>
+		<a class="gobacktop" href="javascript:window.scrollTo( 0, 0 );" title="返回顶部">返回顶部</a>
+		<div class="p_showma" style="display: block;"><img src="./images/vip_index/vipqqbig.png" alt="" width="120" height="120"></div>
+	</div>
+	
+</body>
+</html>

@@ -1,0 +1,169 @@
+/* 
+* @Author: Marte
+* @Date:   2016-12-04 14:26:59
+* @Last Modified by:   Marte
+* @Last Modified time: 2016-12-04 17:51:57
+*/
+
+$(document).ready(function(){
+	index = 0;
+	change(index)
+    $(window).resize(function() {
+        var w = $(window).width();
+        if (w < 1200 ) {
+            $('html').css('font-size', w/12+'px');
+        }else{
+        	$('html').css('font-size', '100px');
+        }
+    });
+    //轮播图小圆点点击
+    $('.header-arrow-item').click(function(){
+    	index = $(this).index();
+    	$('.header-arrow-item').removeClass('header-arrow-itemon');
+    	$(this).addClass('header-arrow-itemon');
+    	change(index);
+    });
+});
+//背景切换
+function change(index){
+	$('.header-bg').css('opacity','0');
+	$('#bg-'+index).css('opacity','1');
+	$('.slide-0').css({
+		opacity:'0',
+	});
+	$('.slide-1').css({
+		opacity:'0',
+	});
+	$('#slide-'+index).css({
+		opacity:'1',
+	});
+	if (index == 0) {
+		//第一块的东西显示
+		$('.header-phone').css({
+			transform:'translateY(0rem)',
+			opacity:1,
+		})
+		$('#header-version').css({
+			transform:'translateX(0rem)',
+			opacity:1,
+		})
+		$('.header-title').css({
+			transform:'translateX(0rem)',
+			opacity:1,
+		})
+		$('.header-sologan').css({
+			transform:'translateX(0rem)',
+			opacity:1,
+		})
+		$('.header-link').css({
+			transform:'translateX(0rem)',
+			opacity:1,
+		})
+		$('.header-download').css({
+			transform:'translateX(0rem)',
+			opacity:1,
+		})
+		$('.header-qrcode').css({
+			transform:'translateX(0rem)',
+			opacity:1,
+		})
+		//第二块的东西隐藏 
+		$('.header-phone-1--b').css({
+			transform:'translateY(2.8rem)',
+			opacity:0,
+		})
+		$('.header-phone-1').css({
+			transform:'translateY(2.8rem)',
+			opacity:0,
+		})
+		$('#header-version-1').css({
+			transform:'translateX(2.5rem)',
+			opacity:0,
+		})
+		$('.header-title-1').css({
+			transform:'translateX(2.5rem)',
+			opacity:0,
+		})
+		$('.header-sologan-1').css({
+			transform:'translateX(2.5rem)',
+			opacity:0,
+		})
+		$('.header-link-1').css({
+			transform:'translateX(2.5rem)',
+			opacity:0,
+		})
+		$('.header-download-1').css({
+			transform:'translateX(2.5rem)',
+			opacity:0,
+		})
+		$('.header-qrcode-1').css({
+			transform:'translateX(2.5rem)',
+			opacity:0,
+		})
+		
+	}
+	if (index == 1) {
+		//第一块隐藏
+		$('.header-phone').css({
+			transform:'translateY(2.8rem)',
+			opacity:0,
+		})
+		$('#header-version').css({
+			transform:'translateX(2.5rem)',
+			opacity:0,
+		})
+		$('.header-title').css({
+			transform:'translateX(2.5rem)',
+			opacity:0,
+		})
+		$('.header-sologan').css({
+			transform:'translateX(2.5rem)',
+			opacity:0,
+		})
+		$('.header-link').css({
+			transform:'translateX(2.5rem)',
+			opacity:0,
+		})
+		$('.header-download').css({
+			transform:'translateX(2.5rem)',
+			opacity:0,
+		})
+		$('.header-qrcode').css({
+			transform:'translateX(2.5rem)',
+			opacity:0,
+		})
+		//第二块显示
+		$('.header-phone-1--b').css({
+			transform:'translateY(0rem)',
+			opacity:1,
+		})
+		$('.header-phone-1').css({
+			transform:'translateY(0rem)',
+			opacity:1,
+		})
+		$('#header-version-1').css({
+			transform:'translateX(0rem)',
+			opacity:1,
+		})
+		$('.header-title-1').css({
+			transform:'translateX(0rem)',
+			opacity:1,
+		})
+		$('.header-sologan-1').css({
+			transform:'translateX(0rem)',
+			opacity:1,
+		})
+		$('.header-link-1').css({
+			transform:'translateX(0rem)',
+			opacity:1,
+		})
+		$('.header-download-1').css({
+			transform:'translateX(0rem)',
+			opacity:1,
+		})
+		$('.header-qrcode-1').css({
+			transform:'translateX(0rem)',
+			opacity:1,
+		})
+	}
+}

@@ -1,0 +1,203 @@
+.contentAf{
+    height: 270px;
+    background:#0745a8 url(../img/price/price_banner.jpg) no-repeat center;
+}
+.contentBf{
+    width: 100%;
+    background: #f2f2f2;
+}
+.contentBf ul{
+    width: 1200px;
+    margin: 0 auto;
+    padding-top: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px #ccc solid;
+
+}
+.contentBf ul li{
+    display: inline-block;
+    font-size: 20px;
+    line-height: 50px;
+    padding: 0 20px;
+    cursor: pointer;
+    border-left: 1px #f2f2f2 solid;
+    border-right: 1px #f2f2f2 solid;
+    border-top: 2px #f2f2f2 solid;
+    transform:translateY(1px);
+}
+.contentBf .Bf_on{
+    border-left: 1px solid #c8c9cb;
+    border-right: 1px solid #c8c9cb;
+    border-top: 2px solid #0745a8;
+    border-bottom: 1px solid #f2f2f2;
+}
+
+.price_list_1{
+    width: 1200px;
+    margin: 0 auto;
+    padding-bottom: 80px;
+    display: block;
+}
+.price_list_2{
+    width: 1200px;
+    margin: 0 auto;
+    padding-bottom: 80px;
+    display: none;
+}
+.price_list_3{
+    width: 1200px;
+    margin: 0 auto;
+    padding-bottom: 80px;
+    display: none;
+}
+.price_list_1 p{
+    line-height: 60px;
+    text-align: right;
+}
+.price_list_2 p{
+    line-height: 60px;
+    text-align: right;
+}
+.price_list_3 p{
+    line-height: 60px;
+    text-align: right;
+}
+.price_list_1 p span{
+    color: #0745a8;
+    border: 1px solid #0745a8;
+    border-radius: 3px;
+    padding: 4px 7px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.3s;
+}
+.price_list_1 p span:hover{
+    background: #0745a8;
+    color: #fff;
+    transition: 0.3s;
+}
+.contentBf h3{
+    text-align: center;
+    height: 60px;
+    line-height: 60px;
+    background: #0745a8;
+    color: #fff;
+    font-size: 30px;
+}
+.contentBf table{
+    width: 1200px;
+    background: #fff;
+}
+.contentBf table tr{
+    line-height: 60px;
+    text-align: center;
+    
+}
+.contentBf table tr td{
+    width: 400px;
+}
+.contentBf table thead tr{
+    font-size: 18px;
+}
+.contentBf table thead tr td{
+    border-right: 1px #eee solid;
+}
+.contentBf table thead tr td:last-child{
+    border-right: none;
+}
+.contentBf table tbody tr{
+    font-size: 16px;
+}
+.contentBf table tbody tr td{
+    border-right: 1px #eee solid;
+    border-top: 1px #eee solid;
+}
+.contentBf table tbody tr td:last-child{
+    border-right: none;
+}
+.contentBf h2{
+    color: #555;
+    line-height: 25px;
+}
+.price_list_2 table tr td{
+    width: 600px;
+}
+.calculator_bg{
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    position: fixed;
+    background: rgba(0,0,0,0.3);
+    display: none;
+}
+.calculator{
+    z-index: 10000;
+    width: 600px;
+    height: 400px;
+    left: 50%;
+    top: 50%;
+    position: absolute;
+    margin-left: -300px;
+    margin-top: -200px;
+    background: #fff;
+    border-radius: 8px;
+    display:none;
+}
+.calculator h3{
+    background: #0745a8;
+    height: 100px;
+    line-height: 100px;
+    color: #fff;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 8px 8px 0 0;
+    font-weight: bold;
+}
+.calculator h3 em{
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+    position: absolute;
+    background: url(../img/spr_2.png) -100px -100px;
+    right: 20px;
+    top: 20px;
+    cursor: pointer;
+}
+.calculator_2{
+    padding-top: 30px;
+    padding-left: 60px;
+    font-size: 14px;
+}
+.calculator_zz span{
+    font-size: 15px;
+    width: 130px;
+    display: inline-block;
+}
+.calculator_zz select{
+    padding: 4px 0;
+    width: 240px;
+    font-size: 14px;
+    background-color: #f2f2f2;
+    border: 1px solid #999;
+    border-radius: 4px;
+}
+.calculator_zz{
+    margin-bottom: 10px;
+}
+.calculator_zz b{
+    width: 240px;
+    font-size: 28px;
+    text-align: right;
+    display: inline-block;
+}
+.calculator_zz strong{
+    width: 240px;
+    text-align: right;
+    display: inline-block;
+    color: #3298ff;
+    font-size: 32px;
+}
+.calculator_zz i{
+    font-size: 14px;
+    margin-left: 10px;
+}

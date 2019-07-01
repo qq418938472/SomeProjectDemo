@@ -1,0 +1,276 @@
+body{
+	background: #F0F2F5;
+    min-width: 300px;
+}
+.clear{
+	clear: both;
+}
+/*=================================头部样式====================*/
+a{
+	color: black;
+}
+a:focus{
+	outline: none;
+}
+a:hover, a:focus{
+	color: #555;
+	text-decoration: none;
+}
+ul, ol{
+	margin-bottom: 0;
+}
+.row{
+	margin-left: 0;
+	margin-right: 0;
+}
+.header_button{
+	text-align: right;
+} 
+.header_top{
+	white-space: nowrap;
+}
+.header_top ul{
+	display: inline-block;
+	height: 44px;
+	line-height:44px;
+	overflow: hidden;
+	border:none;
+}
+.header_top ul li{
+	white-space: nowrap;
+	margin: 0 auto;
+	float: left;
+	display: inline;
+
+}
+.header_top .nav-tabs a:hover{
+	background: #F5F5F5;
+	border:none;
+}
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus{
+	background: none;
+	border:none;
+	border-bottom:2px solid #222222;
+	font-weight: bold;
+}
+.header_top a{
+    color: #555;
+}
+.header_top ul li a{
+	display: inline;
+	color: #555;
+	height: auto;
+	padding:12px 15px;
+
+}
+.header_top div{
+	display: inline;
+}
+.header_top{
+	background: #F5F5F5;
+	border-bottom: 1px solid #BFBFBF;
+}
+.header_button span{
+	height: 20px;
+	width: 20px;
+	margin: 8px 10px 0;
+}
+.jd-header-shortcut {
+    background: #404042 none repeat scroll 0 0;
+    display: table;
+    height: 57px;
+    width: 100%;
+    list-style: none;
+    padding:0;
+    display: none;
+}
+.jd-header-shortcut a{
+	color: #fff;
+}
+.jd-header-shortcut li {
+    display: table-cell;
+    text-align: center;
+    width: 25%
+}
+.jd-header-shortcut span {
+    height: 30px;
+    margin-top: 6px;
+    width: 30px;
+}
+.jd-header-shortcut strong{
+ 	display: block;
+ 	font-weight: normal;
+}
+/*=============================内容=================*/
+.form{
+	width: 100%;
+	max-width: 640px;
+	min-width: 320px;
+	margin: 0 auto;
+	overflow: hidden;
+	font-size: 16px;
+}
+.content_top{
+	float: left;
+}
+.content_topA{
+	padding: 12px;
+	position: relative;
+	background: #fff;
+}
+.panel-body{
+	border:none;
+}
+.name_btn{
+	background: #F23030;
+	color: #fff;
+	padding: 0 5px 0 5px
+}
+.local{
+	margin: 10px 0 0 0;
+	font-size: 14px;
+}
+.fa-angle-right{
+	position: absolute;
+	right: 10px;
+	top: 21px;
+}
+.content_topB{
+	margin: 10px 0 10px 0;
+	background: #fff;
+	/*float: left;*/
+	position: relative;
+	width: 100%;
+	padding:10px 0 0 0 ;
+}
+.content_topB_img{
+	float: left;
+	display: inline;
+	width: 10%;
+	padding-right: 10px;
+}
+.left{
+	width: 60px;
+	display: inline;
+	float: left;
+
+}
+.left img{
+	width: 100%;
+}
+.right{
+	padding: 0 40px 0 20px;
+	float: right;
+	width: 90%;
+	font-size: 15px;
+}
+.content_topB span{
+	position: absolute;
+	right: 0;
+	top: 25px;
+	color: red;
+}
+.send_A{
+	clear: both;
+	position: relative;
+	padding: 10px 0 10px 0;
+	border-top: 1px solid #CDCDCD;
+	border-bottom: 1px solid #CDCDCD;
+}
+.send_1{
+	position: absolute;
+	left: 10px;
+	top: 10px;
+	display: inline;
+}
+.send_2{
+	text-align: right;
+	padding: 0 18px 0 0;
+	margin: 0;
+}
+.fa-angle-right2{
+	right: 0;
+	top: 4px;
+	color: #CDCDCD;
+}
+.send_B{
+	clear: both;
+	position: relative;
+	padding: 10px 0 10px 0;
+}
+.send_B .send_1{
+	top: 20px;
+}
+.send_B .fa-angle-right2{
+	top: 20px;
+	color: #CDCDCD;
+}
+.content_mid{
+	clear: both;
+}
+.content_mid .send_A{
+	border: none;
+}
+.content_mid .send_B{
+	border-top: 1px solid #CDCDCD;
+	border-bottom: 1px solid #CDCDCD;
+}
+.content_mid .send_1{
+	top: 11px;
+}
+.content_mid .fa-angle-right2{
+	top: 5px;
+}
+.content_mid .content_topB{
+	padding: 0;
+}
+u{
+	background: red;
+	font-style: none;
+	text-decoration: none;
+	color: #fff;
+	padding:0 5px 0 5px;
+}
+.mid_bottom{
+	padding: 10px 0 10px 10px;
+}
+.mid_bottom p:nth-child(2){
+	font-size: 12px;
+	color: #888888;
+}
+.content_buttom{
+	clear: both;
+	background: #fff;
+	margin: 10px 0 0 0;
+}
+.content_buttom p{
+	text-align: center;
+	color: red;
+	padding:10px 0;
+	margin: 0;
+}
+.pay-leak-btn-red{
+    background-color: #f23030;
+    border-radius: 2px;
+    color: #fff;
+    font-size: 16px;
+    height: 38px;
+    line-height: 38px;
+    width: 97%;
+    border:none;
+}
+.pay-leak-btn {
+    background-color: #fff;
+    border: 1px solid #f23030;
+    border-radius: 4px;
+    color: #f23030;
+    font-size: 32px;
+    height: 76px;
+    line-height: 76px;
+    margin-top: 10px;
+    margin: 10px 9px 0;
+    text-align: center;
+    transform: scale(0.5, 0.5);
+    transform-origin: 0 0 0;
+    width: 194%;
+}

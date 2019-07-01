@@ -1,0 +1,263 @@
+/* 
+* @Author: Marte
+* @Date:   2016-11-28 09:18:44
+* @Last Modified by:   Marte
+* @Last Modified time: 2016-11-29 11:39:00
+*/
+.container-fluid{
+    padding-right: 0;
+}
+.navbar-collapse{
+    position:relative;
+    right:0;
+    padding: 0;
+}
+.navbar{
+    position: fixed;
+    top: 0;
+    margin-bottom: 0px;
+    background: none;
+    width: 100%;
+    z-index: 2;
+    border: none;
+    font-size: 16px;
+}
+.navbar-default .navbar-nav > li > a{
+    color: #fff;
+    padding:10px 15px;
+}
+.navbar-default .navbar-nav > li > a:hover{
+    padding:8px 13px;
+    color: #fff;
+    padding-left: ;
+    border:2px solid rgba(255, 255, 255, 0.5);
+}
+.collapse .navbar-right{
+    margin:7px 0 0 0;
+    width:470px;
+}
+.navbar-right li{
+    margin-top: 10px;
+    width:30%;
+}
+.navbar-default .navbar-collapse, .navbar-default .navbar-form{
+    border: none;
+}
+.navbar-right .dropdown-menu{
+    font-size: 17px;
+}
+.navbar-brand{
+    padding: 0;
+    width:150px;
+    height: 68px;
+    background:url("../img/index/n_logo.png") no-repeat;
+    background-size:100%;
+}
+.navbar > .container .navbar-brand, .navbar > .container-fluid .navbar-brand{
+    margin: 15px 0 0 30px;
+}
+.navbar-toggle{
+    margin-top: 23px;
+}
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus{
+    background:none;
+}
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus{
+    color:#fff;
+}
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus{
+    background:none;
+    color:#fff;
+}
+.navbar-right i{
+    background-image: url("../img/index/head_spr.png");
+    background-repeat: no-repeat;
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+}
+.spr1{
+    background-position: 0 0;
+    height: 20px;
+    margin-right: 13px;
+    top: 4px;
+    width: 29px;
+}
+.spr2{
+    background-position: -54px 0;
+    height: 20px;
+    margin-right: 13px;
+    top: 4px;
+    width: 29px;
+}
+.spr3{
+    background-position: 0 -24px;
+    height: 20px;
+    margin-right: 13px;
+    top: 4px;
+    width: 29px;
+}
+.navbar-right .dropdown-menu{
+    position: absolute;
+    right: -34px;
+}
+.dropdown-menu > li > a{
+    color:#fff;
+    width:100px;
+}
+.dropdown-menu > li > a:hover{
+    color:#fff;
+    background:black;
+
+}
+.dropdown-menu{
+    background:black;
+    /*opacity: 0.5;*/
+}
+/*=========================导航栏样式结束========================*/
+.content_Af{
+    width:100%;
+    position:relative;
+}
+.img_content{
+    /*margin:0;*/
+    /*transition:5s;*/ 
+}
+.control_box{
+    width:200px;
+    margin:0 auto;
+    z-index: 3;
+    color:#fff;
+    position:relative;
+}
+.control_box span{
+    padding:0 5px 0 5px;
+    border-bottom: 2px solid #444341;
+}
+.control_box #on{
+    border-bottom: 2px solid #fff;
+}
+.control_box .span_xnet{
+    cursor:pointer;
+    position: absolute;
+    margin:600px 0 0 0;
+    height:74px;
+    width: 70px;
+    background-image: url("../img/index/ic_spr.png");
+    background-position: -604px 0;
+    /*margin-left: -30px;*/
+}
+.control_box .span_member{
+    cursor:pointer;
+    position: absolute;
+    margin:600px 0 0 0;
+    left:70px;
+    height:74px;
+    width: 70px;
+    background-image: url("../img/index/ic_spr.png");
+    background-position: -214px 0;
+}
+.control_box .span_xav{
+    cursor:pointer;
+    position: absolute;
+    margin:600px 0 0 0;
+    left:140px;
+    height:74px;
+    width: 70px;
+    background-image: url("../img/index/ic_spr.png");
+    background-position: -398px 0;
+}
+.content_Af_frame{
+    height:960px;
+    /*float: left;*/
+    overflow: hidden;
+}
+.content_Af_frame div{
+    transition: 0.8s;
+}
+.img_1{
+    position:relative;
+}
+.title_content{
+    position:relative;
+    margin:0 auto;
+    width:379px;
+}
+.title_text2{
+    width:548px;
+}
+.title_text3{
+    width:548px;
+}
+.title{
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    margin: 143px 0 0 0px;
+    width: 379px;
+    opacity:0;
+    transition:3s;
+}
+.title_2{
+    width:548px;
+}
+.title_3{
+    width:548px;
+}
+.title_content .title_content_a1{
+    opacity:0.8;
+    padding:8px 40px;
+    border:1px solid #fff;
+    color:#fff;
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left:30px;
+    margin: 235px 0 0 0px;
+    opacity:0;
+}
+.title_content .title_content_a2{
+    opacity:0.8;
+    padding:8px 40px;
+    border:1px solid #fff;
+    color:#fff;
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    right:30px;
+    margin: 235px 0 0 0px;
+    opacity:0;
+}
+.title_content a:hover{
+    text-decoration: none;
+    background:#fff;
+    color:black;
+}
+.content_Af_frame .img_content{
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    width:100%;
+    min-width: 1440px;
+}
+.img_2{
+    position:relative;
+}
+.img_2 .title{
+    margin:272px 0 0 0;
+}
+.img_2 .title_content_a1{
+    margin:380px 0 0 0;
+    left:38%;
+}
+.img_3{
+    position:relative;
+}
+.img_3 .title{
+    margin:300px 0 0 0;
+}
+.img_3 .title_content_a1{
+    margin:390px 0 0 0;
+    left:38%;
+}
+/*=========================轮播图样式结束========================*/

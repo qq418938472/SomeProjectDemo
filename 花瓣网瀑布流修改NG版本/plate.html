@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>盘子</title>
+	<!-- <link rel="stylesheet" href="./css/common.css"> -->
+	
+	<link rel="stylesheet" href="./css/common2.css">
+	<link rel="stylesheet" href="./css/magazine2.css">
+	<link rel="stylesheet" href="./css/plate.css">
+	<script type="text/javascript" src="./js/jquery-3.1.0.min.js"></script>
+	<script type="text/javascript" src="./js/angular.min.js"></script>
+	<script type="text/javascript" src="./js/plate.js" /></script>
+
+</head>
+<body ng-app="myapp">
+	<!--头部-->
+	<div class="header">
+		<div class="header_Af">
+			<div class="header_Af_top">
+				<a href="index.html"><img class="header_Af_top_img" src="./images/scripe/logo.png" alt=""></a>
+				<a class="header_Af_topA" href="index.html">发现</a>
+				<a class="header_Af_topB" href="new.html">最新</a>
+				<a class="header_Af_topC" href="muse.html">美思<img class="new" src="./images/header_Af_new.png" alt=""></a>
+				<a class="header_Af_topD" href="#"><img src="./images/scripe/spot.png" alt=""></a>
+				<input type="text" value="搜索你喜欢的">
+				<a href=""><img class="search"src="./images/scripe/search1.png" alt=""></a>
+				<button class="buttonA">登录</button>
+				<button class="buttonB">注册</button>
+			</div>
+		</div>
+		<div class="header_Bf">
+			<div class="header_Bf_content">
+				<p class="content_Af">盘子</p>
+				<button class="content_Bf">关注</button>
+				<p class="content_Cf">盘子在西餐中的地位非常之高，很多设计精美的盘子甚至可以称得上是艺术品，比起吃东西，更想挂在墙上。</p>
+				<p class="content_Df">Ta 们已关注</p>
+				<!--中间闪图浮现动画-->
+
+				<div class="content_Df_list" ng-controller="myCtrl">
+					<a href="#"><img class="{{dot[0]}}" src="./images/scripe/header_list1.jpg"></a>
+					<a href="#"><img class="{{dot[1]}}" src="./images/scripe/header_list2.jpg"></a>
+					<a href="#"><img class="{{dot[2]}}" src="./images/scripe/header_list3.jpg"></a>
+					<a href="#"><img class="{{dot[3]}}" src="./images/scripe/header_list4.jpg"></a>
+					<a href="#"><img class="{{dot[4]}}" src="./images/scripe/header_list5.jpg"></a>
+					<a href="#"><img class="{{dot[5]}}" src="./images/scripe/header_list6.jpg"></a>
+				</div>
+				<script type="text/javascript">
+					var app = angular.module('myapp',[])
+					app.controller('myCtrl',function($scope,$interval){
+						$scope.dot = ['','','','','',''];
+						var i = 0;
+						$interval(function(){
+							$scope.dot[i] = "on";
+							i++;
+						},300)
+					})
+				</script>
+
+				<!--中间闪图浮现动画-->
+				<div class="header_Bf_circle">
+					<a href="#">我要<br>投稿</a>
+				</div>
+			</div>
+			
+		</div>
+		
+		<div class="header_Cf">
+			<hr class="header_Cf_left" />
+			<span class="header_Cf_titleA">大家正在关注</span>
+			<hr class="header_Cf_right" />
+			<div class="header_Cf_bottom">
+				<ul class="bottom_list">
+					<li class="listA"><a href="#">沙发</a></li>
+					<li class="listB"><a href="#">产品设计</a></li>
+					<li class="listC"><a href="#">书桌</a></li>
+					<li class="listD"><a href="#">吊灯</a></li>
+					<li class="listE"><a href="#">摩托车外观设计</a></li>
+				</ul>
+			</div>
+			<hr class="header_Cf_left" />
+			<span class="header_Cf_titleB">为您推荐</span>
+			<hr class="header_Cf_right" />
+		</div>
+	</div>
+	<!--内容-->
+	<div id="container">
+		<div class="box" id="">
+			<div class="content">
+				<a href="#">
+					<img src="./images/plate/11.jpg" alt="">
+					<button class="content_img_buttomL">采集</button>
+					<button class="content_img_buttomR"></button>
+				</a>
+				<p class="content_list_top">The Water Rat Hotel, South Melbourne | Home</p>
+				<p class="content_list_min">
+					<img src="./images/scripe/content_list_img1.png" alt=""> 271
+					<img src="./images/scripe/content_list_img2.png" alt=""> 29
+				</p>
+				<a href="#">
+						<img class="content_list_bottomA" src="./images/magazine/content_list_img3.jpg">
+				</a>
+				<p class="content_list_bottom">
+					<a href="#">月祷雯</a>&nbsp;采集到<br>
+					<a href="#">杂志</a>
+				</p>
+			</div>
+		</div>		 
+		<div class="box" id="">
+			<div class="content">
+				<a href="#">
+					<img src="./images/plate/12.jpg" alt="">
+					<button class="content_img_buttomL">采集</button>
+					<button class="content_img_buttomR"></button>
+				</a>
+				<p class="content_list_top">The Water Rat Hotel, South Melbourne | Home</p>
+				<p class="content_list_min">
+					<img src="./images/scripe/content_list_img1.png" alt=""> 271
+					<img src="./images/scripe/content_list_img2.png" alt=""> 29
+				</p>
+				<a href="#">
+						<img class="content_list_bottomA" src="./images/magazine/content_list_img3.jpg">
+				</a>
+				<p class="content_list_bottom">
+					<a href="#">月祷雯</a>&nbsp;采集到<br>
+					<a href="#">杂志</a>
+				</p>
+			</div>
+		</div>
+		<div class="box" id="">
+			<div class="content">
+				<a href="#">
+					<img src="./images/plate/13.jpg" alt="">
+					<button class="content_img_buttomL">采集</button>
+					<button class="content_img_buttomR"></button>
+				</a>
+				<p class="content_list_top">The Water Rat Hotel, South Melbourne | Home</p>
+				<p class="content_list_min">
+					<img src="./images/scripe/content_list_img1.png" alt=""> 271
+					<img src="./images/scripe/content_list_img2.png" alt=""> 29
+				</p>
+				<a href="#">
+						<img class="content_list_bottomA" src="./images/magazine/content_list_img3.jpg">
+				</a>
+				<p class="content_list_bottom">
+					<a href="#">月祷雯</a>&nbsp;采集到<br>
+					<a href="#">杂志</a>
+				</p>
+			</div>
+		</div>
+		<div class="box" id="">
+			<div class="content">
+				<a href="#">
+					<img src="./images/plate/14.jpg" alt="">
+					<button class="content_img_buttomL">采集</button>
+					<button class="content_img_buttomR"></button>
+				</a>
+				<p class="content_list_top">The Water Rat Hotel, South Melbourne | Home</p>
+				<p class="content_list_min">
+					<img src="./images/scripe/content_list_img1.png" alt=""> 271
+					<img src="./images/scripe/content_list_img2.png" alt=""> 29
+				</p>
+				<a href="#">
+						<img class="content_list_bottomA" src="./images/magazine/content_list_img3.jpg">
+				</a>
+				<p class="content_list_bottom">
+					<a href="#">月祷雯</a>&nbsp;采集到<br>
+					<a href="#">杂志</a>
+				</p>
+			</div>
+		</div>
+		<div class="box" id="">
+			<div class="content">
+				<a href="#">
+					<img src="./images/plate/15.jpg" alt="">
+					<button class="content_img_buttomL">采集</button>
+					<button class="content_img_buttomR"></button>
+				</a>
+				<p class="content_list_top">The Water Rat Hotel, South Melbourne | Home</p>
+				<p class="content_list_min">
+					<img src="./images/scripe/content_list_img1.png" alt=""> 271
+					<img src="./images/scripe/content_list_img2.png" alt=""> 29
+				</p>
+				<a href="#">
+						<img class="content_list_bottomA" src="./images/magazine/content_list_img3.jpg">
+				</a>
+				<p class="content_list_bottom">
+					<a href="#">月祷雯</a>&nbsp;采集到<br>
+					<a href="#">杂志</a>
+				</p>
+			</div>
+		</div>
+		<div class="box" id="">
+			<div class="content">
+				<a href="#">
+					<img src="./images/plate/16.jpg" alt="">
+					<button class="content_img_buttomL">采集</button>
+					<button class="content_img_buttomR"></button>
+				</a>
+				<p class="content_list_top">The Water Rat Hotel, South Melbourne | Home</p>
+				<p class="content_list_min">
+					<img src="./images/scripe/content_list_img1.png" alt=""> 271
+					<img src="./images/scripe/content_list_img2.png" alt=""> 29
+				</p>
+				<a href="#">
+						<img class="content_list_bottomA" src="./images/magazine/content_list_img3.jpg">
+				</a>
+				<p class="content_list_bottom">
+					<a href="#">月祷雯</a>&nbsp;采集到<br>
+					<a href="#">杂志</a>
+				</p>
+			</div>
+		</div>
+		<div class="box" id="">
+			<div class="content">
+				<a href="#">
+					<img src="./images/plate/17.jpg" alt="">
+					<button class="content_img_buttomL">采集</button>
+					<button class="content_img_buttomR"></button>
+				</a>
+				<p class="content_list_top">The Water Rat Hotel, South Melbourne | Home</p>
+				<p class="content_list_min">
+					<img src="./images/scripe/content_list_img1.png" alt=""> 271
+					<img src="./images/scripe/content_list_img2.png" alt=""> 29
+				</p>
+				<a href="#">
+						<img class="content_list_bottomA" src="./images/magazine/content_list_img3.jpg">
+				</a>
+				<p class="content_list_bottom">
+					<a href="#">月祷雯</a>&nbsp;采集到<br>
+					<a href="#">杂志</a>
+				</p>
+			</div>
+		</div>
+		<div class="box" id="">
+			<div class="content">
+				<a href="#">
+					<img src="./images/plate/18.jpg" alt="">
+					<button class="content_img_buttomL">采集</button>
+					<button class="content_img_buttomR"></button>
+				</a>
+				<p class="content_list_top">The Water Rat Hotel, South Melbourne | Home</p>
+				<p class="content_list_min">
+					<img src="./images/scripe/content_list_img1.png" alt=""> 271
+					<img src="./images/scripe/content_list_img2.png" alt=""> 29
+				</p>
+				<a href="#">
+						<img class="content_list_bottomA" src="./images/magazine/content_list_img3.jpg">
+				</a>
+				<p class="content_list_bottom">
+					<a href="#">月祷雯</a>&nbsp;采集到<br>
+					<a href="#">杂志</a>
+				</p>
+			</div>
+		</div>
+		<div class="box" id="">
+			<div class="content">
+				<a href="#">
+					<img src="./images/plate/19.jpg" alt="">
+					<button class="content_img_buttomL">采集</button>
+					<button class="content_img_buttomR"></button>
+				</a>
+				<p class="content_list_top">The Water Rat Hotel, South Melbourne | Home</p>
+				<p class="content_list_min">
+					<img src="./images/scripe/content_list_img1.png" alt=""> 271
+					<img src="./images/scripe/content_list_img2.png" alt=""> 29
+				</p>
+				<a href="#">
+						<img class="content_list_bottomA" src="./images/magazine/content_list_img3.jpg">
+				</a>
+				<p class="content_list_bottom">
+					<a href="#">月祷雯</a>&nbsp;采集到<br>
+					<a href="#">杂志</a>
+				</p>
+			</div>
+		</div>
+		<div class="box" id="">
+			<div class="content">
+				<a href="#">
+					<img src="./images/plate/20.jpg" alt="">
+					<button class="content_img_buttomL">采集</button>
+					<button class="content_img_buttomR"></button>
+				</a>
+				<p class="content_list_top">The Water Rat Hotel, South Melbourne | Home</p>
+				<p class="content_list_min">
+					<img src="./images/scripe/content_list_img1.png" alt=""> 271
+					<img src="./images/scripe/content_list_img2.png" alt=""> 29
+				</p>
+				<a href="#">
+						<img class="content_list_bottomA" src="./images/magazine/content_list_img3.jpg">
+				</a>
+				<p class="content_list_bottom">
+					<a href="#">月祷雯</a>&nbsp;采集到<br>
+					<a href="#">杂志</a>
+				</p>
+			</div>
+		</div>
+		<div class="box" id="">
+			<div class="content">
+				<a href="#">
+					<img src="./images/plate/1.jpg" alt="">
+					<button class="content_img_buttomL">采集</button>
+					<button class="content_img_buttomR"></button>
+				</a>
+				<p class="content_list_top">The Water Rat Hotel, South Melbourne | Home</p>
+				<p class="content_list_min">
+					<img src="./images/scripe/content_list_img1.png" alt=""> 271
+					<img src="./images/scripe/content_list_img2.png" alt=""> 29
+				</p>
+				<a href="#">
+						<img class="content_list_bottomA" src="./images/magazine/content_list_img3.jpg">
+				</a>
+				<p class="content_list_bottom">
+					<a href="#">月祷雯</a>&nbsp;采集到<br>
+					<a href="#">杂志</a>
+				</p>
+			</div>
+		</div>		 
+		<div class="box" id="">
+			<div class="content">
+				<a href="#">
+					<img src="./images/plate/2.jpg" alt="">
+					<button class="content_img_buttomL">采集</button>
+					<button class="content_img_buttomR"></button>
+				</a>
+				<p class="content_list_top">The Water Rat Hotel, South Melbourne | Home</p>
+				<p class="content_list_min">
+					<img src="./images/scripe/content_list_img1.png" alt=""> 271
+					<img src="./images/scripe/content_list_img2.png" alt=""> 29
+				</p>
+				<a href="#">
+						<img class="content_list_bottomA" src="./images/magazine/content_list_img3.jpg">
+				</a>
+				<p class="content_list_bottom">
+					<a href="#">月祷雯</a>&nbsp;采集到<br>
+					<a href="#">杂志</a>
+				</p>
+			</div>
+		</div>
+		<div class="box" id="">
+			<div class="content">
+				<a href="#">
+					<img src="./images/plate/3.jpg" alt="">
+					<button class="content_img_buttomL">采集</button>
+					<button class="content_img_buttomR"></button>
+				</a>
+				<p class="content_list_top">The Water Rat Hotel, South Melbourne | Home</p>
+				<p class="content_list_min">
+					<img src="./images/scripe/content_list_img1.png" alt=""> 271
+					<img src="./images/scripe/content_list_img2.png" alt=""> 29
+				</p>
+				<a href="#">
+						<img class="content_list_bottomA" src="./images/magazine/content_list_img3.jpg">
+				</a>
+				<p class="content_list_bottom">
+					<a href="#">月祷雯</a>&nbsp;采集到<br>
+					<a href="#">杂志</a>
+				</p>
+			</div>
+		</div>
+		<div class="box" id="">
+			<div class="content">
+				<a href="#">
+					<img src="./images/plate/4.jpg" alt="">
+					<button class="content_img_buttomL">采集</button>
+					<button class="content_img_buttomR"></button>
+				</a>
+				<p class="content_list_top">The Water Rat Hotel, South Melbourne | Home</p>
+				<p class="content_list_min">
+					<img src="./images/scripe/content_list_img1.png" alt=""> 271
+					<img src="./images/scripe/content_list_img2.png" alt=""> 29
+				</p>
+				<a href="#">
+						<img class="content_list_bottomA" src="./images/magazine/content_list_img3.jpg">
+				</a>
+				<p class="content_list_bottom">
+					<a href="#">月祷雯</a>&nbsp;采集到<br>
+					<a href="#">杂志</a>
+				</p>
+			</div>
+		</div>
+		<div class="box" id="">
+			<div class="content">
+				<a href="#">
+					<img src="./images/plate/5.jpg" alt="">
+					<button class="content_img_buttomL">采集</button>
+					<button class="content_img_buttomR"></button>
+				</a>
+				<p class="content_list_top">The Water Rat Hotel, South Melbourne | Home</p>
+				<p class="content_list_min">
+					<img src="./images/scripe/content_list_img1.png" alt=""> 271
+					<img src="./images/scripe/content_list_img2.png" alt=""> 29
+				</p>
+				<a href="#">
+						<img class="content_list_bottomA" src="./images/magazine/content_list_img3.jpg">
+				</a>
+				<p class="content_list_bottom">
+					<a href="#">月祷雯</a>&nbsp;采集到<br>
+					<a href="#">杂志</a>
+				</p>
+			</div>
+		</div>
+		<div class="box" id="">
+			<div class="content">
+				<a href="#">
+					<img src="./images/plate/6.jpg" alt="">
+					<button class="content_img_buttomL">采集</button>
+					<button class="content_img_buttomR"></button>
+				</a>
+				<p class="content_list_top">The Water Rat Hotel, South Melbourne | Home</p>
+				<p class="content_list_min">
+					<img src="./images/scripe/content_list_img1.png" alt=""> 271
+					<img src="./images/scripe/content_list_img2.png" alt=""> 29
+				</p>
+				<a href="#">
+						<img class="content_list_bottomA" src="./images/magazine/content_list_img3.jpg">
+				</a>
+				<p class="content_list_bottom">
+					<a href="#">月祷雯</a>&nbsp;采集到<br>
+					<a href="#">杂志</a>
+				</p>
+			</div>
+		</div>
+		<div class="box" id="">
+			<div class="content">
+				<a href="#">
+					<img src="./images/plate/7.jpg" alt="">
+					<button class="content_img_buttomL">采集</button>
+					<button class="content_img_buttomR"></button>
+				</a>
+				<p class="content_list_top">The Water Rat Hotel, South Melbourne | Home</p>
+				<p class="content_list_min">
+					<img src="./images/scripe/content_list_img1.png" alt=""> 271
+					<img src="./images/scripe/content_list_img2.png" alt=""> 29
+				</p>
+				<a href="#">
+						<img class="content_list_bottomA" src="./images/magazine/content_list_img3.jpg">
+				</a>
+				<p class="content_list_bottom">
+					<a href="#">月祷雯</a>&nbsp;采集到<br>
+					<a href="#">杂志</a>
+				</p>
+			</div>
+		</div>
+		<div class="box" id="">
+			<div class="content">
+				<a href="#">
+					<img src="./images/plate/8.jpg" alt="">
+					<button class="content_img_buttomL">采集</button>
+					<button class="content_img_buttomR"></button>
+				</a>
+				<p class="content_list_top">The Water Rat Hotel, South Melbourne | Home</p>
+				<p class="content_list_min">
+					<img src="./images/scripe/content_list_img1.png" alt=""> 271
+					<img src="./images/scripe/content_list_img2.png" alt=""> 29
+				</p>
+				<a href="#">
+						<img class="content_list_bottomA" src="./images/magazine/content_list_img3.jpg">
+				</a>
+				<p class="content_list_bottom">
+					<a href="#">月祷雯</a>&nbsp;采集到<br>
+					<a href="#">杂志</a>
+				</p>
+			</div>
+		</div>
+		<div class="box" id="">
+			<div class="content">
+				<a href="#">
+					<img src="./images/plate/9.jpg" alt="">
+					<button class="content_img_buttomL">采集</button>
+					<button class="content_img_buttomR"></button>
+				</a>
+				<p class="content_list_top">The Water Rat Hotel, South Melbourne | Home</p>
+				<p class="content_list_min">
+					<img src="./images/scripe/content_list_img1.png" alt=""> 271
+					<img src="./images/scripe/content_list_img2.png" alt=""> 29
+				</p>
+				<a href="#">
+						<img class="content_list_bottomA" src="./images/magazine/content_list_img3.jpg">
+				</a>
+				<p class="content_list_bottom">
+					<a href="#">月祷雯</a>&nbsp;采集到<br>
+					<a href="#">杂志</a>
+				</p>
+			</div>
+		</div>
+		<div class="box" id="">
+			<div class="content">
+				<a href="#">
+					<img src="./images/plate/10.jpg" alt="">
+					<button class="content_img_buttomL">采集</button>
+					<button class="content_img_buttomR"></button>
+				</a>
+				<p class="content_list_top">The Water Rat Hotel, South Melbourne | Home</p>
+				<p class="content_list_min">
+					<img src="./images/scripe/content_list_img1.png" alt=""> 271
+					<img src="./images/scripe/content_list_img2.png" alt=""> 29
+				</p>
+				<a href="#">
+						<img class="content_list_bottomA" src="./images/magazine/content_list_img3.jpg">
+				</a>
+				<p class="content_list_bottom">
+					<a href="#">月祷雯</a>&nbsp;采集到<br>
+					<a href="#">杂志</a>
+				</p>
+			</div>
+		</div>
+	</div>
+	<!--底部-->
+	<!-- <div class="footer_Af">
+		<hr class="footer_Af_left" />
+		<a href="#"><span class="footer_Af_titleA">加载更多</span></a>
+		<hr class="footer_Af_right" />
+		<p class="footer_Af_bottomT">以分类浏览花瓣<a href="#">所有采集》</a></p>
+		<hr class="footer_Af_bottomM" />
+		<ul class="footer_Af_bottomD">
+			<li class="ul_list">
+				<ul class="">
+					<li><a href="#">UI/UX</a></li>
+					<li><a href="#">平面</a></li>
+					<li><a href="#">插画/漫画</a></li>
+					<li><a href="#">家居/家装</a></li>
+					<li><a href="#">女装/搭配</a></li>
+					<li><a href="#">男士/风尚</a></li>
+					<li><a href="#">婚礼</a></li>
+
+				</ul>
+				<ul class="">
+					<li><a href="#">工业设计</a></li>
+					<li><a href="#">摄影</a></li>
+					<li><a href="#">造型/美女</a></li>
+					<li><a href="#">美食</a></li>
+					<li><a href="#">旅行</a></li>
+					<li><a href="#">手工/布艺</a></li>
+					<li><a href="#">健身/舞蹈</a></li>
+				</ul>
+				<ul class="">
+					<li><a href="#">儿童</a></li>
+					<li><a href="#">宠物</a></li>
+					<li><a href="#">美图</a></li>
+					<li><a href="#">明星</a></li>
+					<li><a href="#">美女</a></li>
+					<li><a href="#">礼物</a></li>
+					<li><a href="#">极客</a></li>
+				</ul>
+				<ul class="">
+					<li><a href="#">动漫</a></li>
+					<li><a href="#">建筑设计</a></li>
+					<li><a href="#">人文艺术</a></li>
+					<li><a href="#">数据图</a></li>
+					<li><a href="#">游戏</a></li>
+					<li><a href="#">汽车/摩托</a></li>
+					<li><a href="#">电影/图书</a></li>
+				</ul>
+				<ul class="">
+					<li><a href="#">生活百科</a></li>
+					<li><a href="#">教育</a></li>
+					<li><a href="#">运动</a></li>
+					<li><a href="#">搞笑</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<div class="footer_Bf">
+		<div class="footer_Bf_topL" >
+			<ul class="bottom_list">
+				<li>
+					<dl>
+						<dt><a href="#">花瓣首页</a></dt>
+						<dd><a href="#">花瓣采集工具</a></dd>
+						<dd><a href="#">花瓣官方博客</a></dd>
+					</dl>
+					<dl>
+						<dt>联系与合作</dt>
+						<dd><a href="#">联系我们</a></dd>
+						<dd><a href="#">用户反馈</a></dd>
+						<dd><a href="#">花瓣LOGO标志文档</a></dd>
+					</dl>
+					<dl>
+						<dt>移动客户端</dt>
+						<dd><a href="#">花瓣iPhone版</a></dd>
+						<dd><a href="#">花瓣Android版</a></dd>
+						<dd><a href="#">花瓣HD</a></dd>
+					</dl>
+				</li>
+			</ul>
+		</div>
+		<div class="footer_Bf_topR" >
+			<p class="title">关注我们</p>
+			<p><a href="#">新浪微博: @花瓣网</a></p>
+			<p>官方QQ: 188126952</p>
+			<p>官方微信: <img src="./images/footer_Bf_topR.png" alt=""><img class="code" src="./images/footer_Bf_topRimg.png" alt=""></p>
+		</div>
+		<div class="clear"></div>
+		<div class="footer_Bf_bottom">
+			<p>
+				© Huaban 杭州纬聚网络有限公司   |   <a href="#">浙公网安备 33010602001878号</a>
+			</p>
+		</div>
+
+	</div> -->
+	<!--底部滚动黑块-->
+	<div class="footer_Cf"></div>
+	<div  class="footer_Cf_cover">
+		<div class="footer_Cf_content">
+			<p class="content_leftA">国内最优质图片灵感库</p>
+			<a href="#"><img src="./images/bottom_logoA.png" alt=""></a>
+			<a href="#"><img src="./images/bottom_logoB.png" alt=""></a>
+			<a href="#"><img src="./images/bottom_logoC.png" alt=""></a>
+			<a href="#"><img src="./images/bottom_logoD.png" alt=""></a>
+			<p class="content_rightA">用社交账号直接登录:</p>
+			<p class="content_leftB">已有数百万出众网友，用花瓣保存喜欢的图片。</p>
+
+		</div>
+	</div>
+</body>
+</html>

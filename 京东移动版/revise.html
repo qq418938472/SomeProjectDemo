@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Revise</title>
+	<link rel="stylesheet" href="./css/bootstrap.min.css">
+	<link rel="stylesheet" href="./font-awesome-4.6.3/css/font-awesome.min.css">
+	<link rel="stylesheet" href="./css/revise.css">
+	<script src="./js/jquery-3.1.0.min.js"></script>
+	<script src="./js/bootstrap.min.js"></script>
+	<script src="./js/buy.js"></script>
+	<script>
+		$(function(){
+			var red = 1;
+			$('body').on('click','#red',function(){
+				$('#red').css('display','none');
+				$('#white').css('display','block')
+				 
+			})
+			$('body').on('click','#white',function(){
+				$('#red').css('display','block');
+				$('#white').css('display','none')
+				 
+			})
+		})
+	</script>
+</head>
+<body>
+	<div class="header">
+		<div class="content">
+			<!-- Nav tabs -->
+			<div class="header_top row">
+				<div class="return col-md-2 col-sm-2 col-xs-2"><a href="local.html"><i class="fa fa-angle-left fa-3x"></i></a></div>
+				<div class="text-center ">
+					<ul class="nav nav-tabs col-md-8 col-xs-8 col-sm-8" role="tablist">
+					  <li role="presentation" class="active col-xs-12 col-sm-12 col-md-12">
+					  	<a  href="#home" role="tab" data-toggle="tab">编辑收货地址</a>
+					  </li>
+					</ul>
+				</div>
+			</div>
+			<!-- Tab panes -->
+		</div>
+	</div><!--头部-->
+	<div class="form">
+		<div class="frame">
+			<div class="input1">
+				<div class="left">收货人：</div>
+				<div class="right"><input  type="text" value="谢子然"></div>
+			</div>
+			<div class="input1">
+				<div class="left">手机号码：</div>
+				<div class="right"><input  type="text" value="182****4107"></div>
+			</div>
+			<div class="input1">
+				<div class="left">所在地区：</div>
+				<div class="right"><a href="#">广东省广州市黄浦区南云五路11号光正物流宿舍楼</a></div>
+				<a href="#"><span class="fa fa-angle-right fa-2x"></span></a>
+			</div>
+			<div class="input1">
+				<div class="right right_color">
+					<p>设为默认地址</p>
+					<p>注：每次下单时会使用该地址(轻松购下单除外)</p>
+					<div id="red" class="red"><div class="circle"></div></div>
+					<div id="white" class="white"><div class="circle"></div></div>
+					
+				</div>
+			</div>
+		</div>
+		<div class="check-btn-auto">
+			<div class="check-btn-total">
+				<a class="check-btn-red" href="#">保存并使用</a>
+			</div>
+		</div>
+		
+		
+	</div>
+</body>
+</html>

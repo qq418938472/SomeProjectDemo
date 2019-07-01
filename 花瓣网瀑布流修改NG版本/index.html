@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>花瓣网</title>
+	<link rel="stylesheet" href="./css/index.css">
+	<script type="text/javascript">
+		window.onload = function(){
+			Scroll();
+			window.onscroll = function(){
+				Scroll();
+			}
+		}
+		function Scroll(){				//上部滚动条菜单显示与隐藏的函数
+			var Scroll = document.documentElement.scrollTop || document.body.scrollTop;
+			var header_Af = document.getElementById('header_A');
+			var header_Bf = document.getElementById('header_B');
+			
+			if (Scroll > 280) {
+				// alert(1);
+				header_Bf.style.visibility = 'visible';
+				header_Af.style.visibility = 'hidden';
+			}else{
+				header_Bf.style.visibility = 'hidden';
+				header_Af.style.visibility = 'visible';
+			}
+		}
+	</script>
+</head>
+<body>
+	<!--头部样式-->
+	<div class="header">
+		<div class="header_Af" id="header_A">
+			<div class="header_Af_top">
+				<a href="#"><img class="header_Af_top_img" src="./images/header_Af_flower.png" alt=""></a>
+				<a class="header_Af_topA" href="index.html">发现</a>
+				<a class="header_Af_topB" href="new.html">最新</a>
+				<a class="header_Af_topC" href="muse.html">美思<img class="new" src="./images/header_Af_new.png" alt=""></a>
+				<!--隐藏菜单-->
+				<div class="box">
+					<a class="header_Af_topD" href="#">
+						<img class="box_visible" src="./images/header_spot.png">
+						<div class="header_Af_topE">
+							<a class="box_top" href="#">移动应用</a>
+							<a class="box_top" href="#">采集工具</a>
+							<a class="box_top" href="#">招聘</a>
+							<ul>
+								<li><a href="#">UI/UX</a></li>
+								<li><a href="#">男士/风尚</a></li>
+								<li><a href="#">平面</a></li>
+								<li><a href="#">婚礼</a></li>
+								<li><a href="#">插画/漫画</a></li>
+								<li><a href="#">工业设计</a></li>
+								<li><a href="#">家具/家装</a></li>
+								<li><a href="#">摄影</a></li>
+								<li><a href="#">女装/搭配</a></li>
+								<li><a href="#">兴趣/生活</a></li>
+							</ul>
+							<a href="#"><img class="box_bottom" src="./images/header_Af_box.png" alt=""></a>
+							<a class="box_bottom_list" href="#">活动</a>
+							<a class="box_bottom_list" href="#">周刊</a>
+							<a class="box_bottom_list" href="#">关于</a>
+							<a class="box_bottom_list" href="#">反馈</a>
+							<a class="box_bottom_list" href="#">博客</a>
+						</div>
+					</a>
+				</div>
+				<!--隐藏菜单-->
+				<button class="buttonA">登录</button>
+				<button class="buttonB">注册</button>
+			</div>
+		</div>
+		<!--隐藏的上部分滚动头部-->
+		<div class="header_Af2" id="header_B">
+			<div class="header_Af_top2" >
+				<a href="index.html"><img class="header_Af_top_img2" src="./images/scripe/logo.png" alt=""></a>
+				<a class="header_Af_topA2" href="index.html">发现</a>
+				<a class="header_Af_topB2" href="new.html">最新</a>
+				<a class="header_Af_topC2" href="muse.html">美思<img class="new2" src="./images/header_Af_new.png" alt=""></a>
+				<a class="header_Af_topD2" href="#"><img src="./images/scripe/spot.png" alt=""></a>
+				<input type="text" value="搜索你喜欢的">
+				<a href=""><img class="search2"src="./images/scripe/search1.png" alt=""></a>
+				<button class="buttonA2">登录</button>
+				<button class="buttonB2">注册</button>
+			</div>
+		</div>
+		
+		<!--隐藏的上部分滚动头部-->
+		<div class="header_Bf">
+			<p class="header_Bf_title">花瓣，陪你做生活的设计师</p>
+			<input type="text" value="">
+			<span>搜索你喜欢的</span>
+			<a class="search" href=""><img src="./images/search.png" alt=""></a>
+			<p class="hot">
+				热门搜索:
+				<a class="hotA" href="#">朋友圈配图</a>，
+				<a class="hotA" href="#">公共空间设计</a>，
+				<a class="hotA" href="#">亮色家居</a>，
+				<a class="hotA" href="#">原创插画</a>，
+				<a class="hotA" href="#">设计配色</a>
+			</p>
+		</div>	
+	</div>
+	<!-- 中间跳转菜单 -->
+	<div class="header_Cf">
+		<hr class="header_Cf_left" />
+		<span class="header_Cf_titleA">大家正在关注</span>
+		<hr class="header_Cf_right" />
+		<div class="header_Cf_bottom">
+			<ul class="bottom_list">
+				<li class="listA"><a href="scripe.html">条纹服饰</a></li>
+				<li class="listB"><a href="flower.html">胸花</a></li>
+				<li class="listC"><a href="furniture.html">北欧家居风格</a></li>
+				<li class="listD"><a href="plate.html">盘子</a></li>
+				<li class="listE"><a href="guide.html">引导页</a></li>
+				<li class="listF"><a href="design.html">名片设计</a></li>
+				<li class="listG"><a href="magazine-water.html">杂志封面</a></li>
+			</ul>
+		</div>
+		<hr class="header_Cf_left" />
+		<span class="header_Cf_titleB">为您推荐</span>
+		<hr class="header_Cf_right" />
+	</div>
+	<!--内容样式-->
+	<div class="content">
+		<ul class="content_list">
+			<li class="list1"><a href="#"><img src="./images/content_img1.png" alt=""></a></li>
+			<li class="list2">
+				<div class="list_top">
+					<p class="list_topA">画板</p>
+					<a class="list_topB" href="#">iPhone</a>
+					<p class="list_topC">77 采集 62 粉丝</p>
+					<p class="list_topD">来自<a href="#">百谷自生</a></p>
+				</div>
+				<div class="list_bottom">
+					<p class="list_topA">画板</p>
+					<a class="list_topB" href="#">sevenqiuqiu的原创画</a>
+					<p class="list_topC">9 采集 164 粉丝</p>
+					<p class="list_topD">来自<a href="#">sevenqiuqiu</a></p>
+				</div>
+			</li>
+			<li class="list3"><a href="#"><img src="./images/content_img2.png" alt=""></a></li>
+			<li class="list4"><a href="#"><img src="./images/content_img3.png" alt=""></a></li>
+			<li class="list5"><a href="#"><img src="./images/content_img4.png" alt=""></a></li>
+			<li class="list6"><a href="#"><img src="./images/content_img5.png" alt=""></a></li>
+			<li class="list7">
+				<div class="list_top">
+					<p class="list_topA">人物</p>
+					<a class="list_topB" href="#">肉肉在左</a>
+					<p class="list_topC">28072 采集 18187 粉丝</p>
+				</div>
+				<div class="list_bottom">
+					<p class="list_topA">画板</p>
+					<a class="list_topB" href="#">Poster</a>
+					<p class="list_topC">438 采集 79113 粉丝</p>
+					<p class="list_topD">来自<a href="#">味精姐姐</a></p>
+				</div>
+			</li>
+			<li class="list8"><a href="#"><img src="./images/content_img6.png" alt=""></a></li>
+			<li class="list9"><a href="#"><img src="./images/content_img7.png" alt=""></a></li>
+			<li class="list10">
+				<div class="list_top">
+					<p class="list_topA">画板</p>
+					<a class="list_topB" href="#">UI－欢迎页/闪屏</a>
+					<p class="list_topC">659 采集260 粉丝</p>
+					<p class="list_topD">来自<a href="#">-JJcg-</a></p>
+				</div>
+				<div class="list_bottom">
+					<p class="list_topA">人物</p>
+					<a class="list_topB" href="#">胤妆</a>
+					<p class="list_topC">438 采集 713 粉丝</p>
+					<p class="list_topD">来自<a href="#">味精姐姐</a></p>
+				</div>
+			</li>
+			<li class="list11"><a href="#"><img src="./images/content_img8.png" alt=""></a></li>
+			<li class="list12"><a href="#"><img src="./images/content_img9.png" alt=""></a></li>
+		</ul>
+	</div>
+	<!--底部样式-->
+	<div class="footer">
+		<div class="footer_Af">
+			<hr class="footer_Af_left" />
+			<a href="#"><span class="footer_Af_titleA">加载更多</span></a>
+			<hr class="footer_Af_right" />
+			<p class="footer_Af_bottomT">以分类浏览花瓣<a href="#">所有采集》</a></p>
+			<hr class="footer_Af_bottomM" />
+			<ul class="footer_Af_bottomD">
+				<li class="ul_list">
+					<ul class="">
+						<li><a href="#">UI/UX</a></li>
+						<li><a href="#">平面</a></li>
+						<li><a href="#">插画/漫画</a></li>
+						<li><a href="#">家居/家装</a></li>
+						<li><a href="#">女装/搭配</a></li>
+						<li><a href="#">男士/风尚</a></li>
+						<li><a href="#">婚礼</a></li>
+
+					</ul>
+					<ul class="">
+						<li><a href="#">工业设计</a></li>
+						<li><a href="#">摄影</a></li>
+						<li><a href="#">造型/美女</a></li>
+						<li><a href="#">美食</a></li>
+						<li><a href="#">旅行</a></li>
+						<li><a href="#">手工/布艺</a></li>
+						<li><a href="#">健身/舞蹈</a></li>
+					</ul>
+					<ul class="">
+						<li><a href="#">儿童</a></li>
+						<li><a href="#">宠物</a></li>
+						<li><a href="#">美图</a></li>
+						<li><a href="#">明星</a></li>
+						<li><a href="#">美女</a></li>
+						<li><a href="#">礼物</a></li>
+						<li><a href="#">极客</a></li>
+					</ul>
+					<ul class="">
+						<li><a href="#">动漫</a></li>
+						<li><a href="#">建筑设计</a></li>
+						<li><a href="#">人文艺术</a></li>
+						<li><a href="#">数据图</a></li>
+						<li><a href="#">游戏</a></li>
+						<li><a href="#">汽车/摩托</a></li>
+						<li><a href="#">电影/图书</a></li>
+					</ul>
+					<ul class="">
+						<li><a href="#">生活百科</a></li>
+						<li><a href="#">教育</a></li>
+						<li><a href="#">运动</a></li>
+						<li><a href="#">搞笑</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		<div class="footer_Bf">
+			<div class="footer_Bf_content">
+				<div class="footer_Bf_topL" >
+					<ul class="bottom_list">
+						<li>
+							<dl>
+								<dt><a href="#">花瓣首页</a></dt>
+								<dd><a href="#">花瓣采集工具</a></dd>
+								<dd><a href="#">花瓣官方博客</a></dd>
+							</dl>
+							<dl>
+								<dt>联系与合作</dt>
+								<dd><a href="#">联系我们</a></dd>
+								<dd><a href="#">用户反馈</a></dd>
+								<dd><a href="#">花瓣LOGO标志文档</a></dd>
+							</dl>
+							<dl>
+								<dt>移动客户端</dt>
+								<dd><a href="#">花瓣iPhone版</a></dd>
+								<dd><a href="#">花瓣Android版</a></dd>
+								<dd><a href="#">花瓣HD</a></dd>
+							</dl>
+						</li>
+					</ul>
+				</div>
+				<div class="footer_Bf_topR" >
+					<p class="title">关注我们</p>
+					<p><a href="#">新浪微博: @花瓣网</a></p>
+					<p>官方QQ: 188126952</p>
+					<p>官方微信: <img src="./images/footer_Bf_topR.png" alt=""><img class="code" src="./images/footer_Bf_topRimg.png" alt=""></p>
+				</div>
+				<div class="clear"></div>
+				<div class="footer_Bf_bottom">
+					<p>
+						© Huaban 杭州纬聚网络有限公司   |   <a href="#">浙公网安备 33010602001878号</a>
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,127 @@
+body {
+    overflow-x: hidden;
+}
+.wrapper {
+    padding-bottom: 20px;
+}
+.tequan_index .bg_ban {
+    height: 1195px;
+    left: 50%;
+    margin-left: -958px;
+    position: absolute;
+    top: 0;
+    min-width: 1200px;
+}
+
+.insidebanner {
+    color: #fff;
+    height: 540px;
+    overflow: hidden;
+    position: relative;
+}
+.insidebanner .modwp {
+    position: relative;
+    z-index: 1;
+}
+
+.insidebanner .tqbtns {
+    left: 20.67%;
+    position: absolute;
+    top: 410px;
+}
+.insidebanner .openvipbtn {
+    border: 2px solid #fff;
+    border-radius: 30px;
+    color: #fff;
+    display: block;
+    font-size: 26px;
+    height: 56px;
+    line-height: 56px;
+    min-width: 126px;
+    overflow: hidden;
+    padding: 0 40px;
+    text-align: center;
+    transition: all 0.2s ease 0s;
+}
+.insidebanner .openvipbtn:hover{
+	background: orange;
+	color: #000;
+	border:1px solid orange;
+}
+.modwp {
+    margin: 0 auto;
+    position: relative;
+    width: 1190px;
+}
+.xltqmain_wp {
+    background: #fff none repeat scroll 0 0;
+    padding: 16px 60px 35px;
+}
+.xltqmain-list::after {
+    clear: both;
+    content: " ";
+    display: block;
+    height: 0;
+}
+.xltqmain-list {
+    background: #fff none repeat scroll 0 0;
+    border-bottom: 1px dashed #e3e3e3;
+    padding-left: 19.44%;
+    position: relative;
+}
+
+.xltqmain-list h2 {
+    font-size: 18px;
+    left: 9.89%;
+    margin-top: -13px;
+    position: absolute;
+    top: 50%;
+    font-weight: normal;
+}
+
+.xltqmain-list .xltq-list {
+    overflow: hidden;
+    padding: 44px 0 42px;
+    position: relative;
+}
+
+.xltqmain-list .xltq-list li {
+    float: left;
+    text-align: center;
+    width: 15.4%;
+}
+.xltqmain-list .xltq-list .img_wp {
+    display: block;
+    margin: 0 auto 9px;
+    position: relative;
+    width: 58.2%;
+   
+ }
+ .xltqmain-list .xltq-list .img_wp:hover{
+ 	animation:myfirst 0.7s;
+ }
+@keyframes myfirst{
+	0%{
+		transform: rotate(0deg);
+	}
+	20%{
+		transform: rotate(15deg);
+	}
+	40%{
+		transform: rotate(-15deg);
+	}
+	60%{
+		transform: rotate(15deg);
+	}
+	80%{
+		transform: rotate(-15deg);
+	}
+	100%{
+		transform: rotate(0deg);
+	}
+
+}
+
+.xltqmain-list .xltq-list a {
+    color: #8b8b8b;
+}

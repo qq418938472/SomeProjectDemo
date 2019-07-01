@@ -1,0 +1,418 @@
+body{
+	width: 100%;
+	height: 100%;
+	font: 12px/1.5 \5FAE\8F6F\96C5\9ED1,tahoma,arial,\5b8b\4f53,sans-serif;
+}
+body, button, input, select, textarea {
+    font: 12px/1.5 微软雅黑,tahoma,arial,宋体,sans-serif;
+}
+div {display: block;}
+
+body, dl, dd, h1, h2, h3, h4, h5, h6, p, form {
+    margin: 0;
+}
+.title, .logo, .btn-com, .tit1, .tit2, .tit3, .ico-pri, .ico-num, .ico-top, .round {
+    background: url(../img/hr-3/spr-main.png) no-repeat;
+}
+a {text-decoration: none;outline: 0 none;color: #000;}
+img{border:0;}
+ul, ol {list-style: none;}
+ol, ul, input {margin: 0;padding: 0;}
+
+/*======头部css样式========*/
+.header{
+	width: 100%;
+	height: 60px;
+	line-height: 60px;
+	background:#2B2D2F ;
+	background: rgba(0,0,0,.8);
+	position: fixed;
+	z-index: 1;
+}
+.inner{width: 1040px;margin: 0 auto;position: relative;}
+
+.logo{
+	float: left;
+    width: 75px;
+    height: 40px;
+    background-position: -870px 0;
+    line-height: 100;
+    overflow: hidden;
+    margin: 12px 0 0;
+}
+.nav{
+	width: 520px;
+	text-align: right;
+	float: right;
+}
+.nav a{
+	font-size: 16px;
+	color: #FFFFFF;
+	margin: 0 18px;
+	float: left;
+	transition: color .3s;
+}
+.nav .cur, .nav a:hover {
+    color: #00b9ff;
+}
+
+/*=========1=中部css样式==========*/
+/*中部第一层样式*/
+.wp-top{
+	height: 1000px;
+	background: url(../img/hr-3/bg.jpg)center 0 no-repeat;
+	overflow: hidden;
+    position: relative;
+    background-size: cover;
+}
+.person{
+	width: 2060px;
+    height: 1010px;
+    background: url(../img/hr-3/person.png) center no-repeat;
+    position: absolute;
+    bottom: -75px;
+    left: 50%;
+    margin-left: -1030px;
+    transform-origin: center bottom;  /*底部原点出发*/
+}
+.title{
+	width:590px ;
+	height: 420px;
+	line-height: 300;
+	overflow:hidden;
+	position:absolute;
+	left: 50%;
+	margin: 0 0 0 -245px;
+	top:37.5%;
+	transform-origin: center -50px;
+}
+.wp-top .btn-com{
+	bottom: 78px;
+	left: 50%;
+	margin-left: -137px;
+	position: absolute;
+	-webkit-transform-origin: center bottom;
+	transform-origin: center bottom;
+}
+.btn-com {
+    width: 275px;
+    height: 65px;
+    line-height: 62px;
+    font-size: 26px;
+    color: #fff;
+    text-align: center;
+    display: block;
+    background-position: -590px 0;
+}
+/*中部第二层样式*/
+.wp-about{
+	height: 2195px;
+	background: url(../img/hr-3/bg1.png)center 0;
+	padding: 100px 0 0;
+	color: #808080;
+}
+.about1{
+	height: 760px;
+	position: relative;
+}
+.tit1, .tit2, .tit3{
+	width: 360px;
+	height: 280px;
+	line-height: 300;
+	overflow: hidden;
+}
+.tit1{
+	background-position: 0 -420px;
+}
+.txt-about{
+	line-height: 36px;
+	font-size:18px;
+	font-weight: lighter;
+}
+.pic1{
+	position: absolute;
+	right:0;
+	top:-30px;
+}
+.about2 {
+    text-align: right;
+    position: relative;
+    height: 660px;
+}
+.tit2{
+	background-position:-360px -420px;
+	display:inline-block;
+}
+.round{
+	position:absolute;
+	display: block;
+}
+.r1{
+	width:283px;
+	height: 283px;
+	background-position:0 -730px;
+	top:-46px;
+	left: 0;
+}
+.r2{
+	width: 202px;
+	height: 202px;
+	background-position: -360px -730px;
+	top:66px;
+	left: 360px;
+}
+.r3{
+	width: 250px;
+	height: 250px;
+	background-position:-360px -950px ;
+}.about3{
+	position: relative;
+}
+.tit3{
+	background-position: -720px -420px;
+}
+.pic2{
+	position:absolute;
+	right:0;
+	top:-30px;
+}
+/*中部第三层样式*/
+.wp-get{
+	background: #F5F6FB;
+	position: relative;
+}
+.wp-get .inner{
+	height:645px;
+	padding: 90px 0 0;
+}
+.pic3{
+	position: absolute;
+	top:-50px;
+	left: 280px;
+	width: 761px;
+	height: 787px;
+}
+.get-list{
+	position: relative;
+	z-index: 1;
+}
+.get-list .fn{
+	float: none;
+}
+.get-list li{
+	width: 295px;
+	height: 114px;
+	border-bottom: solid 1px #ecedf5;
+	padding: 50px 0 0 75px;
+	position:relative;
+	float:left;
+}
+.pri1{
+	background-position:-590px -780px ;
+}
+.ico-pri{
+	width: 56px;
+	height: 65px;
+	display: block;
+	position:absolute;
+	left: 0;
+	top:50px;
+}
+.tit{
+	color: #000000;
+	font-size: 20px;
+}
+.des{
+	color: #808080;
+	font-size: 16px;
+	font-weight: lighter;
+	margin: 5px 0 0;
+}
+.pri2{
+	background-position:-650px -780px ;
+}
+.get-list .fr{
+	float: right;
+	width: 320px;
+}
+.pri3{
+	background-position:-710px -780px ;
+}
+.pri4{
+	background-position: -770px -780px;
+}
+.pri5{
+	background-position: -830px -780px;
+}
+/*中部第四层样式*/
+.wp-how{
+	height: 1390px;
+	background:url(../img/hr-3/bg2.png)center 0 no-repeat;
+}
+.wp-how h3{
+	height: 414px;
+	line-height: 1000;
+	overflow:hidden;
+}
+.fix{
+	zoom:1;
+}
+.how-list li{
+	width: 346px;
+	text-align: center;
+	float: left;
+	margin: 0 0 70px;	
+}
+.ico-num{
+	width: 50px;
+	height: 66px;
+	display: inline-block;
+	background-position: -590px -700px;
+	text-align:center;
+	line-height:65px;
+	color: #FFFFFF;
+	font-size: 34px;
+	font-weight: lighter;
+	margin: 0 0 10px;
+}
+.fix::after{
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: ".";
+	clear: both;
+	height: 0;
+}
+.ins-list{
+	margin: 115px 60px 0;
+	font-size:16px;
+	line-height: 35px;
+}
+.ins-list li{
+	list-style: decimal;
+	margin: 0 0 0 20px;
+}
+.ins-list a{
+	color: #FF6C00;
+}
+.wp-how .btn-com{
+	margin: 130px auto 0;
+}
+
+/*中部第五层样式*/
+.prize{
+	background: #015DFF;
+	height: 870px;
+}
+.prize h3{
+	background:url(../img/hr-3/tit1.png)center 0 no-repeat;
+	height: 305px;
+	line-height: 100;
+	overflow: hidden;
+}
+.prize-list > li{
+	float: left;
+	text-align: center;
+	width: 260px;
+}
+.prize h4{
+	font-size:24px;
+	color: #ffd200;
+	position:relative;
+	line-height: 100px;
+}
+.prize h4::after{
+	border-bottom: solid 1px #fff;
+	position:absolute;
+	content: "";
+	width:25px;
+	left: 50%;
+	margin-left: -12px;
+	bottom:0;
+}
+.seq{
+	font-size:110px;
+	color: #FF8400;
+	font-family:'Letter Gothic Std Medium',arial; ;
+	margin: 10px 0 0;
+}
+.prize-des li{
+	line-height:35px;
+	font-size:18px;
+	color: #fff;
+	font-weight: lighter;
+}
+/*中部第六层样式*/
+.know{
+	background:url(../img/hr-3/bg3.png)#eff3f9 center 0 no-repeat;
+	height: 755px;
+}
+.know h3{
+	height: 230px;
+	line-height: 200;
+	overflow:hidden;
+}
+.know li{
+	margin: 0 0 0 255px;
+	line-height: 34px;
+	font-size: 16px;
+	color: #4f4f4f;
+}
+/*==========底部css样式==========*/
+.footer{
+	background: url(../img/hr-3/bg3.png)center -755px no-repeat;
+	color: #808080;
+	height: 110px;
+	line-height: 110px;
+}
+.foot{
+	width: 1040px;
+	margin: 0 auto;
+}
+.f-nav{
+	float: left;
+	width: 930px;
+}
+.f-nav span{
+	margin: 0 20px 0 0;
+}
+.footer a{
+	color: #808080;
+	margin: 0 8px;
+}
+.footer a:hover{
+	color: #00B9FF;
+}
+a:hover .ico-top {
+    background-position: -30px -700px;
+}
+.ico-top{
+	width: 30px;
+	height: 32px;
+	background-position: 0 -700px;
+	display: inline-block;
+	vertical-align: middle;
+	margin: 0 3px 0 0;
+}
+/*==========侧栏css样式==========*/
+.side{
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	z-index: 99;
+}
+.side a{
+	margin: 0 0 10px;
+	width: 170px;
+	height: 55px;
+	line-height: 55px;
+	font-size: 22px;
+	background-position:-655px 0;
+	color: #fff;
+}
+.side a:hover {
+	background-position: -655px -65px;
+}
+.btn-com:hover {
+    background-position: -590px -65px;
+}

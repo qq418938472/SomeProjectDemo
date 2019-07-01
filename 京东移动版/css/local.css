@@ -1,0 +1,164 @@
+body{
+	background: #F8F8F8;
+    min-width: 300px;
+}
+.clear{
+	clear: both;
+}
+/*=================================头部样式====================*/
+a{
+	color: black;
+}
+a:focus{
+	outline: none;
+}
+a:hover, a:focus{
+	color: #555;
+	text-decoration: none;
+}
+ul, ol{
+	margin-bottom: 0;
+}
+.row{
+	margin-left: 0;
+	margin-right: 0;
+}
+.header_button{
+	text-align: right;
+} 
+.header_top{
+	white-space: nowrap;
+}
+.header_top ul{
+	display: inline-block;
+	height: 44px;
+	line-height:44px;
+	overflow: hidden;
+	border:none;
+}
+.header_top ul li{
+	white-space: nowrap;
+	margin: 0 auto;
+	float: left;
+	display: inline;
+
+}
+.header_top .nav-tabs a:hover{
+	background: #F5F5F5;
+	border:none;
+}
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus{
+	background: none;
+	border:none;
+	border-bottom:2px solid #222222;
+	font-weight: bold;
+}
+.header_top a{
+    color: #555;
+}
+.header_top ul li a{
+	display: inline;
+	color: #555;
+	height: auto;
+	padding:12px 15px;
+
+}
+.header_top div{
+	display: inline;
+}
+.header_top{
+	background: #F5F5F5;
+	border-bottom: 1px solid #BFBFBF;
+}
+.header_button span{
+	height: 20px;
+	width: 20px;
+	margin: 8px 10px 0;
+}
+.jd-header-shortcut {
+    background: #404042 none repeat scroll 0 0;
+    display: table;
+    height: 57px;
+    width: 100%;
+    list-style: none;
+    padding:0;
+    display: none;
+}
+.jd-header-shortcut a{
+	color: #fff;
+}
+.jd-header-shortcut li {
+    display: table-cell;
+    text-align: center;
+    width: 25%
+}
+.jd-header-shortcut span {
+    height: 30px;
+    margin-top: 6px;
+    width: 30px;
+}
+.jd-header-shortcut strong{
+ 	display: block;
+ 	font-weight: normal;
+}
+/*=============================内容=================*/
+.local_frame{
+	float: left;
+}
+.form{
+	width: 100%;
+	max-width: 640px;
+	min-width: 320px;
+	margin: 0 auto;
+	overflow: hidden;
+	font-size: 16px;
+}
+.local{
+	float: left;
+	width: 100%;
+	border-bottom: 1px solid #cccccc;
+}
+.left{
+	padding: 10px 0 10px 0 ;
+	width: 80%;
+	display:inline;
+	float: left;
+}
+.left span{
+	background: red;
+	color: #fff;
+	padding: 0 5px 0 5px;
+	font-size: 15px;
+}
+.local_p{
+	font-size: 13px;
+}
+.right{
+	margin: 12px 0 0 0;
+	padding: 20px;
+	display:inline;
+	float: right;
+	width: 11%;
+	border-left: 1px solid #cccccc;
+}
+.pay-btn {
+    bottom: 0;
+    height: 50px;
+    line-height: 50px;
+    max-width: 640px;
+    position: fixed;
+    text-align: center;
+    width: 100%;
+    z-index: 6;
+}
+.btn1 {
+    background: #f23030 none repeat scroll 0 0;
+    border-radius: 2px;
+    color: #fff;
+    display: inline-block;
+    font-size: 15px;
+    height: 33px;
+    line-height: 33px;
+    text-align: center;
+    width: 47.81%;
+}

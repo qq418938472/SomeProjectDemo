@@ -1,0 +1,375 @@
+/* 
+* @Author: Marte
+* @Date:   2016-12-04 14:26:51
+* @Last Modified by:   Marte
+* @Last Modified time: 2016-12-07 13:33:51
+*/
+.header-arrow::after, .slide-wrap::after, .plist::after, .clist::after, .busi::after, .blist::after, .footer::after {
+    clear: both;
+    content: " ";
+    display: block;
+    font-size: 0;
+    height: 0;
+    visibility: hidden;
+}
+
+.slide-wrap > div > div > h1, .slide-wrap > div > div > h2, .slide-wrap > div > div > img, .slide-wrap > div > div > a, .slide-wrap > div > div > div {
+    transition-duration: 0.45s;
+    transition-property: all;
+    transition-timing-function: ease;
+}
+html {
+    font-size: 100px;
+    visibility: inherit;
+}
+.header {
+    background: #28262b none repeat scroll 0 0;
+    overflow: hidden;
+    width:100%;
+}
+
+.header-bg {
+    height: 6.2rem;
+    left: 0;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+.header-bg img{
+    width: 100%;
+    height:100%;
+}
+.header-wrap {
+    height: 6.2rem;
+    width: 12rem;
+    position: relative;
+    z-index: 3;
+    margin: 0 auto;
+}
+.header-logo {
+    background: rgba(0, 0, 0, 0) url("../img/m.xunlei/header-logo.png") no-repeat scroll 0 0 / 2.1rem 0.9rem;
+    display: block;
+    height: 0.9rem;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 2.1rem;
+}
+.header-forum {
+    background: rgba(0, 0, 0, 0) url("../img/m.xunlei/header-forum.png") no-repeat scroll 0 0 / 100% auto;
+    display: block;
+    height: 0.9rem;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 1rem;
+}
+.slide-wrap {
+    height: 100%;
+    position: relative;
+    width: 100%;
+}
+.slide-0, .slide-2, .slide-1,.slide-frame {
+    /*display: none;*/
+    transition: 1s;
+    float: left;
+    height: 100%;
+    position: relative;
+    width: 100%;
+}
+#bg-0{
+    opacity: 1;
+}
+.slide-frame{
+    position: absolute;
+    left: 0;
+}
+.header-title-1, .header-title-2, .header-title {
+    background: rgba(0, 0, 0, 0) url("../img/m.xunlei/header-title.png") no-repeat scroll 0 0 / 100% auto;
+    height: 0.62rem;
+    left: 7.72rem;
+    position: absolute;
+    top: 2.4rem;
+    width: 3.38rem;
+}
+#header-version, #header-version-2, #header-version-1 {
+    background: rgba(0, 0, 0, 0) url("../img/m.xunlei/header-version.png") no-repeat scroll 0 0 / 100% auto;
+    color: #0c5184;
+    font-size: 0.2rem;
+    height: 0.4rem;
+    left: 10.3rem;
+    line-height: 0.3rem;
+    position: absolute;
+    text-align: center;
+    top: 2rem;
+    width: 0.86rem;
+}
+.header-sologan-1, .header-sologan-2, .header-sologan {
+    background: rgba(0, 0, 0, 0) url("../img/m.xunlei/header-sologan.png") no-repeat scroll 0 0 / 100% auto;
+    height: 0.5rem;
+    left: 7.3rem;
+    position: absolute;
+    top: 3.1rem;
+    width: 3.97rem;
+    margin-top: 0;
+}
+.header-phone-1, .header-phone-2, .header-phone {
+    background: rgba(0, 0, 0, 0) url("../img/m.xunlei/header-phone.png") no-repeat scroll 0 0 / 100% auto;
+    bottom: 0;
+    height: 4.8rem;
+    left: 1.2rem;
+    position: absolute;
+    width: 3.76rem;
+}
+.header-link-1, .header-link-2, .header-link {
+    color: #fff;
+    display: block;
+    font-size: 0.2rem;
+    height: 0.2rem;
+    left: 6.58rem;
+    line-height: 0.2rem;
+    position: absolute;
+    text-align: right;
+    top: 3.65rem;
+    width: 4.5rem;
+}
+.js_resource_describe_m_1{
+    font-weight: normal;
+}
+.header-download-1, .header-download, .header-download-2 {
+    background: rgba(0, 0, 0, 0) url("../img/m.xunlei/header-download.png") no-repeat scroll 0 0 / 100% auto;
+    height: 0.71rem;
+    left: 7.4rem;
+    position: absolute;
+    top: 4.6rem;
+    width: 2.26rem;
+}
+.header-qrcode-1, .header-qrcode-2, .header-qrcode {
+    border: 0.05rem solid rgba(0, 0, 0, 0.11);
+    height: 1.28rem;
+    left: 9.8rem;
+    position: absolute;
+    top: 3.98rem;
+    width: 1.28rem;
+}
+/*==============================轮播图第一块结束========================*/
+.header-title-1 {
+    background-image: url("../img/m.xunlei/header-title-1.png");
+    background-size: 100% auto;
+    height: 0.62rem;
+    left: 8.83rem;
+    position: absolute;
+    top: 2.39rem;
+    width: 2.28rem;
+}
+.header-sologan-1 {
+    background-image: url("../img/m.xunlei/header-sologan-1.png");
+    background-size: 100% auto;
+    height: 0.32rem;
+    left: 6.4rem;
+    position: absolute;
+    top: 3.2rem;
+    width: 4.8rem;
+}
+.header-phone-1--b {
+    background: rgba(0, 0, 0, 0) url("../img/m.xunlei/header-phone-1--b.png") no-repeat scroll 0 0 / 100% auto;
+    bottom: 0;
+    height: 4.86rem;
+    left: 1.36rem;
+    position: absolute;
+    width: 4.06rem;
+}
+.header-phone-1 {
+    background-image: url("../img/m.xunlei/header-phone-1.png");
+    background-size: 100% auto;
+    bottom: 0;
+    height: 3.66rem;
+    left: 0.48rem;
+    width: 2.4rem;
+}
+.header-arrow-wrap {
+    bottom: 0.04rem;
+    position: absolute;
+    width: 100%;
+    z-index: 999;
+}
+.header-qrcode-1, .header-qrcode-2, .header-qrcode {
+    border: 0.05rem solid rgba(0, 0, 0, 0.11);
+    height: 1.28rem;
+    left: 9.8rem;
+    position: absolute;
+    top: 3.98rem;
+    width: 1.28rem;
+    box-sizing:content-box;
+
+}
+.header-arrow-item {
+    background: rgba(0, 0, 0, 0) url("../img/m.xunlei/header-arrow.png") no-repeat scroll 0 0 / 100% auto;
+    cursor: pointer;
+    display: inline-block;
+    height: 0.4rem;
+    width: 0.3rem;
+}
+.header-arrow {
+    position: relative;
+    text-align: center;
+}
+.header-arrow-itemon {
+    background: rgba(0, 0, 0, 0) url("../img/m.xunlei/header-arrow-on.png") no-repeat scroll 0 0 / 100% auto;
+}
+/*================================轮播图结束================================================*/
+.header-wrap, .product-wrap {
+    width: 12rem;
+}
+.header-wrap, .product-wrap, .header-arrow {
+    margin-left: auto;
+    margin-right: auto;
+}
+.product-title {
+    /*background: rgba(0, 0, 0, 0) url("../img/m.xunlei/product-title.png") no-repeat scroll 0 0 / 100% auto;*/
+    height: 50px;
+    margin: 20px 0;
+    width: 108px;
+    line-height: 50px;
+    font-weight: normal;
+}
+.product-title_bg{
+    background: rgba(0, 0, 0, 0) url("../img/m.xunlei/product-title.png") no-repeat scroll 0 0 / 100% auto;
+}
+.row{
+    margin: 0 auto;
+    text-align: center;
+}
+.frame{
+    max-width: 285px;
+    margin: 0 auto;
+    transition:0.3s;
+    /*border:1px solid #ccc;*/
+    padding:3px;
+}
+.frame:hover{
+    transform:translateY(-10px);
+    box-shadow: 0 0 5px #ccc;
+}
+#plist{
+    padding-bottom: 47px;
+    border-bottom: 0.01rem solid #e9e9e9;
+}
+#plist li{
+    /*width: 265px;*/
+    padding:0 10px 10px 10px;
+    text-align: center;
+}
+#plist li img{
+    height: auto;
+    width: 100% ;
+}
+.plist-name{
+    color:#222;
+    font-size: 20px;
+    white-space: nowrap;
+}
+.plist-name:hover{
+    text-decoration: none;
+}
+.plist-time{
+    background:rgba(0, 0, 0, 0) url("../img/m.xunlei/product-time.png") no-repeat scroll 0 0 / 100% auto;
+    color:#999;
+    display:inline-block;
+    font-size: 14px;
+    text-align: center;
+    width:90px;
+    white-space: nowrap;
+}
+#clist{
+    padding-bottom: 47px;
+    border-bottom: 1px solid #e9e9e9;
+    margin-bottom:10px;
+}
+#clist li img{
+    display:block;
+}
+#clist .frame{
+    max-width: 285px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.clist-name{
+    white-space:nowrap;
+    position:absolute;
+    left:120px;
+    top: 0;
+    color:#222;
+    font-size: 20px;
+}
+.clist-size {
+    color: #777;
+    font-size: 16px;
+    left: 120px;
+    position: absolute;
+    top: 32px;
+}
+.clist-download {
+    background: rgba(0, 0, 0, 0) url("../img/m.xunlei/coop-download.png") no-repeat scroll 0 0 / 100% auto;
+    color: #222;
+    font-size: 18px;
+    height: 41px;
+    left: 120px;
+    line-height: 42px;
+    position: absolute;
+    text-align: center;
+    text-indent: 0;
+    top: 55px;
+    width: 92px;
+}
+.clist-download:hover{
+    color:#a1a1a1;
+    background: rgba(0, 0, 0, 0) url("../img/m.xunlei/coop-download_hover.png") no-repeat scroll 0 0 / 100% auto;
+    text-decoration: none;
+}
+.clist-detail {
+    color: #999;
+    display: block;
+    font-size:  15px;
+    height: 50px;
+    margin-top: 10px;
+    /*width: 265px;*/
+    text-align: left;
+}
+.busi{
+    margin:20px 0 20px 0;
+}
+.blist{
+    float:left;
+    height:50px;
+    line-height: 50px;
+    margin:0;
+}
+.busi-title {
+    background: rgba(0, 0, 0, 0) url("../img/m.xunlei/busi-title.png") no-repeat scroll 0 0 / 100% auto;
+    float: left;
+    height: 50px;
+    width: 80px;
+    margin:0;
+}
+.blist li{
+    float:left;
+    margin-right: 20px;
+}
+.blist li a{
+    color:#999;
+}
+.footer{
+    background:#F8F8F8;
+    margin:0;
+}
+.footerp {
+    margin:0;
+    color: #bdbdbd;
+    font-size: 13px;
+    padding: 10px 0 20px;
+    text-align: center;
+}

@@ -1,0 +1,271 @@
+/* 
+* @Author: Marte
+* @Date:   2016-12-05 09:03:44
+* @Last Modified by:   Marte
+* @Last Modified time: 2016-12-06 19:00:21
+*/
+/*===========================头部样式=============================*/
+header{
+    height: 64px;
+    width: 100%;
+    z-index: 10;
+    background:#FAFAFA;
+}
+.head{
+    margin: 0 auto;
+    width: 1200px;
+    height: 100%;
+    position: relative;
+}
+.head a{
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+.head a img{
+    display: block;
+    /*height: 64px;*/
+    width: 100%;
+}
+header h1{
+    float: left;
+    font-size: 0;
+    height: 52px;
+    line-height: 0;
+    margin: 12px 0 0 34px;
+    text-indent: -9999em;
+    width: 142px;
+}
+.nav_list{
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin-bottom: 0;
+}
+header .nav_li {
+    float: left;
+    height: 64px;
+    position: relative;
+    width: 94px;
+    text-align: center;
+}
+header .btn_nav {
+    color: #666;
+    display: block;
+    font-size: 14px;
+    height: 64px;
+    line-height: 64px;
+    position: absolute;
+    text-align: center;
+    width: 94px;
+    z-index: 6;
+}
+header .btn_nav:hover{
+    border-top:2px solid #347BE6;
+    /*top:-2px;*/
+    line-height: 60px;
+}
+
+/*==========================轮播图结束===========================*/
+.wrapper{
+    height:100%;
+    background:black;
+    width:100%;
+    margin:0 auto;
+}
+.content{
+    height:100%;
+    width:100%;
+    position: relative;
+}
+.color_list {
+    height:100%;
+    width:100%;
+    /*background:url("../img/video/bg1.jpg");*/
+    position:absolute;
+    top: 0;
+    left: 0;
+}
+.color_bg0{
+    background:url("../img/video/bg1.jpg");
+}
+.color_bg1{
+    background:url("../img/video/bg2.jpg");
+}
+.color_bg2{
+    background:url("../img/video/bg3.jpg");
+}
+.s_left, .s_right {
+    cursor: pointer;
+    height: 60px;
+    margin-top: -30px;
+    position: absolute;
+    top: 50%;
+    width: 60px;
+    z-index: 10;
+}
+
+.download_btn, .s_left, .s_right, .sina_ico, .opt_ico, .switch_list span {
+    background: rgba(0, 0, 0, 0) url("../img/video/sp_png24.png") no-repeat scroll 0 0;
+}
+.s_left {
+    background-position: 0 0;
+    left: 10px;
+}
+.s_right {
+    background-position: -62px 0;
+    right: 10px;
+}
+.bgs_box{
+    transition: 1s;
+}
+.bgs_box .wp {
+    height: auto !important;
+    left: 50%;
+    margin-left: -650px;
+    margin-top: -260px;
+    position: absolute;
+    top: 50%;
+    z-index: 0 !important;
+}
+.bgs_1 .s_img {
+    position: absolute;
+    left: 100px;
+    background: rgba(0, 0, 0, 0) url("../img/video/s_img1.jpg") no-repeat scroll 0 0;
+    height: 404px;
+    width: 673px;
+}
+.item_txt_1 .txt_info {
+    background-position: 0 0;
+    height: 130px;
+    width: 383px;
+}
+.txt_info {
+    background: rgba(0, 0, 0, 0) url("../img/video/txt_png52.png") no-repeat scroll 0 0;
+    position:absolute;
+    left:830px;
+    top: 30px;
+}
+.detail {
+    color: #fff;
+    font-size: 12px;
+    left: 50%;
+    margin:0 0 0 185px;
+    top: 300px;
+    line-height: 20px;
+    overflow: hidden;
+    position: absolute;
+    width: 370px;
+}
+.v_info{
+    opacity: 0.7;
+}
+.bgs_box .download_btn {
+    color: #fff;
+    display: block;
+    font-size: 24px;
+    height: 60px;
+    line-height: 58px;
+    margin: 15px 0 5px;
+    padding-left: 80px;
+    width: 208px;
+    background: rgba(0, 0, 0, 0) url("../img/video/sp_png24.png") no-repeat scroll 0 0;
+    background-position: 0 -125px;
+}
+.detail p{
+    opacity: 0.7;
+}
+.detail p a{
+    color:#fff;
+}
+.bgs_2 .s_img {
+    position: absolute;
+    left: 100px;
+    background: rgba(0, 0, 0, 0) url("../img/video/s_img2.jpg") no-repeat scroll 0 0;
+    height: 404px;
+    width: 673px;
+}
+.item_txt_2 .txt_info {
+    background-position: 0 -156px;
+    height: 105px;
+    width: 383px;
+}
+.bgs_box .download_btn-1{
+    color: #fff;
+    display: block;
+    font-size: 24px;
+    height: 60px;
+    line-height: 58px;
+    margin: 85px 0 5px;
+    padding-left: 80px;
+    width: 208px;
+    background: rgba(0, 0, 0, 0) url("../img/video/sp_png24.png") no-repeat scroll 0 0;
+    background-position: 0 -125px;
+}
+.bgs_3 .s_img {
+    position: absolute;
+    left: 100px;
+    background: rgba(0, 0, 0, 0) url("../img/video/s_img3.png") no-repeat scroll 0 0;
+    height: 404px;
+    width: 673px;
+}
+.bgs_3 .shadow01 {
+    background: rgba(0, 0, 0, 0) url("../img/shadow_2.png") no-repeat scroll 0 0;
+    height: 190px;
+    left: 30px;
+    padding: 8px;
+    position: absolute;
+    width: 285px;
+    top: 266px;
+}
+.bgs_3 .s_img01 {
+    background: rgba(0, 0, 0, 0) url("../img/video/s_img3_1.jpg") no-repeat scroll 0 0;
+    height: 190px;
+    width: 285px;
+}
+.item_txt_3 .txt_info {
+    background-position: 0 -295px;
+    height: 110px;
+    width: 383px;
+}
+.switch_list {
+    bottom: 15%;
+    height: 10px;
+    left: 50%;
+    margin-left: -30px;
+    overflow: hidden;
+    position: absolute;
+    text-align: center;
+    z-index: 10;
+}
+.switch_list .on {
+    background: rgba(0, 0, 0, 0) url("../img/video/sp_png24.png") no-repeat scroll 0 0;
+    background-position: -137px -42px;
+}
+.switch_list span {
+    background: rgba(0, 0, 0, 0) url("../img/video/sp_png24.png") no-repeat scroll 0 0;
+    background-position: -151px -42px;
+    cursor: pointer;
+    float: left;
+    height: 10px;
+    margin: 0 14px 0 0;
+    overflow: hidden;
+    vertical-align: top;
+    width: 10px;
+}
+.foot_txt {
+    bottom: 0;
+    height: 45px;
+    left: 50%;
+    line-height: 18px;
+    margin-left: -550px;
+    padding: 5px 0;
+    position: absolute;
+    text-align: center;
+    width: 1100px;
+    z-index: 4;
+}
+.footer p, .foot_txt p {
+    color: #fff;
+    opacity: 0.4;
+}

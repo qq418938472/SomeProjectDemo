@@ -1,0 +1,117 @@
+.header_Bf{
+	background: url(../images/magazine/header_bg.png) no-repeat;
+	background-size: 100%;
+}
+.header_Bf{
+	height: 254px;
+}
+.header_Bf_content{
+	height: 254px;
+}
+.header_Bf_content .content_Df {
+    font-size: 15px;
+    margin: -20px 0 7px 0;
+}
+.header_Cf_bottom .listA{
+	background: url(../images/magazine/bottom_list5.jpg);
+}
+.header_Cf_bottom .listB{
+	background: url(../images/magazine/bottom_list3.jpg);
+}
+.header_Cf_bottom .listC{
+	background: url(../images/magazine/bottom_list1.jpg);
+}
+.header_Cf_bottom .listD{
+	background: url(../images/magazine/bottom_list4.jpg);
+}
+.header_Cf_bottom .listE{
+	background: url(../images/magazine/bottom_list2.jpg);
+}
+/*===================瀑布流内容样式===========*/
+.box{
+	position: relative;
+	float: left;
+	width:250px;
+	background: #fff;
+}
+.content{
+	/*margin: 6px;*/
+	padding: 6px;
+	/*border:1px solid #ccc;*/
+	box-shadow: 0 0 5px #ccc;
+	border-radius: 5px;
+}
+.content img{
+	width: 236px;
+	height: auto;
+}
+.content img:hover{
+	opacity: 0.9;
+}
+#container{
+	position: relative;
+	width: 1250px;
+	margin: 0 auto;
+}
+.content_img_buttomL{
+	color: #fff;
+	font-size: 13px;
+	border-radius: 2px;
+	padding: 5px 13px ;
+	opacity: 0.9;
+	background: #e23c46;
+	border:none;
+	border:1px solid #7b0b12;
+	position: absolute;
+	top: 13px;
+	left: 13px;
+	visibility: hidden;
+}
+.content_img_buttomL:hover{
+	background: #EB4E52;
+}
+.content_img_buttomR{
+	font-size: 13px;
+	border-radius: 2px;
+	background: url(../images/scripe/content_buttom.png);
+	border: 1px solid #bbbbbb;
+	padding: 15px 15px ;
+	position: absolute;
+	top: 13px;
+	right: 13px;
+	visibility: hidden;
+}
+.content_img_buttomR:hover{
+	background: url(../images/scripe/content_buttom2.png);
+}
+.content:hover button{
+	visibility: visible;
+}
+.content_list_top{
+	margin: 13px 23px 18px 21px;
+	 color: #a6a6a6;
+}
+.content_list_min{
+	 color: #a6a6a6;
+}
+.content_list_min img{
+	margin: 0 0 0 17px;
+	width: 11px;
+}
+.content_list_min_img{
+	margin: 0 0 0 17px;
+	width: 11px;
+}
+.content_list_bottom{
+	padding: 16px 21px;
+	 color: #a6a6a6;
+}
+body .content_list_bottomA{
+	float: left;
+	margin: 10px 0px 0px 12px;
+	width:42px;
+}
+.content_list_bottom a{
+	color: #9e7e6b;	
+	margin: 0 0 0 5px;
+}

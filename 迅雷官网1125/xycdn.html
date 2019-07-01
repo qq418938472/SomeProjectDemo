@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="./css/common.css">
+
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+    <!-- <script src="./js/jquery-3.1.0.min.js"></script> -->
+    <script src="./js/jquery-2.1.4.min.js"></script>
+    
+    <!-- 加载NG相关文件 -->
+    <script type="text/javascript" src="./js/angular.min.js"></script>
+    <script type="text/javascript" src="./js/angular-animate.min.js"></script>
+    <script src="./js/myApp.js"></script>
+    <!-- 引入对应用控制器文件 -->
+    <script src="./js/myCtrl.js"></script>
+    <script type="text/javascript">
+    $(function(){
+        $("#contentCf_Div").hover(
+            function(){
+                $("#contentCf_img").animate({'width':'270px'},200);
+            },
+            function(){
+                $("#contentCf_img").animate({'width':'300px'},200);
+            }
+            
+        );
+
+        $("#contentCf_Div2").hover(
+            function(){
+                $("#contentCf_img2").animate({'width':'270px'},200);
+            },
+            function(){
+                $("#contentCf_img2").animate({'width':'300px'},200);
+            }
+            
+        );
+
+        setInterval(function(){
+            $("#radius_num").animate({'margin-top':'35px'},700).animate({'margin-top':'45px'},700);
+        });
+
+        setInterval(function(){
+            $("#sur_num").animate({'margin-top':'110px'},700).animate({'margin-top':'120px'},700);
+        });
+
+        $(".Cf_btn").hover(
+            function(){
+                $(".Cf_btn_box").animate({'margin-top':'5px'},300);
+            },
+            function(){
+                $(".Cf_btn_box").animate({'margin-top':'-50px'},300);
+            }
+        );
+
+        $(".Df_btn").hover(
+            function(){
+                $(".Df_btn_box").animate({'margin-top':'5px'},300);
+            },
+            function(){
+                $(".Df_btn_box").animate({'margin-top':'-40px'},300);
+            }
+        );
+
+        
+        
+        $(".Df_left span").eq(0).click(function(){
+            $(".Df_left span").removeClass('Df_btn_on');
+            $(".Df_left span").eq(0).addClass('Df_btn_on');
+            $(".Df_right").css({'display':'none'});
+            $(".Df_right").eq(0).css({'display':'inline-block'});
+        });
+        $(".Df_left span").eq(1).click(function(){
+            $(".Df_left span").removeClass('Df_btn_on');
+            $(".Df_left span").eq(1).addClass('Df_btn_on');
+            $(".Df_right").css({'display':'none'});
+            $(".Df_right").eq(1).css({'display':'inline-block'});
+        });
+        $(".Df_left span").eq(2).click(function(){
+            $(".Df_left span").removeClass('Df_btn_on');
+            $(".Df_left span").eq(2).addClass('Df_btn_on');
+            $(".Df_right").css({'display':'none'});
+            $(".Df_right").eq(2).css({'display':'inline-block'});
+        });
+        $(".Df_left span").eq(3).click(function(){
+            $(".Df_left span").removeClass('Df_btn_on');
+            $(".Df_left span").eq(3).addClass('Df_btn_on');
+            $(".Df_right").css({'display':'none'});
+            $(".Df_right").eq(3).css({'display':'inline-block'});
+        });
+        $(".Df_left span").eq(4).click(function(){
+            $(".Df_left span").removeClass('Df_btn_on');
+            $(".Df_left span").eq(4).addClass('Df_btn_on');
+            $(".Df_right").css({'display':'none'});
+            $(".Df_right").eq(4).css({'display':'inline-block'});
+        });
+        
+       
+
+       $(".right_list_3").click(function(){
+            $('html, body').animate({scrollTop:0}, 'slow');
+       });
+    });
+
+    $(window).scroll(function(){
+        var h =$(window).scrollTop();
+        if(h>=1000){
+            $(".right_list_3").addClass('list_3');
+        }else{
+            $(".right_list_3").removeClass('list_3');
+        }
+    });
+    </script>
+    <link rel="stylesheet" href="./css/xycdn.css">
+    <link rel="stylesheet" href="./css/template.css">
+    </head>
+    <body ng-app="myApp" ng-controller="myCtrl">
+    <div class="right_list">
+        <ul>
+            <li><span>
+            <em></em>
+                <p>电话：400-000-0000</p>
+                <p>产品/活动咨询：10:00-19:00(工作日)</p>
+                <p>技术支持：7*24小时</p>
+            </span></li>
+            <li></li>
+            <li class="right_list_3"></li>
+        </ul>
+    </div>
+    <div>
+    
+        <div class="top">
+            <div class="top_box">
+                <div>
+                  <a href="index.html"><img src="./img/logo.png" style="margin:0 auto;"></a>
+                </div>
+                <div>
+                    <ul>
+                      <a href="price.html"><li>价格</li></a>
+                      <a href="plan.html"><li>解决方案</li></a>
+                      <a href="customer.html"><li>客户案例</li></a>
+                      <a href="####"><li>帮助中心</li></a>
+                      <a href="####"><li>关于</li></a>
+                    </ul>
+                </div>
+                <div style="float:right;">
+                    <ul>
+                        <li>管理控制台</li>
+                        <span>免费试用</span><i></i>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div id="container"  ng-mouseleave="mouseleave()" ng-mouseover="mouseover()">
+            <div id="pre" ng-click="pre()"></div>
+            <div id="next" ng-click="next()"></div>
+            <div id="list">
+                <a href="#"><img src="img/banner_xybrand.jpg" style="opacity:{{Zindex[0]}};z-index:{{Zindex[0]}}; transition: 0.7s;moz-transition: 0.7s;ms-transition: 0.7s;"></a>
+                <a href="#"><img src="img/banner_xyplan.jpg" style="opacity:{{Zindex[1]}};z-index:{{Zindex[1]}}; transition: 0.7s;moz-transition: 0.7s;ms-transition: 0.7s;"></a>
+                <a href="#"><img src="img/banner_register.jpg" style="opacity:{{Zindex[2]}};z-index:{{Zindex[2]}}; transition: 0.7s;moz-transition: 0.7s;ms-transition: 0.7s;"></a>
+                <a href="#"><img src="img/banner_live.jpg" style="opacity:{{Zindex[3]}};z-index:{{Zindex[3]}}; transition: 0.7s;moz-transition: 0.7s;ms-transition: 0.7s;"></a>
+                <div id="dot">
+                <span class="{{dot[0]}}" ng-click="selectDot(0)"></span>
+                <span class="{{dot[1]}}" ng-click="selectDot(1)"></span>
+                <span class="{{dot[2]}}" ng-click="selectDot(2)"></span>
+                <span class="{{dot[3]}}" ng-click="selectDot(3)"></span>
+            </div>
+            </div>
+            
+        </div>
+
+        <!-- 内容部分 -->
+        <div class="contentAf">
+            <div class="contentAf_box">
+                <a href="liveBeta.html">
+                    <div class="contentAf_imgbox">
+                        <span><p>星域CDN 直播极速版</p><br />快速接入模式</span>
+                        <img src="./img/t_01.jpg">
+                    </div>
+                </a>
+                <div class="contentAf_imgbox">
+                    <span><p>星域CDN 直播旗舰版</p><br />快速接入模式</span>
+                    <img src="./img/t_02.jpg">
+                </div>
+                <div class="contentAf_imgbox">
+                    <a href="activity.html"><img src="./img/t_04.jpg"></a>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="Bf_titile">
+            <h3>四大创新技术 重新定义CDN</h3>
+            <h5>星域CDN始终坚持在技术创新中前行，引领行业重新定义CDN</h5>
+        </div>
+        <div class="contentBf">
+            <div class="contentBf_box">
+                <div class="contentBf_imgbox">
+                    <span><h3>无限节点</h3><p>星域CDN首创“无限节点”技术，已拥有在全国布建百万量级服务节点的能力（包括400余个骨干节点+百万量级末梢节点），首次实现了下沉至家庭内拉取内容数据，开辟了一条总量更庞大、分布更均匀，数据传输距离可近至1km的网络加速通道。</p></span>
+                    <img src="./img/tech_01.jpg">
+                </div>
+                <div class="contentBf_imgbox">
+                    <span><h3>星域调度</h3><p>依托于迅雷热门资源实时统计系统的先天优势，结合业内独家的P2SP技术和领先的全网探测技术，星域CDN首创了“星域调度”技术。可实现百万量级节点全局调度，最优路径数据传输，速度更快，稳定性更佳。</p></span>
+                    <img src="./img/tech_02.jpg">
+                </div>
+                <div class="contentBf_imgbox">
+                    <span><h3>动态防御</h3><p>星域CDN可支持HTTPDNS域名解析技术，同时拥有丰富的防盗链机制，帮助小米应用商店达到100%防劫持，响巢看看高清内容盗链数成功为0。同时，依托无限节点，星域CDN可轻松抵御高达300G的DDoS攻击，安全稳定有保障。</p></span>
+                    <img src="./img/tech_03.jpg">
+                </div>
+                <div class="contentBf_imgbox">
+                    <span><h3>弱网加速</h3><p>星域CDN领先的弱网加速技术，通过底层协议优化，有效对抗数据传输过程中各网络节点的波动，解决下载失败、下载错误、速度慢等常见问题，在下载速度低于50KB的弱网环境下，可将数据传输速度提升10倍。</p></span>
+                    <img src="./img/tech_04.jpg">
+                </div>
+            </div>
+        </div>
+
+        <div class="contentCf">
+            <div class="Cf_titile">
+                <h3>星域CDN直播产品</h3>
+                <h5>星域一直在创新中推动技术前进，为用户打造直播最佳体验</h5>
+            </div>
+            <div class="contentCf_box">
+                <div class="contentCf_box_1">
+                    <div id="contentCf_Div" class="contentCf_Div">
+                        <h3>直播 极速版</h3>
+                        <div class="yuan_box">
+                            <img id="contentCf_img" src="./img/js_pic.png">
+                        </div>
+                        <p><a href="javascript:;">了解产品<i></i></a></p>
+                        <div class="Cf_Left_bottom">
+                            <p>行业带宽价格对比（元/Mbps/天）</p>
+                            <div class="Cf_Left_radius">
+                                <div class="Cf_Aradius"></div>
+                                <span>2.1</span>
+                                <em></em>
+                                <b>传统CDN</b>
+                            </div>
+                            <div class="Cf_Left_radius">
+                                <div class="Cf_Bradius"></div>
+                                <span style="margin-left:-24px;">1.33</span>
+                                <em></em>
+                                <b style="margin-left:40px;">云厂商</b>
+                            </div>
+                            <div class="Cf_Left_radius">
+                                <div class="Cf_Cradius"></div>
+                                <i id="radius_num">0.5</i>
+                                <em></em>
+                                <b style="color:#2e72ef;font-weight: bold;">星域极速版</b>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="contentCf_Div2" class="contentCf_Div">
+                        <h3>直播 旗舰版</h3>
+                        <div class="yuan_box">
+                            <img id="contentCf_img2" src="./img/qj_pic.png">
+                        </div>
+                        <p><a href="javascript:;">了解产品<i></i></a></p>
+                        <div class="Cf_Left_bottom">
+                           <p>行业带宽价格对比（元/Mbps/天）</p>
+                           <div class="Cf_sur">
+                           <em></em>
+                            <span style="margin-left:-140px;margin-top:20px;">2.1</span>
+                            <span style="margin-left:-5px;margin-top:100px;">1.33</span>
+                            <span id="sur_num" style="margin-left:125px;margin-top:120px;">0.27</span>
+                            <p>
+                                <b style="margin-left:-170px;margin-top:170px;">传统CDN</b>
+                                <b style="margin-left:-20px;margin-top:170px;">云厂商</b>
+                                <b style="margin-left:110px;margin-top:170px;color:#2e72ef;font-weight:bold;">星域旗舰版</b>
+                            </p>
+                           </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="Cf_btn">
+                <div class="Cf_btn_box">
+                    <p><i></i></p>
+                    <p>立即领取100G流量包</p>
+                </div>
+            </div>
+        </div>
+    
+
+        <div class="contentDf">
+            <h2>解决方案</h2>
+            <h3>独家优势创新技术，百分百服务理念，覆盖视频直播五大场景，一站式解决各类直播需求</h3>
+            <div class="Df_left">
+                <span class="Df_btn_on">泛娱乐直播</span>
+                <span>教育直播</span>
+                <span>事件直播</span>
+                <span>移动户外直播</span>
+                <span>VR/全景直播</span>
+            </div>
+            <div class="Df_right" style="display: inline-block;">
+                <div class="Df_top">
+                    <ul class="Df_top_box">
+                        <li><img src="./img/f1.jpg"></li>
+                        <li><img src="./img/f2.jpg"></li>
+                        <li><img src="./img/f3.jpg"></li>
+                    </ul>
+                </div>
+                <h4>泛娱乐直播 解决方案</h4>
+                <h5>星域CDN以行业领先技术实现首屏秒级打开，各项直播技术指标行业领先。独特的音视频互动功能，颠覆了传统的弹幕交互体验，让主播与观众面对面实时交流，情感沟通更密切！</h5>
+                <div class="Df_btn">
+                    <div class="Df_btn_box">
+                        <p><i></i></p>
+                        <p>查看详情</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="Df_right">
+                <div class="Df_top">
+                    <ul class="Df_top_box">
+                        <li><img src="./img/j1.jpg"></li>
+                        <li><img src="./img/j2.jpg"></li>
+                        <li><img src="./img/j3.jpg"></li>
+                    </ul>
+                </div>
+                <h4>教育直播 解决方案</h4>
+                <h5>星域播放器拥有慢同步、音视频分离等技术，可优化播放体验，应对不同网络环境，最大程度保障播放流畅。支持录播一体，云端实时转码，复习回看更加便捷，让学生身临其境，提高学习效率。</h5>
+                <div class="Df_btn">
+                    <div class="Df_btn_box">
+                        <p><i></i></p>
+                        <p>查看详情</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="Df_right">
+                <div class="Df_top">
+                    <ul class="Df_top_box">
+                        <li><img src="./img/s1.jpg"></li>
+                        <li><img src="./img/s2.jpg"></li>
+                        <li><img src="./img/s3.jpg"></li>
+                    </ul>
+                </div>
+                <h4>事件直播 解决方案</h4>
+                <h5>依托无限节点技术，星域CDN可以有效支撑T级带宽，带来极致的直播体验，流畅度高达99%。告别卡顿，不再错过精彩瞬间！</h5>
+                <div class="Df_btn">
+                    <div class="Df_btn_box">
+                        <p><i></i></p>
+                        <p>查看详情</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="Df_right">
+                <div class="Df_top">
+                    <ul class="Df_top_box">
+                        <li><img src="./img/h1.jpg"></li>
+                        <li><img src="./img/h2.jpg"></li>
+                        <li><img src="./img/h3.jpg"></li>
+                    </ul>
+                </div>
+                <h4>移动户外直播 解决方案</h4>
+                <h5>针对户外复杂的网络环境，星域CDN提供码率和分辨率自适应采集的能力，同时应用行业内领先的弱网加速技术，
+有效减少推流卡顿，让移动户外直播流畅播放。</h5>
+                <div class="Df_btn">
+                    <div class="Df_btn_box">
+                        <p><i></i></p>
+                        <p>查看详情</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="Df_right">
+                <div class="Df_top">
+                    <ul class="Df_top_box">
+                        <li><img src="./img/vr1.jpg"></li>
+                        <li><img src="./img/vr2.jpg"></li>
+                        <li><img src="./img/vr3.jpg"></li>
+                    </ul>
+                </div>
+                <h4>VR/全景直播 解决方案</h4>
+                <h5>星域CDN与Insta360联合研发专门针对VR/全景直播的压缩编码算法，同时利用星域CDN H.265实时转码集群，在保证视频质量的同时大幅降低带宽使用，解决普通用户观看时带宽不足的问题。</h5>
+                <div class="Df_btn">
+                    <div class="Df_btn_box">
+                        <p><i></i></p>
+                        <p>查看详情</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="Df_coop">
+                <ul>
+                    <li><img src="./img/iqiyi.png"></li>
+                    <li><img src="./img/mitv.png"></li>
+                    <li><img src="./img/panda.png"></li>
+                    <li><img src="./img/xl.png"></li>
+                    <li><img src="./img/douyu.png"></li>
+                    <li><img src="./img/deepoon.png"></li>
+                    <li><img src="./img/vhall.png"></li>
+                    <li><img src="./img/insta360.png"></li>
+                    <li><img src="./img/zhanqi.png"></li>
+                    <li><img src="./img/chushou.png"></li>
+                </ul>
+            </div>
+        </div>
+        
+
+        <div class="contentEf">
+            <div class="contentEf_box">
+            <h3>无限节点</h3>
+            <h4>突破传统CDN技术局限，首创“无限节点”技术，数据传输距离可近至1km</h4>
+                
+                <div class="contentEf_star">
+                    <canvas id="myCanvas"  style="background: rgba(255,255,255,0);width:1200px; height:580px;z-index:2;"></canvas>
+                </div>
+
+                <div class="Ef_text">
+                    <ul>
+                        <li><h3>300000+</h3><h4>节点数量</h4></li>
+                        <li><h3>10T</h3><h4>带宽总量</h4></li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="contentFf">
+            <div class="Ff_left">
+                <h4>品牌动态<a href="#"><span>查看全部</span></a></h4>
+                <ul>
+                    <li><a>11.17<i>|</i>口碑服务重塑行业标准，星域CDN获</a></li>
+                    <li><a>11.17<i>|</i>技术引领行业变革，星域CDN获2016亚</a></li>
+                    <li><a>10.07<i>|</i>网心陈磊获云鼎奖“云计算行业最具影响力人物”</a></li>
+                    <li><a>11.17<i>|</i>星域CDN助力东京电玩展7大平台流畅直</a></li>
+                    <li><a>08.05<i>|</i>网心科技成DNS.COM超级合伙人 联手布局互联网开放生态圈</a></li>
+                    <li><a>05.13<i>|</i>你应该了解的星域CDN</a></li>
+                </ul>
+            </div>
+            <div class="Ff_right">
+                <h2>热门活动</h2>
+                <a href="#"><img src="./img/img_activity.jpg"></a>
+            </div>
+        </div>
+
+
+        <div class="contentGf">
+            <h3>星域互联 共享未来</h3>
+            <h4>星域用无限挑战极限，联合优秀合作伙伴，打造以共享经济为基础的互联网加速生态</h4>
+            <div class="Gf_imgbox">
+                <ul>
+                    <li><a href="#"><img src="./img/mi.png"></a></li>
+                    <li><a href="#"><img src="./img/iqiyi2.png"></a></li>
+                    <li><a href="#"><img src="./img/perfect_world.png"></a></li>
+                    <li><a href="#"><img src="./img/douyu (2).png"></a></li>
+                    <li><a href="#"><img src="./img/panda (2).png"></a></li>
+                    <li><a href="#"><img src="./img/deepoon (2).png"></a></li>
+                    <li><a href="#"><img src="./img/insta360 (2).png"></a></li>
+                    <li><a href="#"><img src="./img/momo.png"></a></li>
+                    <li><a href="#"><img src="./img/ksyun.png"></a></li>
+                    <li><a href="#"><img src="./img/xl (2).png"></a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer_Af">
+            <div class="footer_Af_box">
+                <span>星域重新定义CDN</span>
+                <a href="#"><i></i>立即领取100G流量包</a>
+            </div>
+        </div>
+        <div class="footer_Bf">
+            <div class="footer_Bf_box">
+                <dl>
+                    <dl>
+                        <dt>产品与价格</dt>
+                        <dd><a href="#">直播极速版</a></dd>
+                        <dd><a href="#">直播旗舰版</a></dd>
+                        <dd><a href="#">价格</a></dd>
+                    </dl>
+                    <dl>
+                        <dt>热门活动</dt>
+                        <dd><a href="#">星耀计划</a></dd>
+                    </dl>
+                    <dl>
+                        <dt>技术支持</dt>
+                        <dd><a href="#">帮助文档</a></dd>
+                        <dd><a href="#">API文档</a></dd>
+                    </dl>
+                    <dl>
+                        <dt>其他</dt>
+                        <dd><a href="#">管理控制台</a></dd>
+                        <dd><a href="#">解决方案</a></dd>
+                        <dd><a href="#">新闻动态</a></dd>
+                        <dd><a href="#">联系我们</a></dd>
+                    </dl>
+                    <dl>
+                        <dt>联系我们</dt>
+                        <dd>电话：400-926-2228 0755-86240150</dd>
+                        <dd>邮箱：xycdn-help@xunlei.com</dd>
+                        <dd>地址：深圳市南山区高新南环道威新软件园5号楼4层</dd>
+                        <dd><img src="./img/company_code.jpg">扫描关注微信公众号</dd>
+                    </dl>
+                </dl>
+            </div>
+        </div>
+        <div class="footer_Cf">
+            <div class="footer_Cf_box">
+                <p>友情链接：<a href="#">迅雷</a><span>|</span><a href="#">迅雷赚钱宝</a></p>
+                <p>Copyright © 2015-2016 xycdn.All Rights Reserved 深圳市网心科技有限公司版权所有 粤ICP备15018633号-1</p>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+            var myCanvas = document.getElementById('myCanvas');
+            var ctx = myCanvas.getContext('2d');
+            
+            
+            
+            var min = 1;
+            var max = 3;
+            myCanvas.width = document.documentElement.clientWidth;
+            myCanvas.height = document.documentElement.clientHeight;
+
+            function Ball() {
+                this.centerX = getRandom(max, myCanvas.width - max);
+                this.centerY = getRandom(max, myCanvas.height - max);
+                this.radius = getRandom(0.2, 2);
+                this.color = getRandomColor();
+                var speed1 = getRandom(1, 1);
+                this.speedX = getRandom(0, 1) ? -speed1 : speed1;
+                var speed2 = getRandom(1, 1);
+                this.speedY = getRandom(0, 1) ? -speed2 : speed2;
+            }
+
+            Ball.prototype.move = function() {
+                this.centerX += this.speedX;
+                this.centerY += this.speedY;
+            }
+            Ball.prototype.draw = function() {
+                ctx.beginPath();
+                ctx.arc(this.centerX, this.centerY, this.radius, 0, Math.PI * 2, false);
+                ctx.closePath();
+                ctx.fillStyle = this.color;
+                ctx.fill();
+            }
+
+            function getRandom(min, max) {
+                return Math.floor(Math.random() * (max - min + 1) + min);
+            }
+
+            function getRandomColor() {
+//              var red = getRandom(0, 255);
+//              var green = getRandom(0, 255);
+//              var blue = getRandom(0, 255);
+                return "rgba(25,128,206,0.3)";
+            }
+
+            var count = 200;
+            var balls = [];
+
+            for(i = 0; i < count; i++) {
+                var ball = new Ball();
+                balls.push(ball);
+            }
+            console.log(balls);
+
+            function startAnimation() {
+                ctx.clearRect(0, 0, myCanvas.width, myCanvas.height);
+                // ctx.strokeStyle = "white";
+            
+                for(i = 0; i < balls.length; i++) {
+                    balls[i].move();
+                    balls[i].draw();
+
+                }
+                adjustPB();
+                ligature();
+            }
+
+            var timer = setInterval("startAnimation()", 50)
+
+            //碰壁反弹
+            function adjustPB() {
+                for(i = 0; i < balls.length; i++) {
+                    if(balls[i].centerX <= balls[i].radius || balls[i].centerX >= myCanvas.width - balls[i].radius) {
+                        balls[i].speedX *= (-1);
+                    }
+                    if(balls[i].centerY <= balls[i].radius || balls[i].centerY >= myCanvas.height - balls[i].radius) {
+                        balls[i].speedY *= (-1);
+                    }
+                }
+            }
+
+            //连线
+            var X1 = myCanvas.width / 2;
+            var Y1 = myCanvas.height / 2;
+            function ligature() {
+                $(document).ready(function() {
+                 
+                    ctx.beginPath();
+                    ctx.arc(X1, Y1, 200, 0, Math.PI * 2, false);
+                    var arc = [];
+                    for(i = 0; i < balls.length; i++) {
+                        var disX1 = X1 - balls[i].centerX;
+                        var disY1 = Y1 - balls[i].centerY;
+                        if(Math.sqrt(disX1 * disX1 + disY1 * disY1) <= 100) {
+                            arc.push(balls[i]);
+                        }
+
+                    }
+                    for(i = 0; i < arc.length; i++) {
+                        for(j = 0; j < arc.length; j++) {
+                            if(i != j) {
+                                var dixX1 = arc[i].centerX - arc[j].centerX;
+                                var dixY1 = arc[i].centerY - arc[j].centerY;
+
+                                if(Math.sqrt(dixX1 * dixX1 + dixY1 * dixY1) <=200) {
+                                    ctx.beginPath();
+                                    ctx.moveTo(arc[i].centerX, arc[i].centerY);
+                                    ctx.lineTo(arc[j].centerX, arc[j].centerY);
+                                    ctx.closePath();
+                                    ctx.strokeStyle = getRandomColor();
+                                    ctx.stroke();
+                                }
+                            }
+                        }
+                    }
+                
+                })
+                
+            }
+            
+                 $('#myCanvas').mouseenter(function(){
+                          $('#myCanvas').mousemove(function(e){
+                                X1 = e.pageX;
+                                Y1 = e.pageY;
+                                //检测移动是否到达到极值
+                                if(X1 < 0 ){
+                                    X1 =0;
+                                } 
+                                if(Y1 < 0){
+                                    Y1 = 0;
+                                }
+                                if(X1 > myCanvas.width - 60){
+                                    X1 =  myCanvas.width - 60;
+                                }
+                                if(Y1 > 4100){
+                                    Y1 = e.pageY - 4100;
+                                }
+                                
+                                
+                      })
+                   })
+                 
+                 $('#myCanvas').mouseleave(function(e){
+                                 X1 = myCanvas.width / 2;
+                             Y1 = myCanvas.height / 2;
+                     })
+            
+                
+            
+            
+        </script>
+    </body>
+</html>

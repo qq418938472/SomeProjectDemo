@@ -1,0 +1,19 @@
+.header_Bf{
+	background: url(../images/plate/header_bg.png) no-repeat;
+	background-size: 100%;
+}
+.header_Cf_bottom .listA{
+	background: url(../images/plate/bottom_list5.jpg);
+}
+.header_Cf_bottom .listB{
+	background: url(../images/plate/bottom_list3.jpg);
+}
+.header_Cf_bottom .listC{
+	background: url(../images/plate/bottom_list1.jpg);
+}
+.header_Cf_bottom .listD{
+	background: url(../images/plate/bottom_list4.jpg);
+}
+.header_Cf_bottom .listE{
+	background: url(../images/plate/bottom_list2.png);
+}

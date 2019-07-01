@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>直播极速版</title>
+        <link rel="stylesheet" type="text/css" href="./css/common.css" />
+        <link rel="stylesheet" type="text/css" href="./css/liveBeta.css" />
+        <script src="./js/jquery-2.1.4.min.js"></script>
+        <script src="./js/liveBeta.js"></script>
+    </head>
+    <body>
+        <header>
+            <div class="hd_content">
+                <div class="logo">
+                    <h2><a href="index.html"><img src="./img/liveBeta/logo.png"/></a></h2>
+                </div>
+                <div class="nav">
+                    <ul class="nav_ul">
+                       <li><a href="price.html">价格</a></li> 
+                       <li><a href="plan.html">解决方案</a></li> 
+                       <li><a href="customer.html">客户案例</a></li> 
+                       <li><a href="#">帮助中心</a></li> 
+                       <li><a href="xycdn.html">星域首页</a></li> 
+                    </ul>
+                </div>
+                <div class="nav_right">
+                    <a href="#">管理控制台</a>
+                    <a class="nav_button1" href="#">免费试用</a>
+                </div>
+            </div>
+        </header>
+        <div class="particles">
+            <canvas id="myCanvas" style="width:100%; height:664px; "></canvas>
+            <script type="text/javascript">
+                var myCanvas = document.getElementById('myCanvas');
+                var ctx = myCanvas.getContext('2d');
+                var min = 1;
+                var max = 3;
+                myCanvas.width = document.documentElement.clientWidth;
+                myCanvas.height = document.documentElement.clientHeight;
+
+                function Ball() {
+                    this.centerX = getRandom(max, myCanvas.width - max);
+                    this.centerY = getRandom(max, myCanvas.height - max);
+                    this.radius = getRandom(1, 3);
+                    this.color = getRandomColor();
+                    var speed1 = getRandom(1, 1);
+                    this.speedX = getRandom(0, 1) ? -speed1 : speed1;
+                    var speed2 = getRandom(1, 1);
+                    this.speedY = getRandom(0, 1) ? -speed2 : speed2;
+                }
+                Ball.prototype.move = function() {
+                    this.centerX += this.speedX;
+                    this.centerY += this.speedY;
+                }
+                Ball.prototype.draw = function() {
+                    ctx.beginPath();
+                    ctx.arc(this.centerX, this.centerY, this.radius, 0, Math.PI * 4, false);
+                    ctx.closePath();
+                    ctx.fillStyle = this.color;
+                    ctx.fill();
+                }
+
+                function getRandom(min, max) {
+                    return Math.floor(Math.random() * (max - min + 1) + min);
+                }
+
+                function getRandomColor() {
+                    return "rgba(255,255,255,1)";
+                }
+
+                var count = 200;
+                var balls = [];
+
+                for(i = 0; i < count; i++) {
+                    var ball = new Ball();
+                    balls.push(ball);
+                }
+                // console.log(balls);
+
+                function startAnimation() {
+                    ctx.clearRect(0, 0, myCanvas.width, myCanvas.height);
+                    ctx.font = "100px STKaiTi";
+                    ctx.strokeStyle = "white"
+                    // ctx.strokeText("SQ", myCanvas.width/2.2, myCanvas.height/2,500);
+                
+                    for(i = 0; i < balls.length; i++) {
+                        balls[i].move();
+                        balls[i].draw();
+
+                    }
+                    adjustPB();
+                    ligature();
+                }
+                var timer = setInterval("startAnimation()", 50)
+
+                //碰壁反弹
+                function adjustPB() {
+                    for(i = 0; i < balls.length; i++) {
+                        if(balls[i].centerX <= balls[i].radius || balls[i].centerX >= myCanvas.width - balls[i].radius) {
+                            balls[i].speedX *= (-1);
+                        }
+                        if(balls[i].centerY <= balls[i].radius || balls[i].centerY >= myCanvas.height - balls[i].radius) {
+                            balls[i].speedY *= (-1);
+                        }
+                    }
+                }
+
+                //连线
+                var X1 = myCanvas.width / 2;
+                var Y1 = myCanvas.height / 2;
+                function ligature() {
+                    $(document).ready(function() {
+                     
+                        ctx.beginPath();
+                        ctx.arc(X1, Y1, 200, 0, Math.PI * 2, false);
+                        var arc = [];
+                        for(i = 0; i < balls.length; i++) {
+                            var disX1 = X1 - balls[i].centerX;
+                            var disY1 = Y1 - balls[i].centerY;
+                            if(Math.sqrt(disX1 * disX1 + disY1 * disY1) <= 200) {
+                                arc.push(balls[i]);
+                            }
+
+                        }
+                        for(i = 0; i < arc.length; i++) {
+                            for(j = 0; j < arc.length; j++) {
+                                if(i != j) {
+                                    var dixX1 = arc[i].centerX - arc[j].centerX;
+                                    var dixY1 = arc[i].centerY - arc[j].centerY;
+
+                                    if(Math.sqrt(dixX1 * dixX1 + dixY1 * dixY1) <=100) {
+                                        ctx.beginPath();
+                                        ctx.moveTo(arc[i].centerX, arc[i].centerY);
+                                        ctx.lineTo(arc[j].centerX, arc[j].centerY);
+                                        ctx.closePath();
+                                        ctx.strokeStyle = getRandomColor();
+                                        ctx.stroke();
+                                    }
+                                }
+                            }
+                        }
+                    })
+                }
+                $('#myCanvas').click(function(e){
+                    var ball = new Ball();
+                    console.log(e.pageY)
+                    ball.centerX = e.pageX;
+                    ball.centerY = e.pageY-33;
+                    console.log(ball.centerY)
+                    ctx.arc(ball.centerX, ball.centerY, this.radius, 0, Math.PI * 4, false);
+                    balls.push(ball);
+                });
+                $('#myCanvas').mouseenter(function(){
+                    $('#myCanvas').mousemove(function(e){
+                        X1 = e.pageX;
+                        Y1 = e.pageY;
+                        console.log()
+                        //检测移动是否到达到极值
+                        if(X1 < 0 ){
+                            X1 = 0;
+                        } 
+                        if(Y1 < 0){
+                            Y1 = 0;
+                        }
+                        if(X1 > myCanvas.width - 0){
+                            X1 =  myCanvas.width - 0;
+                        }
+                        if(Y1 > myCanvas.height -50){
+                            Y1 = myCanvas.height - 50;
+                        }        
+                    })
+                })
+                $('#myCanvas').mouseleave(function(e){
+                    X1 = myCanvas.width / 2;
+                    Y1 = myCanvas.height / 2;
+                })
+                </script>
+            <div class="particles_txt">
+                <h1> </h1>
+                <a href="#">
+                    免费领取100G流量包
+                </a>
+            </div>
+        </div>
+        <div class="content">
+            <div class="beta-odd">
+                <div class="beta-box ">
+                    <h3>星域CDN·直播极速版</h3>
+                    <div class="beta-txtbox">
+                        <p>星域CDN·直播极速版依托强大的星域CDN"无限节点"、"星域调度"、"动态防御"、"弱网加速"四大技术，提供高效、稳定、安全、经济的高质量极速直播服务，为用户打造直播最佳体验！星域一直在创新中推动技术前行，用创新的技术为直播行业构建一个更加公平、透明的市场。</p>
+                        <i class="i-frame-left"></i>
+                        <i class="i-frame-right"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="beta-even">
+                <div class="beta-box">
+                    <div class="beta-txtpic">
+                        <h3>
+                            首创"无限节点"创新技术，直播延迟＜2s
+                        </h3>
+                        <p>
+                            业内首创无限节点：百万级服务节点，400+核心节点；
+                            <br>
+                            直播延迟＜2s：充分利用无限量的末梢带宽，实现自住宅小区内拉取内容数据，将直播延迟成功控制在2s以内，实现用户体验上的无感切换。
+                        </p>
+                        <div class="beta-picbox">
+                            <i class="i-live-1"></i>                            
+                            <i class="i-live-2"></i>                            
+                            <i class="i-live-3"></i>                            
+                            <i class="i-live-4"></i>                            
+                            <i class="i-live-5">
+                                <span class="i-live-5-bg">
+                                    <span class="i-live-5-lvl"></span>
+                                </span>
+                            </i>                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="beta-odd">
+                <div class="beta-box2">
+                    <div class="beta-txtpic">
+                        <h3>首创“星域调度“创新技术，打造极致用户体验</h3>
+                        <p>依托于在热门资源实时统计系统方面的先天优势，结合业内领先的调度算法和全网路由预测技术，首创可实现对全网数据分发全局调度的“星域调度”技术，打造极致用户体验。</p>
+                        <div class="beta-picbox-2">
+                            <i class="i-exp-1"></i>
+                            <i class="i-exp-2"></i>
+                            <i class="i-exp-3"></i>
+                            <i class="i-exp-4"></i>
+                            <i class="i-exp-5"></i>
+                            <i class="i-exp-6"></i>
+                            <i class="i-exp-7"></i>
+                            <i class="i-exp-cdn"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="beta-even">
+                <div class="beta-box">
+                    <div class="beta-txtpic">
+                        <h3>
+                            首创“动态防御“创新技术，保障安全
+                        </h3>
+                        <p>
+                            通过独有的防盗链机制以及动态密码锁方式，使用户高清内容盗链数降至0；同时具备强大的DDOS动态防御能力，使企业轻松抵御高达300G的流量攻击，降低互联网恶意攻击对业务应用的风险；
+                            <br>
+                            7＊24 小时全网监控，基于服务质量的智能监控和调度，保障客户服务的正常运行。
+                        </p>
+                        <div class="beta-picbox beta-picbox-3">
+                            <div class="beta-rotate-wp">
+                                <div class="beta-rotatebox">
+                                    <i class="i-protect-1"></i>
+                                    <i class="i-protect-2"></i>
+                                    <i class="i-protect-3"></i>
+                                    <i class="i-protect-4"></i>
+                                </div>
+                            </div>               
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="beta-odd">
+                <div class="beta-box2">
+                    <div class="beta-txtpic">
+                        <h3>传统CDN价格1/4，同时节省50%以上的流量</h3>
+                        <p>无限节点技术同业界领先的H.265实时编解码技术，可节省50%以上的流量；<br>
+                        颠覆行业传统价格，带宽低至0.5元/Mbps/天，按实际使用量付费；<br>
+                        提供按流量或峰值带宽两种计费方式，满足不同业务需求。</p>
+                        <div class="beta-picbox-4">
+                            <div class="i-compare-1">
+                                <em>2.1</em>
+                                元/Mbps/天
+                            </div>
+                            <div class="i-compare-2">
+                                <em>1.33</em>
+                                元/Mbps/天
+                            </div>
+                            <div class="i-compare-3">
+                                <em>0.5</em>
+                                元/Mbps/天
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="beta-unit beta-even">
+                <div class="beta-box">
+                    <div class="beta-txtpic">
+                        <h3>
+                            多端多协议，接入便捷
+                        </h3>
+                        <p>
+                            提供RTMP、HLS、HTTP+FLV等多协议支持及丰富的API接口，同时覆盖移动端和PC端，支持更全面、接入更便捷。
+                        </p>
+                        <div class="beta-picbox beta-picbox-5">
+                              <i class="i-beta-file i-beta-file-1">RTMP</i>             
+                              <i class="i-beta-file i-beta-file-2">HLS</i>             
+                              <i class="i-beta-file i-beta-file-3">HTTP+FLV</i>             
+                              <i class="i-beta-file-sml i-beta-file-4"></i>             
+                              <i class="i-beta-file-sml i-beta-file-5"></i>             
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="beta-unit beta-example ani">
+                <div class="main">
+                    <div class="beta-txt">
+                        <h3>
+                            直播行业成功案例
+                        </h3>
+                        <p>
+                            星域CDN为众多直播行业用户，如芒果TV、小米盒子、熊猫TV，提供直播传输解决方案。凭借无限节点技术，在足够数量的骨干网节点基础上，布下了百万级遍布全国的个人家庭节点，开辟了一条总量更庞大、分布更均匀，且数据传输距离可近至1km的网络加速通道。配合星域CDN独创的星域调度技术，精准实时近距离调取数据，让用户观看节目时可从同一小区同一栋楼的邻居家中调动视频数据，成功为无数终端用户送上高效优质直播服务。
+                        </p>
+                    </div>
+                    <dl class="beta-example-list clearfix">
+                        <dt>【游戏直播】</dt>
+                        <dd>
+                            <img src="./img/liveBeta/game_01.jpg"/>
+                        </dd>
+                        <dd>
+                            <img src="./img/liveBeta/game_02.jpg"/>
+                        </dd>
+                        <dd>
+                            <img src="./img/liveBeta/game_03.jpg"/>
+                        </dd>
+                    </dl>
+                    <dl class="beta-example-list clearfix">
+                        <dt>【综艺直播】</dt>
+                        <dd>
+                            <img src="./img/liveBeta/variety_01.jpg"/>
+                        </dd>
+                        <dd>
+                            <img src="./img/liveBeta/variety_02.jpg"/>
+                        </dd>
+                        <dd>
+                            <img src="./img/liveBeta/variety_03.jpg"/>
+                        </dd>
+                    </dl>
+                    <dl class="beta-example-list clearfix">
+                        <dt>【事件直播】</dt>
+                        <dd>
+                            <img src="./img/liveBeta/event_01.jpg"/>
+                        </dd>
+                        <dd>
+                            <img src="./img/liveBeta/event_02.jpg"/>
+                        </dd>
+                        <dd>
+                            <img src="./img/liveBeta/event_03.jpg"/>
+                        </dd>
+                    </dl>
+                    <div class="beta-example-logo">
+                        <div class="beta-exa-pic-1">
+                            <img src="./img/liveBeta/xycdn.png"/>
+                        </div>
+                        <div class="beta-exa-pic-2">
+                            <img src="./img/liveBeta/Mtv.png"/>
+                        </div>
+                        <div class="beta-exa-pic-3">
+                            <img src="./img/liveBeta/mi.png"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="beta-unit beta-even ani">
+                <div class="main">
+                    <dl class="beta-rule">
+                        <dt>星域CDN 用心服务客户</dt>
+                        <dd>基于业界领先技术积累的视频直播传输平台以及可拓展无限可能的无限节点布局，一体化解决方案，助力客户从无到优，节省人力和时间，从而将有限的精力专注于核心业务。</dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="extend">
+                <div class="main">
+                    <div class="extend-txt">
+                        <em class="extend-txt-tit">星域重新定义CDN</em>
+                        <a href="" class="btn-e-gift tonji">
+                            <i class="i-e-gift"></i>
+                            立即领取100G流量包
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="site">
+                <div class="main">
+                    <div class="site-links clearfix">
+                        <dl>
+                            <dt>产品与价格</dt>
+                            <dd>
+                                <a href="#">直播极速版</a>
+                            </dd>
+                            <dd>
+                                <a href="#">直播旗舰版</a>
+                            </dd>
+                            <dd>
+                                <a href="#">价格</a>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>热门活动</dt>
+                            <dd>
+                                <a href="#">星耀计划</a>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>技术支持</dt>
+                            <dd>
+                                <a href="#">帮助文档</a>
+                            </dd>
+                            <dd>
+                                <a href="#">API文档</a>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>热门活动</dt>
+                            <dd>
+                                <a href="#">星耀计划</a>
+                            </dd>
+                            <dd>
+                                <a href="#">直播旗舰版</a>
+                            </dd>
+                            <dd>
+                                <a href="#">价格</a>
+                            </dd>
+                        </dl>
+                        <dl class="contact-us">
+                            <dt>联系我们</dt>
+                            <dd>
+                                <span class="ft-contact-phone">电话：400-926-2228</span>
+                                <span class="ft-contact-phone">   0755-86240150</span>
+                            </dd>
+                            <dd>
+                                邮箱：xycdn-help@xunlei.com
+                            </dd>
+                            <dd>
+                                地址：深圳市南山区高新南环道威新软件园5号楼4层
+                            </dd>
+                            <dd>
+                                <div class="site-img">
+                                    <img src="./img/liveBeta/company_code.jpg"/>
+                                    扫描关注微信公众号
+                                </div>
+                            </dd>
+                        </dl>
+                    </div>
+
+                </div>
+            </div>
+            <div class="ft">
+                <div class="main">
+                    <div class="ft-ect">
+                        <p>
+                            友情链接
+                            <a href="#">迅雷</a>
+                            |
+                            <a href="#">迅雷赚钱宝</a>
+                        </p>
+                        <p>
+                            Copyright © 2015-2016 xycdn.All Rights Reserved 深圳市网心科技有限公司版权所有                                 
+                            <a href="#">粤ICP备15018633号-1</a>
+                            <a href="#"><img src="./img/liveBeta/govIcon.gif"/></a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

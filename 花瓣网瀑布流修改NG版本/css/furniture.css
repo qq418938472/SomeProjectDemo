@@ -1,0 +1,19 @@
+.header_Bf{
+	background: url(../images/furniture/header_bg.png)no-repeat ;
+	background-size: 100%;
+}
+.header_Cf_bottom .listA{
+	background: url(../images/furniture/bottom_list_bg1.jpg);
+}
+.header_Cf_bottom .listB{
+	background: url(../images/furniture/bottom_list_bg2.jpg);
+}
+.header_Cf_bottom .listC{
+	background: url(../images/furniture/bottom_list_bg3.jpg);
+}
+.header_Cf_bottom .listD{
+	background: url(../images/furniture/bottom_list_bg4.jpg);
+}
+.header_Cf_bottom .listE{
+	background: url(../images/furniture/bottom_list_bg5.jpg);
+}

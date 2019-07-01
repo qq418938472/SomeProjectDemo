@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>校园大使</title>
+		<link rel="stylesheet" type="text/css" href="css/hr-3-style.css">
+		<script src="js/hr-3/angular.min.js"></script>
+			<script>
+var app = angular.module("myApp", []);
+app.controller("myCtrlone", function($scope) {
+    $scope.records1 = [
+    { 
+    	'p':"关于迅雷网心校园大使",
+	 'txta':["你为迅雷代言，是迅雷在校园中的代言人与传播者,",
+	 "主要责职是通过向学生群体宣传公司产品，",
+	 "在校内开展一系列产品推广、试用和传播活动；",
+	 "帮助了解学生用户的需求，收集反馈学生用户信息，",
+	 "协助公司各类高校活动的项目策划及执行"],
+    },]
+
+	 $scope.records2 = [
+    { 
+    	'p':"三大职责",
+	 'txta':["产品推广",
+	 "在校内通过各种渠道推广公司产品，引导学生注册体验",
+	 "用户信息收集反馈",
+	 "收集并传达相关学生用户群体的反馈，对公司的校园活动提出合理化的建议",
+	 "活动组织策划",
+	 "协助公司各类高校活动的项目策划及执行"],
+    },]
+	 
+	 $scope.records3 = [
+    { 
+    	'p':"四个要求",
+	 'txta':["全日制在校大学生或研究生",
+	 "热爱互联网",
+	 "用户信息收集反馈",
+	 "踏实认真，高度负责",
+	 "活动组织策划",
+	 "社团达人、有校园宣传资源或产品推广经验者优先考虑"],
+    },]
+	 
+	  $scope.records4 = [
+    { 
+    	'p':"报名须知",
+	 'txta':["1. 获奖标准基于活动方案的线上曝光度和线下可行度；",
+	 "2. 要求活动必须在线上如微博，BBS，微信公众平台等渠道有一定曝光；",
+	 "3. 线下活动参与人数，APP下载量需达到一定考核指标（具体考核标准请下载活动资料查看）；",
+	 "4. 可以个人或者团队的形式报名，团队人数在3-6个人，报名表需填上团队所有人的姓名以确认参加；",
+	 "5. 所有申请者需在活动报名截止前提交详细方案至xlcampus@xunlei.com；",
+	 "6. 请务必详细查阅活动资料了解活动形式及主题；",
+	 "7. 官方咨询QQ群为577399149；",
+	 "8. 活动最终解释权归迅雷招聘所有。"
+	 ],
+    },]
+});
+
+</script>
+	</head>
+	<body ng-app="myApp">
+		
+	<div class="warp">
+		<!--头部标签-->
+		<div class="header">
+			<div class="inner">
+				<a href="index.html"><div class="logo"></div></a>
+				<div class="nav">
+					<a href="hr-1.html">欢迎</a>
+					<a href="hr-3.html" class="cur">校园大使</a>
+					<a href="hr-2.html">校园招聘</a>
+					<a href="hr-4.html">关于迅雷</a>
+				</div>
+			</div>
+		</div>
+		
+		<!--中部标签-->
+		<div class="content" ng-controller="myCtrlone">
+			<!--中部第一层-->
+			<div id="wpTop" class="wp-top" style="height:355px;" >
+				<div id="person" class="person" style="transform: scale(0.37);"></div>
+				<h1 class="title" style="transform: scale(0.37);">真玩客，玩极限——迅雷校招大使招募</h1>
+				<a href="####" class="btn-com" style="transform: scale(0.37);">快速报名</a>
+			</div>
+			<!--中部第二层-->
+			<div class="wp-about" >
+				<div class="inner">
+					<div class="about1" ng-repeat="x in records1">
+						<h2 class="tit1">{{x.p}}</h2>
+						<p ng-repeat="z in x.txta" class="txt-about">
+							{{z}}
+						</p>
+						<img class="pic1" src="img/hr-3/p1.png" />
+					</div>
+					<div class="about2" ng-repeat="x in records2">
+						<h2 class="tit2">{{x.p}}</h2>
+						<p ng-repeat="z in x.txta" class="txt-about">
+							{{z}}
+						</p>
+						<span class="round r1"></span>
+						<span class="round r2"></span>
+						<span class="round r3"></span>
+					</div>
+					<div class="about3" ng-repeat="x in records3">
+						<h2 class="tit3">{{x.p}}</h2>
+						<p ng-repeat="z in x.txta" class="txt-about">
+							{{z}}
+						</p>
+						<img class="pic2" src="img/hr-3/p2.png"/>
+					</div>
+				</div>
+			</div>
+			<!--中部第三层-->
+			<div class="wp-get">
+				<div class="inner">
+					<img class="pic3" src="img/hr-3/p3.png" alt="五项全获" />
+					<ul class="get-list">
+						<li class="fn">
+							<span class="ico-pri pri1"></span>
+							<p class="tit">迅雷实习证明</p>
+							<p class="des">有价值的就业推荐</p>
+						</li>
+						<li>
+							<span class="ico-pri pri2"></span>
+							<p class="tit">活动基金</p>
+							<p class="des">每月500-2000元</p>
+						</li>
+						<li class="fr">
+							<span class="ico-pri pri3"></span>
+							<p class="tit">人脉累积</p>
+							<p class="des">第一时间获得迅雷相关资讯营造自己的影响力</p>
+						</li>
+						<li>
+							<span class="ico-pri pri4"></span>
+							<p class="tit">优先面试机会</p>
+							<p class="des">优秀者有机会获得迅雷的正式工作机会</p>
+						</li>
+						<li class="fr">
+							<span class="ico-pri pri5"></span>
+							<p class="tit">限量级礼品</p>
+							<p class="des">有机会获得迅雷年度奖学金及周边限量级礼品</p>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!--中部第四层-->
+			<div class="wp-how">
+				<div class="inner">
+					<h3>如何成为校园大使</h3>
+					<ul class="how-list fix">
+						<li>
+							<span class="ico-num">1</span>
+							<p class="tit">网申报名</p>
+							<p class="des">11月17日-12月16日</p>
+						</li>
+						<li>
+							<span class="ico-num">2</span>
+							<p class="tit">方案审核和完善</p>
+							<p class="des">11月23日-12月19日</p>
+						</li>
+						<li>
+							<span class="ico-num">3</span>
+							<p class="tit">接收物料和准备活动</p>
+							<p class="des">12月10日-12月23日</p>
+						</li>
+						<li>
+							<span class="ico-num">6</span>
+							<p class="tit">公布大使名单</p>
+							<p class="des">2017年01月06日</p>
+						</li>
+						<li>
+							<span class="ico-num">5</span>
+							<p class="tit">活动总结反馈</p>
+							<p class="des">12月27日-2017年01月05日</p>
+						</li>
+						<li>
+							<span class="ico-num">4</span>
+							<p class="tit">执行活动</p>
+							<p class="des">12月23日-12月31日</p>
+						</li>
+					</ul>
+					<ul class="ins-list">
+						<li>可以个人或3-5人的团队形式报名，所有申请同学需下载活动资料，结合迅雷网心新产品策划校园party，在活动截止报名前
+    在活动截止报名前提交详细方案及相关申请表至xlcampus@xunlei.com （详情<a href="####">下载活动资料>></a>查看)</li>
+						<li>工作人员将在3个工作日内对提交方案进行审核，通过后予以物料及活动资金支持，进入活动执行阶段</li>
+						<li>活动结束后通过活动效果来评定奖级及确认你是否符合校园大使资格</li>
+					</ul>
+					<a class="btn-com" href="down/apply.doc">下载资料</a>
+				</div>
+			</div>
+			<!--中部第五层-->
+			<div class="prize">
+				<h3>奖项设置</h3>
+				<div class="inner">
+					<ul class="fix prize-list">
+						<li>
+							<h4>
+								一等奖（1名）
+							</h4>
+							<p class="seq">01</p>
+							<ul class="prize-des">
+								<li>5000元现金奖励</li>
+								<li>迅雷网心校园大使任用资格</li>
+								<li>迅雷白金会员1年</li>
+								<li>迅雷订制礼品</li>
+							</ul>
+						</li>
+						<li>
+							<h4>二等奖（2名）</h4>
+							<p class="seq">02</p>
+							<ul class="prize-des">
+								<li>2000元现金奖励</li>
+								<li>迅雷网心校园大使任用资格</li>
+								<li>迅雷白金会员半年</li>
+								<li>迅雷订制礼品</li>
+							</ul>
+						</li>
+						<li>
+							<h4>三等奖（3名）</h4>
+							<p class="seq">03</p>
+							<ul class="prize-des">
+								<li>1000元现金奖励</li>
+								<li>迅雷网心校园大使任用资格</li>
+								<li>迅雷白金会员1个月</li>
+								<li>迅雷订制礼品</li>
+							</ul>
+						</li>
+						<li>
+							<h4>优秀奖（5名）</h4>
+							<p class="seq">05</p>
+							<ul class="prize-des">
+								<li>校园大使任用资格</li>
+								<li>迅雷订制礼品</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!--中部第六层-->
+			<div class="know" ng-repeat="x in records4">
+				<h3>{{x.p}}</h3>
+				<div class="inner" >
+					<ul>
+						<li ng-repeat="z in x.txta">{{z}}</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		
+		<!--底部标签-->
+		<div class="footer">
+			<div class="foot">
+				<div class="f-nav">
+					<span>Copyright © 2003-2016 Xunlei.com. All rights reserved.</span>
+					<a href="hr-4.html">关于迅雷</a>
+					<a href="####">下载迅雷</a>
+					<a href="####">加盟迅雷</a>
+					<a href="####">商务合作</a>
+					<a href="####">客服中心</a>
+					<a href="####">安全中心</a>
+					<a href="####">用户协议</a>
+				</div>
+				<div class="f-top">
+					<a href="####">
+						<span class="ico-top"></span>
+						回到顶部
+					</a>
+				</div>
+			</div>
+		</div>
+		
+		<!--侧栏标签-->
+		<div class="side">
+			<a class="btn-com" href="down/apply.doc">下载报名表</a>
+			<a class="btn-com" href="down/document.pdf">下载资料</a>
+		</div>
+		
+	</div>
+	</body>
+	
+	<script src="js/jquery-1.8.3.min.js"></script>
+	<script src="js/hr-3/schoolAmbassadors.js"></script>
+</html>

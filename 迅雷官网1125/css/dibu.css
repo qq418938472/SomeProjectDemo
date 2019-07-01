@@ -1,0 +1,116 @@
+/*底部*/
+footer{
+	background: #fff none repeat scroll 0 0;
+    position: relative;
+    width: 1200px;
+    margin: 15px auto;
+}
+.modwp {
+    padding: 0;
+    width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+footer .mapin {
+    font-size: 14px;
+    min-height: 138px;
+    padding: 30px 0 60px;
+}
+ .mapin .fuwu {
+    max-width: 462px;
+    padding-left: 35px;
+    padding-right: 55px;
+    width: 43%;
+}
+.mapin dt {
+    color: #383838;
+    font-size: 18px;
+    line-height: 1;
+    margin-bottom: 28px;
+}
+.mapin .links {
+    color: #343434;
+    display: inline-block;
+    height: 20px;
+    line-height: 20px;
+    margin: 0 0 10px;
+    width: 154px;
+}
+.sicontq {
+    background: rgba(0, 0, 0, 0) url("../images/vip_index/bg_basespr.png") no-repeat scroll 0 0;
+    display: inline-block;
+    height: 20px;
+    margin-right: 15px;
+    overflow: hidden;
+    vertical-align: middle;
+    width: 20px;
+}
+.ic-xlpd {
+    background-position: -110px -37px;
+}
+.ic-xlbbs {
+    background-position: -22px -37px;
+}
+.ic-netjsq {
+    background-position: -66px -37px;
+}
+.ic-jinrong {
+    background-position: -165px -37px;
+}
+.ic-jwzb {
+    background-position: -190px -37px;
+}
+.ic-tieba {
+    background-position: -215px -37px;
+}
+.mapin .kefu {
+    width: 33%;
+}
+.mapin dl {
+    display: inline;
+    float: left;
+}
+.mapin .txt_kf {
+    background: rgba(0, 0, 0, 0) url("../images/vip_index/bg_basespr.png") no-repeat scroll -40px 0;
+    display: inline-block;
+    height: 21px;
+    line-height: 1000;
+    margin-bottom: 4px;
+    overflow: hidden;
+    width: 280px;
+}
+ .mapin .line {
+    color: #c0c0c0;
+    font-size: 12px;
+    margin: 0 19px;
+}
+ .mapin .gz dd {
+    height: 20px;
+    margin-bottom: 9px;
+    position: relative;
+}
+.ic-sinawb {
+    background-position: -20px 0;
+}
+.ic-wx {
+    background-position: -20px -18px;
+    width: 17px;
+}
+.ic-qq {
+    background-position: -325px 0;
+    width: 17px;
+}
+
+footer .foot {
+    border-top: 1px dashed #c6c6c6;
+    color: #8b8b8b;
+    font-size: 14px;
+    line-height: 1;
+    padding: 30px 0 70px;
+    text-align: center;
+}
+
+footer .f-nav a {
+    color: #8b8b8b;
+    margin: 0 20px 0 0;
+}

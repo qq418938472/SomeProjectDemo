@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>bootstrap</title>
+	<link rel="stylesheet" href="./css/bootstrap.min.css">
+	<link rel="stylesheet" href="./font-awesome-4.6.3/css/font-awesome.min.css">
+	<script src="./js/jquery-3.1.0.min.js"></script>
+	<script src="./js/bootstrap.min.js"></script>
+	<style>
+	.navbar{
+		opacity: 0.9;
+		margin-bottom: 0px;
+		min-height: 40px;
+		padding:10px 0;
+	}
+	.navbar-brand{
+		height: 42px;
+		line-height: 42px;
+		padding: 0px;
+		margin-right: 15px;
+		width: 102px;
+		background: url(./images/m-vip/logo_hd_hv.png) no-repeat;
+
+	}
+	.navbar-nav > li > a{
+		padding-top:12px;
+		padding-bottom: 0px;
+	}
+	.job-hot{
+		color: #d9534f;
+		visibility: visible;
+		position: absolute;
+	    right: 0;
+	    top: 15px;
+	}
+	.jumbotron{
+		padding: 410px 0 0px;
+		background: url("./images/m-vip/bg2.jpg") no-repeat;
+		background-position: center;
+		text-align: center;
+		color: #fff;
+		margin-bottom: 0px;
+		/*background: rgba(0, 0, 0, 0) linear-gradient(45deg, #020031 0px, #6d3353 100%) repeat scroll 0 0;*/
+	
+	}
+	.jumbotron h1{
+		font-weight: 700;
+		font-size: 100px;
+	}
+	.button-links a{
+		border: 0 none;
+		box-shadow: 0 -4px 0 #2a6496 inset;
+		color: #fff;
+		padding: 13px 35px 17px;
+		margin-top: 30px;
+	}
+	.masthead-links{
+		list-style:outside none none;
+		margin: 0;
+		padding: 0;	
+	}
+	.masthead-links li a{
+		color: rgba(255, 255, 255, 0.25);
+	}
+	.masthead-links li a:hover{
+		color: #fff;
+	}
+	@media screen and (max-width: 970px) {
+	    .masthead h1 {
+	        font-size: 90px;
+	    }
+	    .masthead h2 {
+	        font-size: 24px;
+	    }
+	}
+	@media screen and (max-width: 750px) {
+	    .masthead h1 {
+	        font-size: 60px;
+	    }
+	    .masthead h2 {
+	        font-size: 18px;
+	    }
+	    body .page-header h2{
+			font-size: 30px;
+	    }
+	}
+	.bc-social{
+		background-color: #f5f5f5;
+	    border-bottom: 1px solid #ddd;
+	    border-top: 1px solid #fff;
+	    padding: 15px 0;
+	    text-align: center;
+	}
+	.bc-social-buttons{
+		list-style:outside none none;
+		margin: 0;
+		padding: 0;
+	}
+	.bc-social-buttons li{
+		display: inline;
+		padding: 0 10px;
+		color: #555;
+		border-right: 1px solid #CCCCCC;
+	}
+	.bc-social-buttons li:last-child{
+		border: none;
+	}
+	.bc-social-buttons li a{
+		color: #555;
+	}
+	.fa{
+		font-size: 18px;
+		margin:	0 7px 0 0;
+	}
+	.page-header{
+		text-align: center;
+		width: 60%;
+		margin: 60px  auto 40px;
+	}
+	.page-header h2{
+		font-size: 42px;
+	}
+	.thumnail{
+		padding: 4px;
+		border: 1px solid #ddd;
+		margin-bottom: 30px;
+	    margin-left: auto;
+	    margin-right: auto;
+	    max-width: 310px;
+	    text-align: center;
+	    border-radius: 10px;
+	    transition: 0.3s;
+	}
+	.thumnail:hover{
+		transform: translateY(-20px);
+	}
+	.thumnail a img{
+		height: auto;
+    	max-width: 100%;
+    	margin-top: 20px;
+    	transition:1s;
+	}
+	.thumnail a img:hover{
+		transform: rotate(360deg);
+	}
+	.thumnail h3 a{
+		text-decoration:none;
+	} 
+	.caption{
+		height: 200px;
+		color: #555;
+		overflow-y:hidden;
+		padding: 9px;
+	}
+	.footer{
+		border-top:1px solid #e5e5e5;
+		color: #777;
+		margin-top:70px;
+		padding: 30px 0;
+	}
+	.footer a{
+		color: #777;
+		margin: 0;
+		padding: 0;
+	}
+	.row h4{
+		color: #FFB912;
+		font-weight: bold;
+	}
+	.list-unstyled{
+		list-style: outside none none;
+		padding-left: 0;
+	}
+	.footer-bottom ul li{
+		border-right: 1px solid #DDDDDD;
+		padding: 0 10px 0 10px;
+	}
+	.footer-bottom ul li:last-child{
+		border: none;
+	}
+	</style>
+</head>
+<body>
+	<div class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container">
+		    <div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand  hidden-sm" href="m-xunlei.html"></a>
+		    </div>
+		    <!-- Collect the nav links, forms, and other content for toggling -->
+		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav">
+					<li><a href="m-xunlei.html">首页</a></li>
+					<li><a href="#">功能特权</a></li>
+					<li><a href="#">游戏特权</a></li>
+					<li><a href="#">会员等级</a></li>
+					<li><a href="#">超级会员</a></li>
+					<li><a href="#">会员商城</a></li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right hidden-sm">
+					<li class="dropdown"><a href="#">商城特权</a></li>
+				</ul>
+		    </div><!-- /.navbar-collapse -->
+		</div>
+	</div>
+	<div class="jumbotron masthead">
+		<div class="container">
+			<!-- <h2>简洁、直观、强悍的前端开发框架，让web开发更迅速、简单。</h2> -->
+			<!-- <p class="button-links"><a class="btn btn-lg btn-primary btn-shadow" href="#" role="button">BootStrap3中文文档(v3.3.5)</a></p> -->
+			<!-- <ul class="masthead-links"> -->
+				<!-- <li><a href="#">Bootstrap2中文文档(v2.3.2)</a></li> -->
+			<!-- </ul> -->
+		</div>
+	</div>
+	<div class="bc-social">
+		<div class="container">
+			<ul class="bc-social-buttons">
+				<li class="social-qq"><i class="fa fa-dollar"></i>每日零钱</li>
+				<li class="social-forum"><a href="#"><i class="fa fa-calendar-check-o"></i>打卡</a></li>
+				<li class="social-weibo"><a href="#"><i class="fa fa-map-o"></i>福利券</a></li>
+				<li class="social-weibo"><a href="#"><i class="fa fa-weibo"></i>微博</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="container ">
+		<div class="projects-header page-header">
+			<h2>迅雷会员 因快而乐</h2>
+			<p>高速下载、离线空间、在线云播快鸟提速等30多项特权等你享受</p>
+		</div>
+		<div class="row">
+			
+			<div class="col-sm-6 col-md-4 col-lg-3">
+				<div class="thumnail">
+					<a href="#">
+						<img src="./images/m-vip/birthday.png">
+					</a>
+					<div class="caption">
+						<h3>
+							<a href="#">VIP7生日特权<br><small>生日加速</small></a>
+						</h3>
+						<p>当月生日用户可随机领取生日礼物一份，生日礼物、贴心祝福都给你</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-6 col-md-4 col-lg-3">
+				<div class="thumnail">
+					<a href="#">
+						<img src="./images/m-vip/yongcun.png">
+					</a>
+					<div class="caption">
+						<h3>
+							<a href="#">账号永存<br><small>永不过期</small></a>
+						</h3>
+						<p>只要开通过一次会员，您的帐号就会纳入会员专属保护帐号的数据库中，永不收回。</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-6 col-md-4 col-lg-3">
+				<div class="thumnail">
+					<a href="#">
+						<img src="./images/m-vip/bugirl.png">
+					</a>
+					<div class="caption">
+						<h3>
+							<a href="#">美女写真<br><small>天天美图</small></a>
+						</h3>
+						<p>会员尊享高清美图，海量美女每日更新</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-6 col-md-4 col-lg-3">
+				<div class="thumnail">
+					<a href="#">
+						<img src="./images/m-vip/gaosu.png">
+					</a>
+					<div class="caption">
+						<h3>
+							<a href="#">高速通道<br><small>下载飞快</small></a>
+						</h3>
+						<p>全球领先的云下载技术，享受高速通道的加速</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-6 col-md-4 col-lg-3">
+				<div class="thumnail">
+					<a href="#">
+						<img src="./images/m-vip/kefu.png">
+					</a>
+					<div class="caption">
+						<h3>
+							<a href="#">客服优先<br><small>专用通道</small></a>
+						</h3>
+						<p>拨打客服电话：400-1111-000，选择业务类型，输入数字帐号；进入人工服务，迅雷会员电话优先接入；普通用户排队等待。</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-6 col-md-4 col-lg-3">
+				<div class="thumnail">
+					<a href="#">
+						<img src="./images/m-vip/lixian.png">
+					</a>
+					<div class="caption">
+						<h3>
+							<a href="#">离线下载<br><small>网速加倍</small></a>
+						</h3>
+						<p>当您注册了迅雷号码，并开通迅雷会员后，就拥有了为您专属定制的离线下载服务。</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-6 col-md-4 col-lg-3">
+				<div class="thumnail">
+					<a href="#">
+						<img src="./images/m-vip/safe.png">
+					</a>
+					<div class="caption">
+						<h3>
+							<a href="#">安全特权<br><small>常见问题</small></a>
+						</h3>
+						<p>为避免打扰您，安全提示每天最多2次，你还可以在安全中心进行设置，只要把发送条数设置为0则关闭提示。</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-6 col-md-4 col-lg-3">
+				<div class="thumnail">
+					<a href="#">
+						<img src="./images/m-vip/shengji.png">
+					</a>
+					<div class="caption">
+						<h3>
+							<a href="#">升级加速<br><small>雷友等级</small></a>
+						</h3>
+						<p>雷友等级是所有迅雷用户共有的等级，需要在迅雷客户端上有在线和下载行为；而会员等级是会员专享的，只和会员的续费历史有关。</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div><!-- 	container -->
+	<div class="footer">
+		<div class="container">
+			<div class="footer-top row">
+				<div class="col-sm-6 col-lg-6">
+					<h4>
+						迅雷会员服务
+					</h4>
+					<p>
+						迅雷官网
+					</p>
+					<p>
+						迅雷网游加速器
+					</p>
+					<p>
+						酒窝直播
+					</p>
+				</div>
+				<div class="col-sm-6 col-lg-5 col-lg-offset-1">
+					<div class="row about">
+						<div class="col-xs-3">
+							<h4>
+								关于
+							</h4>
+							<ul class="list-unstyled">
+								<li><a href="#">关于我们</a></li>
+								<li><a href="#">广告合作</a></li>
+								<li><a href="#">友情链接</a></li>
+								<li><a href="#">招聘</a></li>
+							</ul>
+						</div>
+						<div class="col-xs-3">
+							<h4>
+								联系方式
+							</h4>
+							<ul class="list-unstyled">
+								<li><a href="#">新浪微博</a></li>
+								<li><a href="#">电子邮件</a></li>
+							</ul>
+						</div>
+						<div class="col-xs-3">
+							<h4>
+								旗下网站
+							</h4>
+							<ul class="list-unstyled">
+								<li><a href="#">Laravel中文网</a></li>
+								<li><a href="#">Ghost中国</a></li>
+							</ul>
+						</div>
+						<div class="col-xs-3">
+							<h4>
+								赞助商
+							</h4>
+							<ul class="list-unstyled">
+								<li><a href="#">UCloud</a></li>
+								<li><a href="#">又拍云</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<hr>
+			<div class="footer-bottom row">
+				<ul class="text-center list-inline">
+					<li><a href="#">京ICP备11008151号</a></li>
+					<li>京公网安备11010802014853</li>
+				</ul>
+			</div>
+		</div>
+	</div>	
+</body>
+</html>

@@ -1,0 +1,196 @@
+/* 
+* @Author: Marte
+* @Date:   2016-11-29 14:32:54
+* @Last Modified by:   Marte
+* @Last Modified time: 2016-11-30 19:21:12
+*/
+body{
+    background:#f8f8f8 none repeat scroll 0 0;
+}
+/*===========================头部样式=============================*/
+header{
+    height: 85px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+}
+.head{
+    margin: 0 auto;
+    width: 1200px;
+    height: 100%;
+    position: relative;
+}
+.head a{
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+.head a img{
+    display: block;
+    height: 64px;
+    width: 142px;
+}
+header h1{
+    float: left;
+    font-size: 0;
+    height: 64px;
+    line-height: 0;
+    margin: 12px 0 0 34px;
+    text-indent: -9999em;
+    width: 142px;
+}
+.nav_list{
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+header .nav_li {
+    float: left;
+    height: 84px;
+    position: relative;
+    width: 162px;
+}
+header .btn_nav {
+    color: #fff;
+    display: block;
+    font-size: 16px;
+    height: 38px;
+    left: 50%;
+    line-height: 38px;
+    margin: -19px 0 0 -68px;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    width: 136px;
+    z-index: 6;
+}
+header .btn_nav:hover{
+    border:2px solid rgba(255, 255, 255, 0.5);
+    width:132px;
+    margin-top: -21px;
+}
+.banner_box{
+    height:536px;
+    position: relative;
+}
+.banner_box .banner_list{
+    height: 100%;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+.banner_box  .banner_list a{
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    transition: 1s;
+}
+.banner_box a img {
+    height: 100%;
+    left: 50%;
+    margin-left: -960px;
+    position: absolute;
+    top: 0;
+}
+.banner_btns{
+    position: absolute;
+    left: 0;
+    bottom: 40px;
+    line-height: 0;
+    text-align: center;
+    width: 100%;
+}
+.banner_btns a{
+    background: rgba(0, 0, 0, 0) url("../img/newscenter/news_spr.png") no-repeat scroll -112px 0;
+    display: inline-block;
+    height: 10px;
+    margin: 0 10px;
+    width: 10px;
+}
+#on{
+    background: rgba(0, 0, 0, 0) url("../img/newscenter/news_spr.png") no-repeat scroll -90px 0;
+}
+/*==========================轮播图结束===========================*/
+.content {
+    margin: 0 auto;
+    position: relative;
+    width: 1200px;
+}
+.news_wp{
+    padding-top: 30px;
+}
+.box{
+    background: #fcfcfc none repeat scroll 0 0;
+    border: 1px solid #fcfcfc;
+    margin-bottom: 30px;
+    padding: 24px 99px;
+    width: 1000px;
+}
+.box:hover{
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.4) ;
+}
+.box h2{
+    color: #000;
+    font-size: 20px;
+    line-height: 40px;
+    font-weight: normal;
+}
+.news_top span{
+}
+.news_top p{
+    line-height: 28px;
+    color:#a4a4a4;
+    margin-top: 2px;
+    display: block;
+    clear: both;
+}
+.news_top span a{
+    border-radius: 3px;
+    color: #fff;
+    display: inline-block;
+    font-size: 16px;
+    margin-right: 18px;
+    padding: 0 8px;
+    background:#e9614d none repeat scroll 0 0;
+}
+.txt_time{
+    font-size: 16px;
+    margin-right: 14px;
+}
+.txt_read{
+    font-size: 15px;
+    padding-left: 25px;
+    position: relative;
+}
+.ic_read{
+    background: rgba(0, 0, 0, 0) url("../img/newscenter/news_spr.png") no-repeat scroll -80px -32px;
+    height: 12px;
+    left: 0;
+    margin-top: -6px;
+    position: absolute;
+    top: 50%;
+    width: 21px;
+}
+.txt_news{
+    color: #777;
+    font-size: 16px;
+    line-height: 30px;
+    margin-bottom: 26px;
+}
+.news_bot{
+    clear: both;
+    display: block;
+    height: 20px; 
+}
+.news_bot a{
+    color: #2aa3e9;
+    float: right;
+    font-size: 16px;
+    line-height: 20px;
+}
